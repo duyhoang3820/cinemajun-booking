@@ -8,6 +8,7 @@ import img from '../../../assets/img/play-video.png'
 import img1 from '../assets/img/fast-and-furious9.jpg'
 import img2 from '../assets/img/ve-si-sat-thu.jpg'
 import img3 from '../assets/img/lat-mat.jpg'
+import img4 from '../assets/img/mortal-kombat.jpg'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -32,6 +33,10 @@ export default function CarouselMovie() {
             {
                 img: img3,
                 id: 'UeyaR8jWl2c'
+            },
+            {
+                img: img4,
+                id: 'NYH2sLid0Zc'
             }
         ]);
     // console.log('trailer', trailer);

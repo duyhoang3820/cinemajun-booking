@@ -47,7 +47,7 @@ export default function AdminQuanLyLichChieu() {
   const menu1 = (
     <Menu>
       <Menu.Item>
-        <NavLink to="/thong-tin-nguoi-dung" onClick={() => {
+        <NavLink to="/thong-tin-nguoi-dung" style={{textDecoration:'none'}} onClick={() => {
           history.push('/thong-tin-nguoi-dung')
         }}>Thông tin cá nhân</NavLink>
       </Menu.Item>

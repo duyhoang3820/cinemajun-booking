@@ -19,10 +19,10 @@ export default function Header() {
   const menu1 = (
     <Menu>
       <Menu.Item>
-        <NavLink to="/thong-tin-nguoi-dung">Thông tin cá nhân</NavLink>
+        <NavLink to="/thong-tin-nguoi-dung" style={{textDecoration:'none'}}>Thông tin cá nhân</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink to="/admin" >Quản lý admin</NavLink>
+        <NavLink to="/admin" style={{textDecoration:'none'}}>Quản lý admin</NavLink>
       </Menu.Item>
     </Menu>
   )
