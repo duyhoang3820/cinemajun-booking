@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import style from '../assets/css/Carousel.module.css'
-// import '../assets/css/neumophism.css'
-// import '../../../assets/css/sclick/sclick_next.css'
 import '../../../assets/css/sclick/slick_dots.css'
 import ModalVideo from 'react-modal-video'
 import '../../../../node_modules/react-modal-video/scss/modal-video.scss';
@@ -10,8 +8,6 @@ import img from '../../../assets/img/play-video.png'
 import img1 from '../assets/img/fast-and-furious9.jpg'
 import img2 from '../assets/img/ve-si-sat-thu.jpg'
 import img3 from '../assets/img/lat-mat.jpg'
-// import { Carousel, CarouselItem } from 'ui-neumorphism'
-import 'ui-neumorphism/dist/index.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
