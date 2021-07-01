@@ -1,0 +1,12 @@
+.backToTop {
+  transition: 0.3s;
+}
+.backToTop:hover {
+  transform: scale(1.2);
+}
+.backToTopBtn {
+  margin-left: 60px !important;
+}
+button:focus {
+  outline: none;
+}

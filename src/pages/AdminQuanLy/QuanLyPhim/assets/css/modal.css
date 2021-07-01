@@ -1,0 +1,19 @@
+
+
+  .btnClose{
+    position: absolute;
+    left: 47%;
+    top :20%
+  }
+
+  .form{
+    padding: 20px !important;
+  }
+
+  input[type=text]:focus {
+    border: 3px solid #555;
+  }
+  .form-control:focus{
+    border-color: #555 !important;
+    box-shadow: none !important;
+  }

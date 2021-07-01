@@ -1,0 +1,20 @@
+.slick-dots li.slick-active button:before {
+  content: "●" !important;
+  font-size: 20px !important;
+  color: #f5222d !important;
+  opacity: 1 !important;
+  border: 2px solid #f5222d;
+  border-radius: 50%;
+  line-height: 10px !important;
+  text-align: center !important;
+}
+.slick-dots li button:before {
+  content: "•" !important;
+  font-size: 5px !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  border: 1px solid #f5222d;
+  border-radius: 50%;
+  /* line-height: 5px !important; */
+  text-align: center !important;
+}

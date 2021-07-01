@@ -1,0 +1,68 @@
+.title {
+  font-size: 30px;
+  color: white;
+  position: relative;
+}
+.title::before {
+  content: "";
+  display: block;
+  background: #ce3017;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 150px;
+  height: 2px;
+}
+.title::after {
+  content: "";
+  display: block;
+  background: linear-gradient(to right, #fb4226, #ce3017);
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 50px;
+  width: 50px;
+  height: 6px;
+  border-radius:2px;
+  box-shadow: 0 0 30px 0 #fb4226;
+}
+
+.titleLichChieu {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  display: grid;
+}
+.titleLichChieu:before,
+.titleLichChieu:after {
+  content:"Lịch chiếu";
+  color: #fb4226;
+  grid-area: 1/1;
+  -webkit-mask:linear-gradient(90deg,#000 50%,#0000 0) 0 50%/2ch 100%;
+  animation:c1 1s infinite cubic-bezier(0.5,220,0.5,-220);
+}
+.titleLichChieu:after {
+  -webkit-mask-position:1ch 50%;
+  --s:-1;
+}
+@keyframes c1 {100%{transform: translateY(calc(var(--s,1)*0.1%));}}
+
+.titleCunRap {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  display: grid;
+}
+.titleCunRap:before,
+.titleCunRap:after {
+  content:"Cụm rạp";
+  color: #fb4226;
+  grid-area: 1/1;
+  -webkit-mask:linear-gradient(90deg,#000 50%,#0000 0) 0 50%/2ch 100%;
+  animation:c1 1s infinite cubic-bezier(0.5,220,0.5,-220);
+}
+.titleCunRap:after {
+  -webkit-mask-position:1ch 50%;
+  --s:-1;
+}
+@keyframes c1 {100%{transform: translateY(calc(var(--s,1)*0.1%));}}
+

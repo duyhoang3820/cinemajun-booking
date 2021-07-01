@@ -1,0 +1,20 @@
+.slick-next {
+  color: black !important;
+  margin-right: 65px;
+}
+.slick-prev {
+  z-index: 9;
+  color: black !important;
+  margin-left: 35px;
+}
+.slick-next::before {
+  font-size: 50px;
+  color: #fb4226;
+  line-height: 35px !important ;
+}
+.slick-prev::before {
+  font-size: 50px;
+  color: #fb4226;
+  line-height: 35px !important ;
+}
+

@@ -1,0 +1,4 @@
+export const GET_CHI_TIET_PHIM = 'GET_CHI_TIET_PHIM';
+export const GET_PHIM_DANG_CHIEU = 'GET_PHIM_DANG_CHIEU';
+export const GET_PHIM_SAP_CHIEU = 'GET_PHIM_SAP_CHIEU';
+export const GET_PHIM_HOT = 'GET_PHIM_HOT';

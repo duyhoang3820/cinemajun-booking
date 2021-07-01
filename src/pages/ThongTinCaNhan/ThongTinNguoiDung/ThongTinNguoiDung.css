@@ -1,0 +1,125 @@
+.user {
+  border: 1px solid #fb4226 !important;
+  /* box-shadow: 0 0 5px 0 #fb4226; */
+  /* background-color: white !important; */
+}
+.form-control:focus {
+  border: 1px solid #fb4226 !important;
+  box-shadow: 0 0 10px 0 #fb4226 !important;
+}
+
+.info {
+  justify-content: center;
+}
+.lable {
+  font-size: 17px;
+  width: 20%;
+}
+.lable::after {
+  content: "";
+  margin-top: 10px;
+  width: 80%;
+  height: 1px;
+  display: block;
+  background: linear-gradient(to right, #fb4226, #ce3017);
+  box-shadow: 0 0 30px 0 #fb4226;
+  transition: 0.5s;
+}
+
+.group {
+  justify-content: space-around;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #00474f !important;
+  color: #fff;
+}
+.btnCapNhat {
+  text-align: center;
+}
+.btnCapNhat__item {
+  font-size: 16px;
+  border-radius: 4px;
+  text-align: center;
+  background: 0 0;
+  padding: 7px 25px;
+  transition: all 0.2s;
+  margin: 25px 0;
+  /* margin-left: 70px !important; */
+  background-color: #1890ff;
+  border: none;
+  color: #fff;
+}
+.btnCapNhat__item:hover {
+  background-color: #096dd9;
+}
+button:focus {
+  outline: 5px auto #096dd9;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .tablist__item {
+  color: #1890ff;
+  font-size: 20px;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:hover .tablist__item {
+  color: #1890ff;
+  font-size: 20px;
+}
+.ant-tabs-tab .ant-tabs-tab-btn .tablist__item {
+  transition: 0.3s;
+  color: #1890ff;
+}
+.ant-tabs-tab .ant-tabs-tab-btn:hover .tablist__item {
+  color: #096dd9;
+  font-size: 17px;
+}
+
+.history_table {
+  width: 99%;
+  margin: auto;
+}
+.history_table .ant-table-cell-scrollbar {
+  box-shadow: none;
+}
+.history_table div {
+  background: #002329;
+}
+.history_table table {
+  background: #081b27 !important;
+  color: #fff;
+}
+.history_table table th {
+  background: #081b27 !important;
+  color: #fff !important;
+}
+.history_table table tr:hover > td {
+  background: #0a2638 !important;
+}
+.history_table table td {
+  display: table-cell;
+}
+.history_table table td button {
+  color: #e2c72e !important;
+  background: #0a2638 !important;
+}
+.history_table table .transaction td {
+  background: #0a2638;
+}
+.history_table table .transaction td .transaction_description {
+  background: #0a2638;
+  width: 80%;
+  margin: 0 auto;
+}
+.history_table .ant-table-body {
+  overflow-y: scroll;
+  max-height: 240px;
+}
+.history_table .ant-table-body::-webkit-scrollbar {
+  width: 5px;
+  background: #666565;
+}
+.history_table .ant-table-body::-webkit-scrollbar-thumb {
+  background: #fb4226;
+}
+

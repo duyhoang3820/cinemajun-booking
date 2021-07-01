@@ -1,0 +1,29 @@
+.back {
+  font-size: 60px;
+  color: #fb4226;
+  transition: 0.3s;
+}
+
+.back:hover {
+  color: #f5222d;
+  transform: scale(1.2);
+}
+@media screen and (max-width: 767px) {
+  .logo_cinema {
+    display: none;
+  }
+  .navbar.navbar-expand-sm.navbar__logo {
+    justify-content: flex-end !important;
+    margin-top: 3px !important;
+    padding: 0 !important;
+  }
+  .back_page {
+    display: none !important;
+  }
+  .navbar__right {
+    margin-left: 50px !important;
+  }
+  .signIn {
+    margin-left: 50px !important;
+  }
+}

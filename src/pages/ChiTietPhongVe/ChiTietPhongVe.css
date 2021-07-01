@@ -1,0 +1,307 @@
+.ghe {
+  width: 37px;
+  height: 25px;
+  font-size: 14px;
+  margin: 7px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.38);
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 0;
+}
+.ghe::after {
+  border: 1px solid #4d4f5c;
+  content: "";
+  display: block;
+  font: 16px/1em sans-serif;
+  height: 9px;
+  line-height: 25px;
+  margin: 0.2em 0.56em 0 0;
+  padding: 0;
+  width: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: rgba(255, 255, 255, 0.38);
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+.ghe:hover {
+  transform: scale(1.2);
+}
+.gheDaDat {
+  /* border: 3px solid #f5222d !important; */
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  border-radius: 5px;
+  background: #333545 !important;
+  color: #000;
+  cursor: no-drop !important;
+}
+.gheDaDat:hover {
+  cursor: no-drop !important;
+  transform: none;
+}
+.gheVip {
+  background: linear-gradient(to right, #faad14, #722ed1);
+}
+.gheDangDat {
+  transition: 0.3s;
+  background: linear-gradient(to right, #73d13d, #52c41a) !important;
+  /* border: 3px solid #73d13d !important; */
+  color: #000;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  border-radius: 5px;
+}
+.btn_DatVe {
+  font-size: 16px;
+  border-radius: 4px;
+  text-align: center;
+  background: 0 0;
+  padding: 7px 25px;
+  transition: all 0.2s;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  background-color: #fb4226;
+  border: none;
+  color: #fff;
+}
+.btn_DatVe:hover {
+  background-color: #b42a14;
+}
+.gheEx {
+  width: 37px;
+  height: 25px;
+  margin: 8px 3px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.38);
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  border-radius: 5px;
+  font-weight: 600;
+}
+.gheEx::after {
+  border: 1px solid #4d4f5c;
+  content: "";
+  display: block;
+  font: 16px/1em sans-serif;
+  height: 10px;
+  line-height: 25px;
+  margin: 0.2em 0.56em 0 0;
+  padding: 0;
+  width: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: rgba(255, 255, 255, 0.38);
+  text-align: center;
+  margin-top: 27px;
+  margin-left: 3px;
+}
+.gheVipEx {
+  width: 37px;
+  height: 25px;
+  margin: 8px 3px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(to right, #faad14, #722ed1);
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  border-radius: 5px;
+  font-weight: 600;
+}
+.gheVipEx::after {
+  border: 1px solid #4d4f5c;
+  content: "";
+  display: block;
+  font: 16px/1em sans-serif;
+  height: 10px;
+  line-height: 25px;
+  margin: 0.2em 0.56em 0 0;
+  padding: 0;
+  width: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: rgba(255, 255, 255, 0.38);
+  text-align: center;
+  margin-top: 27px;
+  margin-left: 3px;
+}
+.gheDaDatEx {
+  width: 37px;
+  height: 25px;
+  margin: 8px 3px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #2b2d3d;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  border-radius: 5px;
+  font-weight: 600;
+}
+.gheDaDatEx::after {
+  border: 1px solid #4d4f5c;
+  content: "";
+  display: block;
+  font: 16px/1em sans-serif;
+  height: 10px;
+  line-height: 25px;
+  margin: 0.2em 0.56em 0 0;
+  padding: 0;
+  width: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: rgba(255, 255, 255, 0.38);
+  text-align: center;
+  margin-top: 27px;
+  margin-left: 3px;
+}
+.gheDangDatEx {
+  width: 37px;
+  height: 25px;
+  margin: 8px 3px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(to right, #73d13d, #52c41a) !important;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  border-radius: 5px;
+  font-weight: 600;
+}
+.gheDangDatEx::after {
+  border: 1px solid #4d4f5c;
+  content: "";
+  display: block;
+  font: 16px/1em sans-serif;
+  height: 8px;
+  line-height: 25px;
+  margin: 0.2em 0.56em 0 0;
+  padding: 0;
+  width: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: rgba(255, 255, 255, 0.38);
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 3.5px;
+}
+.cluster__info {
+  margin-bottom: 1rem;
+}
+.title_selected_seats {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.info_total {
+  padding: 16px;
+}
+.header_list {
+  color: #fff;
+  font-weight: 500;
+}
+.total_seat {
+  font-weight: 700;
+  color: #e2c72e;
+  font-size: 1.5rem;
+}
+.total_price {
+  font-weight: 700;
+  color: #e2c72e;
+  font-size: 1.5rem;
+}
+.ant-list-items {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ant-list-items::-webkit-scrollbar {
+  width: 3px;
+  background: #666565;
+}
+.ant-list-items::-webkit-scrollbar-thumb {
+  background: #fb4226;
+}
+.seats {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(16, min-content);
+  justify-content: center;
+}
+.ghe:nth-of-type(16n + 2) {
+  margin-right: 25px;
+}
+.ghe:nth-of-type(16n + 14) {
+  margin-right: 25px;
+}
+.thumnailImg {
+  width: 200px;
+  height: 300px;
+}
+.scrollCinema {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.scrollCinema {
+  width: 100%;
+  padding-top: 35px;
+  padding-bottom: 80px;
+}
+.scrollCinema::-webkit-scrollbar {
+  height: 6px;
+  background-color: #ffffff;
+}
+.scrollCinema::-webkit-scrollbar-thumb {
+  background-color: #ff4444;
+}
+.scrollCinema::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+  background-color: #ffffff;
+}
+.seatCinema {
+  width: 1100px;
+  margin: auto;
+}
+.datVe {
+  display: flex;
+  justify-content: center;
+}
+.titleChonGhe {
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: 0 0 0 rgb(255 0 0), 0 0 0 rgb(0 255 0), 0 0 0 rgb(0 0 255);
+  font-size: 30px;
+  animation: c2 1s infinite cubic-bezier(0.5, -2000, 0.5, 2000);
+}
+.titleChonGhe:before {
+  content: "Chọn ghế ⇓";
+  color: #fadb14;
+}
+.titleThanhToan {
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: 0 0 0 rgb(255 0 0), 0 0 0 rgb(0 255 0), 0 0 0 rgb(0 0 255);
+  font-size: 30px;
+  animation: c2 1s infinite cubic-bezier(0.5, -2000, 0.5, 2000);
+}
+.titleThanhToan:before {
+  content: "Thanh toán ⇓";
+  color: #fadb14;
+}
+@keyframes c2 {
+  25%,
+  100% {
+    text-shadow: 0.03px -0.01px 0.01px rgb(255 0 0),
+      0.02px 0.02px 0 rgb(0 255 0), -0.02px 0.02px 0 rgb(0 0 255);
+  }
+}
+.ant-empty-description{
+  color: #fadb14 !important;
+}

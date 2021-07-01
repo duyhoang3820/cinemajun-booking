@@ -1,0 +1,95 @@
+.ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list
+  .ant-tabs-tab
+  .ant-tabs-tab-btn
+  .item__nav {
+  font-size: 18px;
+  transition: 0.2s;
+  font-weight: 600;
+  color: white;
+}
+
+.ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list
+  .ant-tabs-tab
+  .ant-tabs-tab-btn
+  .item__nav:hover {
+  font-size: 20px;
+}
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:hover {
+  color: black;
+}
+
+.ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn
+  .item__nav {
+  /* color: white; */
+  font-size: 20px;
+  color: #fa5238;
+}
+
+.ant-tabs-tab .ant-tabs-tab-btn .heThongRap {
+  transition: 0.5s;
+  opacity: 0.5 !important;
+  text-align: left !important;
+}
+
+/* .ant-tabs-tab .ant-tabs-tab-btn .heThongRap::after {
+  content: "";
+  margin-top: 10px;
+  width: 0%;
+  height: 1px;
+  display: block;
+  background: linear-gradient(to right, #fb4226, #ce3017);
+  box-shadow: 0 0 30px 0 #fb4226;
+  transition: 0.5s;
+} */
+/* .ant-tabs-tab .ant-tabs-tab-btn:hover .heThongRap::after {
+  width: 100%;
+} */
+/* .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .heThongRap::after {
+    content: "";
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: linear-gradient(to right, #fb4226, #ce3017);
+    box-shadow: 0 0 30px 0 #fb4226;
+    transition: 0.5s;
+  } */
+
+  .ant-tabs-tab .ant-tabs-tab-btn:hover .heThongRap {
+    opacity: 1 !important;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .heThongRap {
+    opacity: 1 !important;
+  }
+
+.ant-tabs-nav-list .ant-tabs-tab .heThongRap span {
+  color: black;
+  font-weight: 500;
+}
+
+.ant-tabs-nav-list .ant-tabs-tab .heThongRap .tenHeThongRap {
+  font-size: 16px;
+  color: white;
+}
+
+.ant-tabs-ink-bar.ant-tabs-ink-bar-animated {
+  background: transparent;
+}
+
+.tenPhim {
+  font-size: 20px;
+  font-weight: 600;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .logoCinema {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
