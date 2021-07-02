@@ -15,7 +15,7 @@ export default function TabCumRap(props) {
             <Tabs tabPosition="top" defaultActiveKey="0">
                 {cumRap.lstCumRap?.map((cr, index) => {
                     return <TabPane key={index} tab={<div className="cumRap" style={{ width: '250px' }}>
-                        <div className="row" style={{ width: '250px', alignItems: "center", justifyContent: "space-around" }}>
+                        <div className="row pb-2" style={{ width: '250px', alignItems: "center", justifyContent: "space-around" }}>
                             <div className="col-4">
                                 <img style={{ borderRadius: '3px', }} src={imgcumRap} width='50px' height="50px"></img>
                             </div>

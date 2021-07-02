@@ -72,7 +72,6 @@ export default function Menu(props) {
           <iframe className="mt-3" width="100%" height="450px" src={chiTietPhim.trailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </TabPane>
       </Tabs>
-      
     </div>
   );
 }

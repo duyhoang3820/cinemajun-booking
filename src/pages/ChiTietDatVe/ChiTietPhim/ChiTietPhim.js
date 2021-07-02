@@ -43,13 +43,18 @@ export default function ChiTietPhim(props) {
                 }} className="btn_play_video pulsing_2" src={img} alt="" /></button>
               </div>
               <div className="detail ml-4 mt-5 text-white">
-                <p className="detail__ngayKhoiChieu text-white">
+                <p className="detail__ngayKhoiChieu text-white ml-1">
                   Ngày khởi chiếu:
                   {moment(chiTietPhim.ngayKhoiChieu).format(" DD.MM.YYYY")}
                 </p>
-                <p className="detail__tenPhim text-white">{chiTietPhim.tenPhim}</p>
+                <div className="row ml-1" style={{ alignItems: "center" }}>
+                  <span className="p-1 px-2 mr-3" style={{ backgroundColor: 'red', color: "white", borderRadius: '3px', fontSize: "12px", fontWeight: 'bold' }}>C16</span>
+                  <span className="detail__tenPhim text-white">{chiTietPhim.tenPhim}</span>
+                </div>
+                <p className="mb-5 mt-2 ml-1" style={{ color: '#e9e9e9', fontSize: '14px' }}>120 phút - 7.4 IMDb - 2D/Digitals</p>
+
                 {/* <p>Thời lượng: {chiTietPhim.thoiLuong}</p> */}
-                <Link to="cumRap" smooth={true} duration={500} className="btn_muaVe">Mua vé</Link>
+                <Link to="cumRap" smooth={true} duration={500} className="btn_muaVe ml-1">Đặt vé</Link>
               </div>
             </div>
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-5 mt-5 danhGiaPhim ">

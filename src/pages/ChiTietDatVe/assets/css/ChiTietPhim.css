@@ -70,11 +70,9 @@
 .detail__tenPhim{
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 50px;
 }
 .detail__ngayKhoiChieu{
   font-size: 16px;
-  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 280px) {
