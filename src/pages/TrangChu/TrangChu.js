@@ -10,7 +10,7 @@ export default function TrangChu(props) {
     }, [])
     return (
         <div className="" >
-            <div id="/trangchu">
+            <div id="trangchu">
                 <CarouselMovie />
             </div>
             <br id="lichChieu" /><br />

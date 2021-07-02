@@ -18,13 +18,13 @@ export default function TabListMovies(props) {
 
     const { listPhim } = useSelector(state => state.QuanLyPhimReducer);
     const { listPhimSapChieu } = useSelector(state => state.QuanLyPhimReducer);
-    const { listPhimHot } = useSelector(state => state.QuanLyPhimReducer);
+    // const { listPhimHot } = useSelector(state => state.QuanLyPhimReducer);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(layDanhSachPhimAction())
         dispatch(layDanhSachPhimSapChieu())
-        dispatch(layDanhSachPhimHot())
+        // dispatch(layDanhSachPhimHot())
     }, []);
 
     const { Meta } = Card;
@@ -71,7 +71,7 @@ export default function TabListMovies(props) {
         })
     }
     const renderHotMoviesList = () => {
-        return listPhimHot.map((phim, index) => {
+        return listPhimSapChieu.map((phim, index) => {
             return <Card className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index}>
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
@@ -92,18 +92,18 @@ export default function TabListMovies(props) {
 
     return (
         <div className="" >
-            <Tabs defaultActiveKey="2" centered={true} size={size}>
-                <TabPane tab={<span className="type__list_film">Phim sắp chiếu</span>} key="1">
+            <Tabs defaultActiveKey="b" centered={true} size={size}>
+                <TabPane tab={<span className="type__list_film">Phim sắp chiếu</span>} key="a">
                     <Slider className="m-1" {...settingTabListMovies}>
                         {renderUpCommingMoviesList()}
                     </Slider>
                 </TabPane>
-                <TabPane tab={<span className="type__list_film">Phim đang chiếu</span>} key="2">
+                <TabPane tab={<span className="type__list_film">Phim đang chiếu</span>} key="b">
                     <Slider {...settingTabListMovies}>
                         {renderCurrentMoviesList()}
                     </Slider>
                 </TabPane>
-                <TabPane tab={<span className="type__list_film">Phim hot nhất</span>} key="3">
+                <TabPane tab={<span className="type__list_film">Phim hot nhất</span>} key="c">
                     <Slider {...settingTabListMovies}>
                         {renderHotMoviesList()}
                     </Slider>

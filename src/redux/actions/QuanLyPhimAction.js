@@ -13,7 +13,7 @@ export const layDanhSachPhimAction = () => {
         try {
 
             let result = await axios({
-                url: `${DOMAIN}/QuanLyPhim/LayDanhSachPhim?maNhom=GP03`,
+                url: `${DOMAIN}/QuanLyPhim/LayDanhSachPhim?maNhom=GP09`,
                 method: 'GET'
             })
             dispatch({
@@ -30,9 +30,6 @@ export const layDanhSachPhimAction = () => {
 }
 
 export const layDanhSachPhimSapChieu = () => {
-    function timeout(delay) {
-        return new Promise(res => setTimeout(res, delay));
-    }
     return async (dispatch) => {
         dispatch({
             type: DISPLAY_LOADING
@@ -40,7 +37,7 @@ export const layDanhSachPhimSapChieu = () => {
         await timeout(1800);
         try {
             let result = await axios({
-                url: `${DOMAIN}/QuanLyPhim/LayDanhSachPhim?maNhom=GP02`,
+                url: `${DOMAIN}/QuanLyPhim/LayDanhSachPhim?maNhom=GP07`,
                 method: 'GET'
             })
             dispatch({
