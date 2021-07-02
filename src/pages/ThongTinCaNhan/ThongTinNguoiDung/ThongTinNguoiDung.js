@@ -74,7 +74,7 @@ export default function ThongTinNguoiDung() {
             <a className="ml-4" onClick={() => {
                 history.goBack()
             }}><i className="fa fa-angle-left back"></i></a>
-            <Tabs className="tablist" defaultActiveKey="1" >
+            <Tabs className="tablist" defaultActiveKey="1" centered={true}>
                 <TabPane tab={<div className="tablist__item"><span><i className="fa fa-user"></i> Thông tin cá nhân</span></div>} key="1">
                     <div className="container py-4">
                         < form onSubmit={formik.handleSubmit} >

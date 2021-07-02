@@ -7,7 +7,7 @@ export const LayThongTinLichChieuHeThongRap = () => {
     return async (dispatch) => {
         try {
             let result = await axios({
-                url: `${DOMAIN}/QuanLyRap/LayThongTinLichChieuHeThongRap`,
+                url: `${DOMAIN}/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP09`,
                 method: 'GET'
             })
             dispatch({

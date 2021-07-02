@@ -89,7 +89,7 @@ export default function CinemaCluster(props) {
 
     return (
         <div className="mt-5 pb-4 bg-light">
-            <Tabs tabPosition="left">
+            <Tabs tabPosition="left" centered={true}>
                 {renderHeThongRap()}
             </Tabs>
             

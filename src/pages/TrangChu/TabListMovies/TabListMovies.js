@@ -35,7 +35,7 @@ export default function TabListMovies(props) {
     const [trailer, setTrailer] = useState();
 
     const renderUpCommingMoviesList = () => {
-        return listPhimSapChieu.map((phim, index) => {
+        return listPhimSapChieu.slice(0, 20).map((phim, index) => {
             return <Card className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index}>
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
@@ -53,7 +53,7 @@ export default function TabListMovies(props) {
         })
     }
     const renderCurrentMoviesList = () => {
-        return listPhim.map((phim, index) => {
+        return listPhim.slice(0, 20).map((phim, index) => {
             return <Card className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
@@ -71,7 +71,7 @@ export default function TabListMovies(props) {
         })
     }
     const renderHotMoviesList = () => {
-        return listPhimSapChieu.map((phim, index) => {
+        return listPhimSapChieu.slice(0, 20).map((phim, index) => {
             return <Card className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index}>
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
@@ -93,17 +93,17 @@ export default function TabListMovies(props) {
     return (
         <div className="" >
             <Tabs defaultActiveKey="b" centered={true} size={size}>
-                <TabPane tab={<span className="type__list_film">Phim sắp chiếu</span>} key="a">
-                    <Slider className="m-1" {...settingTabListMovies}>
+                <TabPane tab={<div ><span className="type__list_film">Phim sắp chiếu</span></div>} key="a">
+                    <Slider {...settingTabListMovies}>
                         {renderUpCommingMoviesList()}
                     </Slider>
                 </TabPane>
-                <TabPane tab={<span className="type__list_film">Phim đang chiếu</span>} key="b">
+                <TabPane tab={<div ><span className="type__list_film">Phim đang chiếu</span></div>} key="b">
                     <Slider {...settingTabListMovies}>
                         {renderCurrentMoviesList()}
                     </Slider>
                 </TabPane>
-                <TabPane tab={<span className="type__list_film">Phim hot nhất</span>} key="c">
+                <TabPane tab={<div ><span className="type__list_film">Phim hot nhất</span></div>} key="c">
                     <Slider {...settingTabListMovies}>
                         {renderHotMoviesList()}
                     </Slider>
