@@ -3,15 +3,13 @@ import React, { useState } from "react";
 import { Tabs, Tag } from "antd";
 import "../assets/css/Menu.css";
 import moment from "moment";
-import { NavLink } from "react-router-dom";
+import MenuTabCumRap from "./MenuTabCumRap";
+
 
 const { TabPane } = Tabs;
 export default function Menu(props) {
   const { heThongRapChieu, chiTietPhim } = props;
-  // console.log(chiTietPhim);
-  function callback(key) {
-    // console.log(key);
-  }
+  // console.log('chiTietPhim',chiTietPhim);
 
   const [state, setstate] = useState({
     tabPosition: "left",
@@ -22,7 +20,7 @@ export default function Menu(props) {
   const renderHeThongRap = () => {
     return heThongRapChieu?.map((htr, index) => {
       return (
-        <TabPane
+        <TabPane 
           tab={
             <div className="heThongRap d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
               <img className="logoCinema" src={htr.logo} width={50} height={50} alt="" />
@@ -31,20 +29,7 @@ export default function Menu(props) {
           }
           key={index}
         >
-          {htr.cumRapChieu?.map((cumRap, index) => {
-            return (
-              <div key={index}>
-                <p className="m-0 font-weight-bold text-white" style={{ fontSize: '20px' }}>{cumRap.tenCumRap}</p>
-                <div className="row my-2">
-                  {cumRap.lichChieuPhim?.slice(0, 12).map((lichChieu, index) => {
-                    return <NavLink key={index} className="col-12 col-sm-12 col-md-4 col-lg-3" to={`/chi-tiet-phong-ve/${lichChieu.maLichChieu}`}>
-                      <Tag className="m-1 p-1 tagTimes" color="#2db7f5" style={{ fontSize: '17px' }}> {moment(lichChieu.ngayChieuGioChieu).format("hh:mm A")} </Tag>
-                    </NavLink>
-                  })}
-                </div>
-              </div>
-            );
-          })}
+          <MenuTabCumRap cumRap={htr.cumRapChieu} />
         </TabPane>
       );
     });
@@ -54,9 +39,9 @@ export default function Menu(props) {
 
   return (
     <div>
-      <Tabs defaultActiveKey="1" onChange={callback} centered={true}>
+      <Tabs defaultActiveKey="1" centered={true} style={{borderRadius:'5px'}}>
         <TabPane tab={<span className="item__nav">Lịch chiếu</span>} key="1">
-          <Tabs tabPosition={tabPosition}>{renderHeThongRap()}</Tabs>
+          <Tabs className="bg-light" tabPosition={tabPosition}>{renderHeThongRap()}</Tabs>
         </TabPane>
         <TabPane tab={<span className="item__nav">Thông tin</span>} key="2">
           <div className="row">

@@ -44,19 +44,7 @@
 .ant-tabs-nav-list {
   padding-top: 10px;
 }
-/* .ant-tabs-tab .ant-tabs-tab-btn .cumRap::after {
-  content: "";
-  margin-top: 10px;
-  width: 0%;
-  height: 1px;
-  display: block;
-  background: linear-gradient(to right, #fb4226, #ce3017);
-  box-shadow: 0 0 30px 0 #fb4226;
-  transition: 0.5s;
-}
-.ant-tabs-tab .ant-tabs-tab-btn:hover .cumRap::after {
-  width: 100%;
-} */
+
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .cumRap .tenCumRap {
   color: black;
   font-size: 14px;
@@ -96,7 +84,7 @@
   position: relative;
   mask-position: center center;
   text-align: center;
-  mask-image: url("../assets/movie-seat.png");
+  mask-image: url("../img/movie-seat.png");
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
   cursor: pointer;
@@ -110,6 +98,10 @@
   font-size: 15px !important;
   font-weight: bold;
   transform: scale(1.2);
+}
+.cinemaSystem{
+  border-radius: 5px;
+  box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.5);
 }
 
 .ant-tabs-tabpane .ant-tabs-tabpane-active .listShowTimes {

@@ -6,7 +6,7 @@ import { Tabs, Tag } from 'antd';
 import { LayThongTinLichChieuHeThongRap } from '../../../redux/actions/HeThongRapAction';
 import moment from 'moment';
 import { NavLink } from 'react-router-dom';
-import './assets/CinemaSystem.css'
+import './assets/css/CinemaSystem.css'
 import TabCumRap from './TabCumRap';
 
 export default function CinemaCluster(props) {
@@ -78,17 +78,13 @@ export default function CinemaCluster(props) {
                 <img className="logoCinema" src={rap.logo} style={{ borderRadius: '50%', }} width='50' height='50' alt="" />
             </div>} key={index} >
                 <div className="">
-                    <TabCumRap cumRap={rap} />
+                    <TabCumRap cumRap={rap.lstCumRap} />
                 </div>
             </TabPane>
         })
     }
-
-
-
-
     return (
-        <div className="mt-5 pb-4 bg-light">
+        <div className="mt-5 pb-4 bg-light cinemaSystem">
             <Tabs tabPosition="left" centered={true}>
                 {renderHeThongRap()}
             </Tabs>

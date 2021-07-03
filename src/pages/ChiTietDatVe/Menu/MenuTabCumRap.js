@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { Tabs } from 'antd';
-import TabLichChieu from './TabLichChieu';
-import './assets/css/CinemaSystem.css'
-import mega from './assets/img/mega.jpg'
-import bhdstar from './assets/img/bhd-star.png'
-import cgv from './assets/img/cgv.jpg'
-import cns from './assets/img/cinestar.jpg'
-import lotte from './assets/img/lotte-cinema.jpg'
-import galaxy from './assets/img/galaxy.jpg'
+import MenuTabLichChieu from './MenuTabLichChieu'
+import '../../TrangChu/CinemaSystem/assets/css/CinemaSystem.css'
+import mega from '../../TrangChu/CinemaSystem/assets/img/mega.jpg'
+import bhdstar from '../../TrangChu/CinemaSystem/assets/img/bhd-star.png'
+import cgv from '../../TrangChu/CinemaSystem/assets/img/cgv.jpg'
+import cns from '../../TrangChu/CinemaSystem/assets/img/cinestar.jpg'
+import lotte from '../../TrangChu/CinemaSystem/assets/img/lotte-cinema.jpg'
+import galaxy from '../../TrangChu/CinemaSystem/assets/img/galaxy.jpg'
 
 
-export default function TabCumRap(props) {
+export default function MenuTabCumRap(props) {
     const { TabPane } = Tabs;
     let cumRap = props.cumRap;
     // console.log('cumRap', cumRap);
@@ -82,7 +82,7 @@ export default function TabCumRap(props) {
                         </div>
                     </div>
                     }>
-                        <TabLichChieu lichChieu={cr} />
+                        <MenuTabLichChieu lichChieu={cr} imgCumRap={detail.img} />
                     </TabPane>
                 })}
             </Tabs>
