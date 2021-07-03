@@ -3,12 +3,16 @@ import React from 'react'
 import { Tabs } from 'antd';
 import './assets/CinemaSystem.css'
 import TabLichChieu from './TabLichChieu';
-import imgcumRap from './assets/img-cum-rap.jpg'
+import mega from './assets/mega.jpg'
+import bhdstar from './assets/bhd-star.png'
+import cgv from './assets/cgv.jpg'
+import cns from './assets/cinestar.jpg'
+import lotte from './assets/lotte-cinema.jpg'
+import galaxy from './assets/galaxy.jpg'
 
 
 export default function TabCumRap(props) {
     const { TabPane } = Tabs;
-
     let cumRap = props.cumRap;
     console.log('cumRap', cumRap);
     const splitCumRap = (tenCumRap) => {
@@ -18,27 +22,33 @@ export default function TabCumRap(props) {
         let systems = [
             {
                 name: 'BHD Star',
-                color: '#8bc541'
+                color: '#8bc541',
+                img: bhdstar
             },
             {
                 name: 'CGV',
-                color: 'red'
+                color: 'red',
+                img: cgv
             },
             {
                 name: 'CNS',
-                color: '#df0d7a'
+                color: '#df0d7a',
+                img: cns
             },
             {
                 name: 'Lotte',
-                color: '#ca4137'
+                color: '#ca4137',
+                img: lotte
             },
             {
                 name: 'MegaGS',
-                color: '#e5a813'
+                color: '#e5a813',
+                img: mega
             },
             {
                 name: 'GLX',
-                color: 'orange'
+                color: 'orange',
+                img: galaxy
             },
         ]
         let arr = systems.find(item => {
@@ -55,15 +65,16 @@ export default function TabCumRap(props) {
         <div>
             <Tabs tabPosition="top" defaultActiveKey="0">
                 {cumRap.lstCumRap?.map((cr, index) => {
+                    const detail = styleClass(cr.tenCumRap)
                     return <TabPane key={index} tab={<div className="cumRap" style={{ width: '250px' }}>
                         <div className="row pb-2" style={{ width: '250px', alignItems: "center", justifyContent: "space-around" }}>
                             <div className="col-4">
-                                <img style={{ borderRadius: '3px', }} src={imgcumRap} width='50px' height="50px"></img>
+                                <img style={{ borderRadius: '3px', }} src={detail.img} width='50px' height="50px"></img>
                             </div>
                             <div className="col-8">
                                 <p className="tenCumRap m-0">
-                                    <span style={{ color: styleClass(cr.tenCumRap).color }}>
-                                    {splitCumRap(cr.tenCumRap)[0]}</span>
+                                    <span style={{ color: detail.color }}>
+                                        {splitCumRap(cr.tenCumRap)[0]}</span>
                                     <span style={{ color: 'black' }}> - {splitCumRap(cr.tenCumRap)[1]}</span></p>
                                 <p className="diaChi m-0">{cr.diaChi}</p>
                                 <p className="chiTiet m-0">[Chi tiết]</p>

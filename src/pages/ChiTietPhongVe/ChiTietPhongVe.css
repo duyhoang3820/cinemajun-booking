@@ -1,6 +1,6 @@
-.bgPhongVe{
-  background-image: url('../ChiTietDatVe/assets/img/movie-details-bg.jpg');
-  background-repeat:repeat;
+.bgPhongVe {
+  background-image: url("../ChiTietDatVe/assets/img/movie-details-bg.jpg");
+  background-repeat: repeat;
   background-size: contain;
   background-position: center;
 }
@@ -310,6 +310,8 @@
       0.02px 0.02px 0 rgb(0 255 0), -0.02px 0.02px 0 rgb(0 0 255);
   }
 }
-.ant-empty-description{
+.ant-empty-description {
   color: #fadb14 !important;
 }
+
+

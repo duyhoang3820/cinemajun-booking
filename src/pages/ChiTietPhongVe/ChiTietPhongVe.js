@@ -134,6 +134,7 @@ export default function ChiTietPhongVe(props) {
                                     />
                                 </Panel>
                             </Collapse>
+
                             <div className="info_total mt-1" style={{ backgroundColor: '#00474f' }}>
                                 <table>
                                     <tbody>
@@ -148,6 +149,7 @@ export default function ChiTietPhongVe(props) {
                                     </tbody>
                                 </table>
                             </div>
+
                             <div className="datVe pt-4">
                                 {taiKhoan.trim() !== '' ?
                                     danhSachGheDangDat.length !== 0 ? <button onClick={() => {
@@ -185,6 +187,7 @@ export default function ChiTietPhongVe(props) {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
