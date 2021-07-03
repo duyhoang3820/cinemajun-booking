@@ -27,7 +27,7 @@ export default function ChiTietPhim(props) {
   }, []);
 
   return (
-    <div>
+    <div className="bgImg">
       <a className="ml-4" onClick={() => {
         history.goBack()
       }}><i className="fa fa-angle-left back"></i></a>

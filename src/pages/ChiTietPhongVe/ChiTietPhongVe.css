@@ -1,3 +1,9 @@
+.bgPhongVe{
+  background-image: url('../ChiTietDatVe/assets/img/movie-details-bg.jpg');
+  background-repeat:repeat;
+  background-size: contain;
+  background-position: center;
+}
 .ghe {
   width: 37px;
   height: 25px;
@@ -274,6 +280,8 @@
   justify-content: center;
 }
 .titleChonGhe {
+  background-color: rgba(8, 6, 11, 0.6);
+  box-shadow: 20px 5px 30px 20px rgba(8, 6, 11, 0.6);
   font-weight: bold;
   font-family: monospace;
   text-shadow: 0 0 0 rgb(255 0 0), 0 0 0 rgb(0 255 0), 0 0 0 rgb(0 0 255);

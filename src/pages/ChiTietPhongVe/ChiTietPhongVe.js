@@ -50,7 +50,7 @@ export default function ChiTietPhongVe(props) {
     }
 
     return (
-        <div style={{ backgroundColor: '#002329' }} >
+        <div className="bgPhongVe" style={{ backgroundColor: '#002329' }} >
             <a className="ml-4" onClick={() => {
                 history.goBack()
             }}><i className="fa fa-angle-left back"></i></a>

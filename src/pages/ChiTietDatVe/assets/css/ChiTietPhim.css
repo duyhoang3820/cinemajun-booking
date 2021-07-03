@@ -1,6 +1,12 @@
 .bgMovie {
   z-index: 1;
 }
+.bgImg{
+  background-image: url('../img/movie-details-bg.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .banner_phim {
   padding: 70px 0;
