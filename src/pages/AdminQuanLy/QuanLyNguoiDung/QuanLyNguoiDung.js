@@ -80,7 +80,7 @@ export default function QuanLyNguoiDung(props) {
                         onConfirm={() => {
                             dispatch(xoaNguoiDung(record.taiKhoan))
                         }}
-                        onCancel={()=>{
+                        onCancel={() => {
                             return
                         }}
                         okText="Yes"
@@ -129,7 +129,7 @@ export default function QuanLyNguoiDung(props) {
             </div>
 
             {renderDanhSachNguoiDung()}
-            <Table columns={columns} dataSource={data} scroll={{ x: 1300 }} sticky />
+            <Table columns={columns} dataSource={data} pagination={{ position: ["bottomCenter"] }} scroll={{ y: 500, x: 1300 }} sticky />
         </div >
     )
 }

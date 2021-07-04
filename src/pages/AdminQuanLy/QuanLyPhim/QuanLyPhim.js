@@ -148,7 +148,7 @@ export default function QuanLyPhim() {
                 </div>
             </div>
             {renderDanhSachPhim()}
-            <Table columns={columns} dataSource={data} scroll={{ x: 1300 }} sticky />
+            <Table columns={columns} dataSource={data} pagination={{position: ["bottomCenter"] }} scroll={{ y: 500, x: 1300 }} sticky />
 
         </div >
     )

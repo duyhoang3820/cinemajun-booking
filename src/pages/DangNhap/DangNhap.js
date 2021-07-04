@@ -1,19 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import './assets/css/font-awesome.css';
 import './assets/css/styleDangNhap.css'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import { Redirect } from 'react-router';
-import { dangNhapAction } from '../../redux/actions/NguoidungAction';
-import { USERLOGIN } from '../../util/constants/settingSystem';
-import { history } from '../../App';
+import { dangKyAction, dangNhapAction } from '../../redux/actions/NguoidungAction';
 
 export default function DangNhap() {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+    const [state, setstate] = useState({
+        isActive: ''
+    })
     const dispatch = useDispatch();
-    const formik = useFormik({
+    const formik_dangNhap = useFormik({
         initialValues: {
             taiKhoan: '',
             matKhau: '',
@@ -23,67 +24,137 @@ export default function DangNhap() {
             matKhau: Yup.string().required("Required!"),
         }),
         onSubmit: values => {
-            // console.log('values', values);
+            console.log('values', values);
             const action = dangNhapAction(values);
             dispatch(action);
             // console.log('value',values);
             // console.log('action',action);
         },
     });
-    if (localStorage.getItem(USERLOGIN)) {
-        alert('Bạn đã đăng nhập thành công!')
-        return <Redirect to="/" />
-    }
+    const formik_dangKy = useFormik({
+        initialValues: {
+            taiKhoan: '',
+            matKhau: '',
+            hoTen: '',
+            email: '',
+            soDt: '',
+            maLoaiNguoiDung: 'KhachHang',
+            maNhom: 'GP01'
+        },
+        validationSchema: Yup.object().shape({
+            taiKhoan: Yup.string().min(2, "Mininum 2 characters")
+                .max(15, "Maximum 15 characters")
+                .required("Required!"),
+            matKhau: Yup.string().min(6, "Minimum 6 characters")
+                .max(15, "Maximum 15 characters")
+                .required("Required!"),
+            email: Yup.string()
+                .email("Invalid email format")
+                .required("Required!"),
+            hoTen: Yup.string().min(2, "Mininum 2 characters")
+                .max(15, "Maximum 15 characters")
+                .required("Required!"),
+            soDt: Yup.string().min(9, "Mininum 9 characters")
+                .max(11, "Maximum 11 characters")
+                .required("Required!"),
+        }),
+        onSubmit: values => {
+            dispatch(dangKyAction(values))
+            // console.log('value', values);
+        }
+    });
+    // if (localStorage.getItem(USERLOGIN)) {
+    //     alert('Bạn đã đăng nhập thành công!')
+    //     return <Redirect to="/" />
+    // }
+
 
     return (
-        <div>
-            <div className="header-w3l">
-                <h1 className="text-white mt-3 display-4">Đăng nhập</h1>
-            </div>
-            <div className="row w-100">
-                <div className="col-12 col-sm-12 col-xl-6">
-                    <div className="mt-3">
-                        <h2 className="agileits1">Welcome - to - CineJun</h2>
-                    </div>
-                    <div className="btn_directory">
-                        <button onClick={() => { history.push('/') }} className="btn_Home mx-5" >Trang chủ</button>
-                        <button onClick={() => { history.push('/dangky') }} className="btn_SingUp mx-5">Đăng ký</button>
-                    </div>
-                </div>
-                <div className="col-12 col-sm-12 col-xl-6">
-                    <div className="main-w3layouts-agileinfo">
-                        <div className="wthree-form">
-                            <form method="post" onSubmit={formik.handleSubmit}>
-                                <div className="form-sub-w3">
-                                    <input type="text" name="taiKhoan" placeholder="Tài khoản" required onChange={formik.handleChange} />
-                                    {formik.errors.taiKhoan && formik.touched.taiKhoan && (
-                                        <p className="text-danger">{formik.errors.taiKhoan} </p>
-                                    )}
-                                    <div className="icon-w3">
-                                        <i className="fa fa-user" aria-hidden="true" />
-                                    </div>
-                                </div>
-                                <div className="form-sub-w3">
-                                    <input type="password" name="matKhau" placeholder="Mật khẩu" required onChange={formik.handleChange} />
-                                    {formik.errors.matKhau && formik.touched.matKhau && (
-                                        <p className="text-danger">{formik.errors.matKhau} </p>
-                                    )}
-                                    <div className="icon-w3">
-                                        <i className="fa fa-unlock-alt" aria-hidden="true" />
-                                    </div>
-                                </div>
-                                <label className="anim">
-                                    <input type="checkbox" className="checkbox" />
-                                    <span>Remember Me</span>
-                                    <a href="#">Quên mật khẩu?</a>
-                                </label>
-                                <div className="clear" />
-                                <div className="submit-agileits">
-                                    <input type="submit" value="Đăng nhập" />
-                                </div>
-                            </form>
+        <div className="login">
+            <div className={`${state.isActive} container_login`}>
+                <div className="card_login"></div>
+                <div className="card_login">
+                    <h1 className="title_login">Đăng nhập</h1>
+                    <form onSubmit={formik_dangNhap.handleSubmit}>
+                        <div className="input-container">
+                            <input name="taiKhoan" type="text" id="taiKhoan" required="required" onChange={formik_dangNhap.handleChange} />
+                            {formik_dangNhap.errors.taiKhoan && formik_dangNhap.touched.taiKhoan && (
+                                <p className="text-danger">{formik_dangNhap.errors.taiKhoan} </p>
+                            )}
+                            <label htmlFor="taiKhoan">Tài khoản</label>
+                            <div className="bar"></div>
                         </div>
-                    </div>
+                        <div className="input-container">
+                            <input type="password" name="matKhau" id="matKhau" required="required" onChange={formik_dangNhap.handleChange} />
+                            {formik_dangNhap.errors.matKhau && formik_dangNhap.touched.matKhau && (
+                                <p className="text-danger">{formik_dangNhap.errors.matKhau} </p>
+                            )}
+                            <label htmlFor="matKhau">Mật khẩu</label>
+                            <div className="bar"></div>
+                        </div>
+                        <div className="button-container">
+                            <button type="submit"><span>Đăng nhập</span></button>
+                        </div>
+                    </form>
+                </div>
+                <div className="card_login alt">
+                    <div className="toggle" onClick={() => {
+                        setstate({
+                            isActive: 'active'
+                        })
+                    }}></div>
+                    <h1 className="title_login">Đăng ký
+                        <div className="close" onClick={() => {
+                            setstate({
+                                isActive: ''
+                            })
+                        }}></div>
+                    </h1>
+                    <form onSubmit={formik_dangKy.handleSubmit}>
+                        <div className="input-container">
+                            <input type="text" name="taiKhoan" required onChange={formik_dangKy.handleChange} />
+                            {formik_dangKy.errors.taiKhoan && formik_dangKy.touched.taiKhoan && (
+                                <p className="text-danger">{formik_dangKy.errors.taiKhoan} </p>
+                            )}
+                            <label htmlFor="taiKhoan">Tài khoản</label>
+                            <div className="bar"></div>
+                        </div>
+                        <div className="input-container">
+                            <input type="password" name="matKhau" required onChange={formik_dangKy.handleChange} />
+                            {formik_dangKy.errors.matKhau && formik_dangKy.touched.matKhau && (
+                                <p className="text-danger">{formik_dangKy.errors.matKhau} </p>
+                            )}
+                            <label htmlFor="matKhau">Mật khẩu</label>
+                            <div className="bar"></div>
+                        </div>
+                        <div className="input-container">
+                            <input type="text" name="email" required onChange={formik_dangKy.handleChange} />
+                            {formik_dangKy.errors.email && formik_dangKy.touched.email && (
+                                <p className="text-danger">{formik_dangKy.errors.email} </p>
+                            )}
+                            <label htmlFor="email">Email</label>
+                            <div className="bar"></div>
+                        </div>
+                        <div className="input-container">
+                            <input type="text" name="hoTen" required onChange={formik_dangKy.handleChange} />
+                            {formik_dangKy.errors.hoTen && formik_dangKy.touched.hoTen && (
+                                <p className="text-danger">{formik_dangKy.errors.hoTen} </p>
+                            )}
+                            <label htmlFor="hoTen">Họ và tên</label>
+                            <div className="bar"></div>
+                        </div>
+                        <div className="input-container">
+                            <input type="text" name="soDt" required onChange={formik_dangKy.handleChange} />
+                            {formik_dangKy.errors.soDt && formik_dangKy.touched.soDt && (
+                                <p className="text-danger">{formik_dangKy.errors.soDt} </p>
+                            )}
+                            <label htmlFor="soDt">Số điện thoại</label>
+                            <div className="bar"></div>
+                        </div>
+                        <div className="button-container">
+                            <button type="submit"><span>Đăng ký</span></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

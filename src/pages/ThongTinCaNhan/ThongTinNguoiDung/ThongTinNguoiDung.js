@@ -77,39 +77,39 @@ export default function ThongTinNguoiDung() {
             <Tabs className="tablist" defaultActiveKey="1" centered={true}>
                 <TabPane tab={<div className="tablist__item"><span><i className="fa fa-user"></i> Thông tin cá nhân</span></div>} key="1">
                     <div className="py-4">
-                        < form onSubmit={formik.handleSubmit} style={{ width: '80%' }}>
+                        < form className="m-auto" onSubmit={formik.handleSubmit} style={{ width: '80%' }}>
                             <div className="row info ">
                                 <div className="" style={{ width: '100%' }}>
                                     <div className="form-group d-flex group">
-                                        <label htmlFor="taiKhoan" className="text-primary mb-2 lable"><i className="fa fa-user mr-2"></i> Tài khoản</label>
-                                        {readOnly === true ? <input className="form-control user w-50" readOnly={true} type="text" name="taiKhoan" id="taiKhoan" value={dataUser?.dataUser.taiKhoan} /> : <Tooltip title="Tài khoản không thể thay đổi!" color={colors} key={colors}>
-                                            <input className="form-control user w-50" readOnly={true} type="text" name="taiKhoan" id="taiKhoan" value={dataUser?.dataUser.taiKhoan} />
+                                        <label htmlFor="taiKhoan" className="text-primary mb-2 lable_input"><i className="fa fa-user mr-2"></i> Tài khoản</label>
+                                        {readOnly === true ? <input className="form-control user w-50 " readOnly={true} type="text" name="taiKhoan" id="taiKhoan" value={dataUser?.dataUser.taiKhoan} /> : <Tooltip title="Tài khoản không thể thay đổi!" color={colors} key={colors}>
+                                            <input className="form-control user w-50 " readOnly={true} type="text" name="taiKhoan" id="taiKhoan" value={dataUser?.dataUser.taiKhoan} />
                                         </Tooltip>}
                                     </div>
                                     <div className="form-group d-flex group">
-                                        <label htmlFor="matKhau" className="text-primary mb-2 lable"><i className="fa fa-lock mr-2"></i> Mật khẩu</label>
-                                        <input readOnly={readOnly} className="form-control user w-50" type="text" name="matKhau" id="matKhau" value={dataUser?.dataUser.matKhau} onChange={formik.handleChange} />
+                                        <label htmlFor="matKhau" className="text-primary mb-2 lable_input"><i className="fa fa-lock mr-2"></i> Mật khẩu</label>
+                                        <input readOnly={readOnly} className="form-control user w-50 " type="text" name="matKhau" id="matKhau" value={dataUser?.dataUser.matKhau} onChange={formik.handleChange} />
                                         {formik.errors.matKhau && formik.touched.matKhau && (
                                             <p className="text-danger">{formik.errors.matKhau} </p>
                                         )}
                                     </div>
                                     <div className="form-group d-flex group">
-                                        <label htmlFor="hoTen" className="text-primary mb-2 lable"><i className="fa fa-tag mr-2"></i> Họ tên</label>
-                                        <input readOnly={readOnly} className="form-control user w-50" type="text" name="hoTen" id="hoTen" value={dataUser?.dataUser.hoTen} onChange={formik.handleChange} />
+                                        <label htmlFor="hoTen" className="text-primary mb-2 lable_input"><i className="fa fa-tag mr-2"></i> Họ tên</label>
+                                        <input readOnly={readOnly} className="form-control user w-50 " type="text" name="hoTen" id="hoTen" value={dataUser?.dataUser.hoTen} onChange={formik.handleChange} />
                                         {formik.errors.hoTen && formik.touched.hoTen && (
                                             <p className="text-danger">{formik.errors.hoTen} </p>
                                         )}
                                     </div>
                                     <div className="form-group d-flex group">
-                                        <label htmlFor="Email" className="text-primary mb-2 lable"><i className="fa fa-envelope mr-2"></i> Email</label>
-                                        <input readOnly={readOnly} className="form-control user w-50" type="email" name="email" id="Email" value={dataUser?.dataUser.email} onChange={formik.handleChange} />
+                                        <label htmlFor="Email" className="text-primary mb-2 lable_input"><i className="fa fa-envelope mr-2"></i> Email</label>
+                                        <input readOnly={readOnly} className="form-control user w-50 " type="email" name="email" id="Email" value={dataUser?.dataUser.email} onChange={formik.handleChange} />
                                         {formik.errors.email && formik.touched.email && (
                                             <p className="text-danger">{formik.errors.email} </p>
                                         )}
                                     </div>
                                     <div className="form-group d-flex group">
-                                        <label htmlFor="soDT" className="text-primary mb-2 lable"><i className="fa fa-phone mr-2"></i> Số điện thoại</label>
-                                        <input readOnly={readOnly} className="form-control user w-50" type="text" name="soDT" id="soDT" value={dataUser?.dataUser.soDT} onChange={formik.handleChange} />
+                                        <label htmlFor="soDT" className="text-primary mb-2 lable_input"><i className="fa fa-phone mr-2"></i> Số điện thoại</label>
+                                        <input readOnly={readOnly} className="form-control user w-50 " type="text" name="soDT" id="soDT" value={dataUser?.dataUser.soDT} onChange={formik.handleChange} />
                                         {formik.errors.soDT && formik.touched.soDT && (
                                             <p className="text-danger">{formik.errors.soDT} </p>
                                         )}

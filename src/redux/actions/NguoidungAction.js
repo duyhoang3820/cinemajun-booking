@@ -54,6 +54,7 @@ export const dangNhapAction = (userLogin) => {
 }
 
 export const dangKyAction = (userRegister) => {
+    const value = 'true';
     return async dispatch => {
         dispatch({
             type: DISPLAY_LOADING
@@ -65,6 +66,10 @@ export const dangKyAction = (userRegister) => {
                 method: 'POST',
                 data: userRegister
             })
+            dispatch({
+                type: 'IS_ACTIVE',
+                isActived: value
+            })
             Swal.fire({
                 title: 'Success!',
                 text: 'Đăng ký thành công!',
@@ -72,9 +77,8 @@ export const dangKyAction = (userRegister) => {
                 confirmButtonText: 'OK'
             })
             setTimeout(function () {
-                history.push('/dangnhap');
+                window.location.reload()
             }, 2000);
-
         } catch (error) {
             Swal.fire({
                 title: 'Error!',

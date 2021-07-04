@@ -113,7 +113,7 @@ export default function Header() {
                   }, 2000);
                   // history.goBack()
 
-                }} className="nav-link text-danger">Đăng xuất</a> : <NavLink to="/dangky" style={{ borderLeft: "1px solid #e9e9e9" }} className="px-2">Đăng kí</NavLink>}
+                }} className="nav-link text-danger">Đăng xuất</a> : ''}
               </div>
             </div>
           </div>

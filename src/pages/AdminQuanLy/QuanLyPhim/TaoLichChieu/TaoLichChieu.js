@@ -1,6 +1,6 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { DatePicker, Space, Table } from 'antd';
+import { DatePicker, Space} from 'antd';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useFormik } from 'formik';
@@ -13,65 +13,7 @@ export default function TaoLichChieu() {
     // console.log('listCumRap', listCumRap);
     // console.log('thongTinPhim', thongTinPhim);
     useEffect(() => {
-        renderLichChieu();
     }, [thongTinPhim])
-
-    const columns = [
-        {
-            title: 'Mã lịch chiếu',
-            width: 20,
-            dataIndex: 'maLichChieu',
-            key: 'maLichChieu',
-            fixed: 'left',
-        },
-        {
-            title: 'Hệ thống rạp',
-            width: 30,
-            dataIndex: 'heThongRap',
-            key: 'heThongRap',
-            // fixed: 'left',
-        },
-        {
-            title: 'Cụm rạp',
-            width: 40,
-            dataIndex: 'cumRap',
-            key: 'cumRap',
-        },
-        {
-            title: 'Ngày giờ chiếu',
-            width: 35,
-            dataIndex: 'ngayGioChieu',
-            key: 'ngayGioChieu',
-        },
-        {
-            title: 'Giá vé',
-            width: 20,
-            dataIndex: 'giaVe',
-            key: 'giaVe',
-        },
-        {
-            title: 'Thời lượng phim',
-            width: 20,
-            dataIndex: 'thoiLuongPhim',
-            key: 'thoiLuongPhim',
-        }
-    ];
-    const data = [];
-
-    const renderLichChieu = () => {
-        return thongTinPhim.lichChieu?.map((phim, index) => {
-            data.push({
-                key: index,
-                maLichChieu: phim.maLichChieu,
-                heThongRap: phim.thongTinRap.tenHeThongRap,
-                cumRap: phim.thongTinRap.tenCumRap,
-                ngayGioChieu: phim.ngayChieuGioChieu,
-                giaVe: phim.giaVe,
-                thoiLuongPhim: phim.thoiLuong
-            })
-        })
-    }
-
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {
@@ -183,15 +125,7 @@ export default function TaoLichChieu() {
                         </div>
                     </div>
                 </div>
-
-            </form>
-            {renderLichChieu()}
-            <Table pagination={{
-                pageSizeOptions: ["5", "10", "20"],
-                showSizeChanger: true,
-                locale: { items_per_page: "" },
-                defaultPageSize: 5
-            }} columns={columns} dataSource={data} scroll={{ x: 1095 }} sticky />
+            </form>        
         </div>
     )
 }

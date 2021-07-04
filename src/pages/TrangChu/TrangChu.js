@@ -9,7 +9,7 @@ export default function TrangChu(props) {
         window.scrollTo(0, 0);
     }, [])
     return (
-        <div className="" >
+        <div className="home" >
             <div id="trangchu">
                 <CarouselMovie />
             </div>

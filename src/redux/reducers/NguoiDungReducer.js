@@ -12,7 +12,8 @@ if (localStorage.getItem(USERLOGIN)) {
 const stateDefault = {
     taiKhoan: taiKhoanNguoiDung,
     maLoaiNguoiDung: loaiNguoiDung,
-    thongTinTaiKhoan: {}
+    thongTinTaiKhoan: {},
+    isActived: ''
 }
 
 export const NguoiDungReducer = (state = stateDefault, action) => {
@@ -25,6 +26,10 @@ export const NguoiDungReducer = (state = stateDefault, action) => {
         }
         case THONG_TIN_TAI_KHOAN: {
             state.thongTinTaiKhoan = action.thongTinTaiKhoan
+            return { ...state };
+        }
+        case `IS_ACTIVE`: {
+            state.isActived = action.isActived
             return { ...state };
         }
         default:

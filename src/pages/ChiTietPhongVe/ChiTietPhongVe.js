@@ -91,7 +91,7 @@ export default function ChiTietPhongVe(props) {
                         </div>
                     </div>
                     <div className="seatCinema ">
-                        <img src={screen} alt="" />
+                        <img src={screen} alt="" width="1100px" />
                         <div className="seats" style={{ gridColumn: 16 }}>
                             {renderDanhSachGhe()}
                         </div>
