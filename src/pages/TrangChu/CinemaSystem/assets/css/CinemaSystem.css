@@ -105,7 +105,7 @@
 }
 
 .ant-tabs-tabpane .ant-tabs-tabpane-active .listShowTimes {
-  height: 450px !important;
+  max-height: 450px !important;
   overflow-y: scroll !important;
 }
 .ant-tabs-tabpane .ant-tabs-tabpane-active .listShowTimes::-webkit-scrollbar {

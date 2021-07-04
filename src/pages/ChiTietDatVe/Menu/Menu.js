@@ -24,7 +24,7 @@ export default function Menu(props) {
           tab={
             <div className="heThongRap d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
               <img className="logoCinema" src={htr.logo} width={50} height={50} alt="" />
-              <span className="ml-3 tenHeThongRap">{htr.tenHeThongRap}</span>
+              <span className="d-none d-md-block ml-3 tenHeThongRap">{htr.tenHeThongRap}</span>
             </div>
           }
           key={index}

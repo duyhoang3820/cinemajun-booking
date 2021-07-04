@@ -23,7 +23,7 @@ export default function TabLichChieu(props) {
                                 </div>
                                 <div className="row w-100">
                                     {phim.lstLichChieuTheoPhim?.slice(0, 8).map((lstChieu, index) => {
-                                        return <NavLink key={index} className="col-6 col-sm-4 col-md-4 col-lg-3" to={`/chi-tiet-phong-ve/${lstChieu.maLichChieu}`}>
+                                        return <NavLink key={index} className="col-12 col-sm-6 col-md-4 col-lg-3" to={`/chi-tiet-phong-ve/${lstChieu.maLichChieu}`}>
                                             <Tag className="m-1 p-1 tagTimes" color="#2db7f5" style={{ fontSize: '15px' }}> {moment(lstChieu.ngayChieuGioChieu).format("hh:mm A")} </Tag>
                                         </NavLink>
                                     })}

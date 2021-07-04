@@ -46,7 +46,7 @@ export default function MenuTabLichChieu(props) {
     return (
         <div className="menu_ListShowTimes">
             <div className=" d-flex mb-4" style={{ alignItems: 'center' }}>
-                <div className="col-3 d-none d-md-block col-lg-2">
+                <div className="col-3 d-none d-lg-block col-lg-2">
                     <span><img className="" src={imgCumRap} style={{ width: '100px', height: '150px', borderRadius: 3 }} alt="" /></span>
                 </div>
                 <div className="col-9 col-sm-12 col-md-8">
