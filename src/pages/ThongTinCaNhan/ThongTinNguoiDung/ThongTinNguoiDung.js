@@ -76,10 +76,10 @@ export default function ThongTinNguoiDung() {
             }}><i className="fa fa-angle-left back"></i></a>
             <Tabs className="tablist" defaultActiveKey="1" centered={true}>
                 <TabPane tab={<div className="tablist__item"><span><i className="fa fa-user"></i> Thông tin cá nhân</span></div>} key="1">
-                    <div className="container py-4">
-                        < form onSubmit={formik.handleSubmit} >
+                    <div className="py-4">
+                        < form onSubmit={formik.handleSubmit} style={{ width: '80%' }}>
                             <div className="row info ">
-                                <div className="" style={{ width: '70%' }}>
+                                <div className="" style={{ width: '100%' }}>
                                     <div className="form-group d-flex group">
                                         <label htmlFor="taiKhoan" className="text-primary mb-2 lable"><i className="fa fa-user mr-2"></i> Tài khoản</label>
                                         {readOnly === true ? <input className="form-control user w-50" readOnly={true} type="text" name="taiKhoan" id="taiKhoan" value={dataUser?.dataUser.taiKhoan} /> : <Tooltip title="Tài khoản không thể thay đổi!" color={colors} key={colors}>

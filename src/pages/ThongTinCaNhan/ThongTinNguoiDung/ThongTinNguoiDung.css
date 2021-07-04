@@ -12,7 +12,7 @@
   justify-content: center;
 }
 .lable {
-  font-size: 17px;
+  font-size: 14px;
   width: 20%;
 }
 .lable::after {
@@ -27,7 +27,7 @@
 }
 
 .group {
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .form-control:disabled,

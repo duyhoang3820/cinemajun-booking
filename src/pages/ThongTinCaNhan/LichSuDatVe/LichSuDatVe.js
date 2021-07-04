@@ -79,8 +79,8 @@ export default function LichSuDatVe() {
             let thongTinDatGhe = inThongTinGhe(item.danhSachGhe)
             data.push({
                 key: index,
-                maVe:item.maVe,
-                giaVe:`${item.giaVe.toLocaleString()} vnđ`,
+                maVe: item.maVe,
+                giaVe: `${item.giaVe.toLocaleString()} vnđ`,
                 tenPhim: item.tenPhim,
                 thoiLuongPhim: `${item.thoiLuongPhim} phút`,
                 ngayDat: new Date(item.ngayDat).toLocaleString(),
@@ -98,7 +98,7 @@ export default function LichSuDatVe() {
     return (
         <div className="py-5">
             {renderData()}
-            <Table className="history_table" columns={columns} dataSource={data} pagination={{ pageSize: 10, position: ["bottomCenter"] }} scroll={{ y: 240 }} />,
+            <Table className="history_table" columns={columns} dataSource={data} pagination={{ pageSize: 10, position: ["bottomCenter"] }} scroll={{ y: 240, x: 1300 }} />,
         </div >
     )
 }

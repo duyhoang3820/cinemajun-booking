@@ -25,49 +25,48 @@ export default function QuanLyPhim() {
     const columns = [
         {
             title: 'Mã phim',
-            width: 30,
+            width: 20,
             dataIndex: 'maPhim',
             key: 'maPhim',
             // fixed: 'left',
         },
         {
             title: 'Tên phim',
-            width: 50,
+            width: 25,
             dataIndex: 'tenPhim',
             key: 'tenPhim',
             // fixed: 'left',
         },
         {
             title: 'Hình ảnh',
-            width: 40,
+            width: 30,
             dataIndex: 'hinhAnh',
             key: 'hinhAnh',
             align: 'center'
         },
         {
             title: 'Mô tả',
-            width: 80,
+            width: 60,
             dataIndex: 'moTa',
             key: 'moTa',
         },
         {
             title: 'Mã nhóm',
-            width: 35,
+            width: 20,
             dataIndex: 'maNhom',
             key: 'maNhom',
             align: 'center'
         },
         {
             title: 'Ngày khởi chiếu',
-            width: 50,
+            width: 30,
             dataIndex: 'ngayKhoiChieu',
             key: 'ngayKhoiChieu',
         },
         {
             title: 'Thao tác',
             key: 'thaoTac',
-            fixed: 'right',
-            width: 45,
+            width: 30,
             align: 'center',
             render: (_, record) =>
                 <Fragment>

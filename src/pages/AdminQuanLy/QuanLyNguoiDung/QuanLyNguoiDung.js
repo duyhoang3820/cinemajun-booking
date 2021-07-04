@@ -25,38 +25,38 @@ export default function QuanLyNguoiDung(props) {
     const columns = [
         {
             title: 'STT',
-            width: 15,
+            width: 10,
             dataIndex: 'stt',
             key: 'stt',
             // fixed: 'left',
         },
         {
             title: 'Tài khoản',
-            width: 30,
+            width: 20,
             dataIndex: 'taiKhoan',
             key: 'taiKhoan',
         },
         {
             title: 'Mật khẩu',
-            width: 30,
+            width: 20,
             dataIndex: 'matKhau',
             key: 'matKhau',
         },
         {
             title: 'Họ tên',
-            width: 30,
+            width: 25,
             dataIndex: 'hoTen',
             key: 'hoTen',
         },
         {
             title: 'Email',
-            width: 50,
+            width: 30,
             dataIndex: 'email',
             key: 'email',
         },
         {
             title: 'Số điện thoại',
-            width: 30,
+            width: 20,
             dataIndex: 'sdt',
             key: 'sdt',
             align: 'center'
@@ -64,7 +64,6 @@ export default function QuanLyNguoiDung(props) {
         {
             title: 'Thao tác',
             key: 'thaoTac',
-            fixed: 'right',
             width: 20,
             align: 'center',
             render: (_, record) =>
@@ -130,7 +129,7 @@ export default function QuanLyNguoiDung(props) {
             </div>
 
             {renderDanhSachNguoiDung()}
-            <Table columns={columns} dataSource={data} scroll={{ x: 1000 }} sticky />
+            <Table columns={columns} dataSource={data} scroll={{ x: 1300 }} sticky />
         </div >
     )
 }
