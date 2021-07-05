@@ -152,36 +152,49 @@ export default function ChiTietPhongVe(props) {
 
                             <div className="datVe pt-4">
                                 {taiKhoan.trim() !== '' ?
-                                    danhSachGheDangDat.length !== 0 ? <button onClick={() => {
-                                        let objectApi = {
-                                            "maLichChieu": props.match.params.maLichChieu,
-                                            "danhSachVe": danhSachGheDangDat,
-                                            "taiKhoanNguoiDung": taiKhoan
-                                        }
-                                        dispatch(datVeAction(objectApi))
-                                    }} className=" btn_DatVe">
-                                        <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
-                                    </button> : <button onClick={() => {
-                                        Swal.fire({
-                                            title: 'Sorry!',
-                                            text: "Vui lòng chọn ghế !",
-                                            icon: 'warning',
-                                            confirmButtonText: 'OK'
-                                        })
-                                    }} className="btn_DatVe ">
-                                        <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
-                                    </button> : <button onClick={() => {
-                                        Swal.fire({
-                                            title: 'Sorry!',
-                                            text: "Bạn chưa đăng nhập !",
-                                            icon: 'warning',
-                                            confirmButtonText: 'OK'
-                                        })
-                                        setTimeout(function () {
-                                            history.push("/dangnhap")
-                                        }, 2000);
+                                    danhSachGheDangDat.length !== 0 ?
+                                        <button onClick={() => {
+                                            Swal.fire({
+                                                title: 'Bạn có chắc muốn thanh toán!',
+                                                text: "Hãy kiểm tra thông tin trước khi thanh toán!",
+                                                icon: 'question',
+                                                showCancelButton: true,
+                                                confirmButtonColor: '#3085d6',
+                                                cancelButtonColor: '#d33',
+                                                confirmButtonText: 'Yes'
+                                            }).then((result) => {
+                                                if (result.isConfirmed) {
+                                                    let objectApi = {
+                                                        "maLichChieu": props.match.params.maLichChieu,
+                                                        "danhSachVe": danhSachGheDangDat,
+                                                        "taiKhoanNguoiDung": taiKhoan
+                                                    }
+                                                    dispatch(datVeAction(objectApi))
+                                                }
+                                            })
+                                        }} className=" btn_DatVe">
+                                            <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
+                                        </button> : <button onClick={() => {
+                                            Swal.fire({
+                                                title: 'Sorry!',
+                                                text: "Vui lòng chọn ghế !",
+                                                icon: 'warning',
+                                                confirmButtonText: 'OK'
+                                            })
+                                        }} className="btn_DatVe ">
+                                            <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
+                                        </button> : <button onClick={() => {
+                                            Swal.fire({
+                                                title: 'Sorry!',
+                                                text: "Bạn chưa đăng nhập !",
+                                                icon: 'warning',
+                                                confirmButtonText: 'OK'
+                                            })
+                                            setTimeout(function () {
+                                                history.push("/dangnhap-dangky")
+                                            }, 2000);
 
-                                    }} className="btn_DatVe ">
+                                        }} className="btn_DatVe ">
                                         <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
                                     </button>}
                             </div>

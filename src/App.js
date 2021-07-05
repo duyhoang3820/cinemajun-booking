@@ -3,7 +3,6 @@ import { Route, Router, Switch } from 'react-router-dom'
 import AdminQuanLy from './pages/AdminQuanLy/AdminQuanLy';
 import ChiTietPhim from './pages/ChiTietDatVe/ChiTietPhim/ChiTietPhim';
 import ChiTietPhongVe from './pages/ChiTietPhongVe/ChiTietPhongVe';
-import DangKy from './pages/DangKy/DangKy';
 import DangNhap from './pages/DangNhap/DangNhap';
 import ThongTinNguoiDung from './pages/ThongTinCaNhan/ThongTinNguoiDung/ThongTinNguoiDung';
 import TrangChu from './pages/TrangChu/TrangChu';
@@ -23,8 +22,7 @@ function App() {
         <HomeTemplate path="/thong-tin-nguoi-dung" exact component={ThongTinNguoiDung} />
         <HomeTemplate path="/chi-tiet-dat-ve/:maPhim" exact component={ChiTietPhim} />
         <HomeTemplate path="/chi-tiet-phong-ve/:maLichChieu" exact component={ChiTietPhongVe} />
-        <Route path="/dangnhap" exact component={DangNhap} />
-        <Route path="/dangky" exact component={DangKy} />
+        <Route path="/dangnhap-dangky" exact component={DangNhap} />
         <Route path="/admin/:path?" exact component={AdminQuanLy} />
         <Route path="/not-admin" exact component={PageNotAuthorization} />
         <HomeTemplate path="/" exact component={TrangChu} />

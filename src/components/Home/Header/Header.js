@@ -19,10 +19,10 @@ export default function Header() {
   const menu1 = (
     <Menu>
       <Menu.Item>
-        <NavLink to="/thong-tin-nguoi-dung" style={{textDecoration:'none'}}>Thông tin cá nhân</NavLink>
+        <NavLink to="/thong-tin-nguoi-dung" style={{ textDecoration: 'none' }}>Thông tin cá nhân</NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink to="/admin" style={{textDecoration:'none'}}>Quản lý admin</NavLink>
+        <NavLink to="/admin" style={{ textDecoration: 'none' }}>Quản lý admin</NavLink>
       </Menu.Item>
     </Menu>
   )
@@ -94,23 +94,37 @@ export default function Header() {
                   <Dropdown overlay={menu2} placement="bottomCenter" arrow>
                     <a className="ant-dropdown-link">{taiKhoan}</a>
                   </Dropdown> :
-                  <NavLink to="/dangnhap" className="px-2">Đăng nhập</NavLink>}
+                  <NavLink to="/dangnhap-dangky" className="px-2">Đăng nhập</NavLink>}
               </div>
               <div>
                 {localStorage.getItem(USERLOGIN) ? <a onClick={() => {
                   localStorage.removeItem(USERLOGIN);
                   localStorage.removeItem(TOKEN);
                   Swal.fire({
-                    title: 'Success!',
-                    text: 'Đăng xuất thành công!',
-                    icon: 'success',
-                    confirmButtonText: 'OK'
+                    title: 'Are you sure?',
+                    text: "Bạn có chắc muốn đăng xuất!",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      Swal.fire({
+                        title: 'Success!',
+                        text: 'Đăng xuất thành công!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                      })
+                      setTimeout(function () {
+                        window.location.reload();
+                        window.scrollTo(0, 0);
+                      }, 2000);
+                    }
                   })
+
                   // history.push('/')
-                  setTimeout(function () {
-                    window.location.reload();
-                    window.scrollTo(0, 0);
-                  }, 2000);
+
                   // history.goBack()
 
                 }} className="nav-link text-danger">Đăng xuất</a> : ''}

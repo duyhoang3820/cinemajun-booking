@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import './assets/css/styleDangNhap.css'
+import './assets/css/font-awesome.css'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { dangKyAction, dangNhapAction } from '../../redux/actions/NguoidungAction';
@@ -71,13 +72,16 @@ export default function DangNhap() {
 
     return (
         <div className="login">
+            <div className="pen-title">
+                <h1>Welcome to CineJun Cinema</h1>
+            </div>
             <div className={`${state.isActive} container_login`}>
                 <div className="card_login"></div>
                 <div className="card_login">
                     <h1 className="title_login">Đăng nhập</h1>
                     <form onSubmit={formik_dangNhap.handleSubmit}>
                         <div className="input-container">
-                            <input name="taiKhoan" type="text" id="taiKhoan" required="required" onChange={formik_dangNhap.handleChange} />
+                            <input name="taiKhoan" type="text" id="taiKhoan" autoComplete="off" required="required" onChange={formik_dangNhap.handleChange} />
                             {formik_dangNhap.errors.taiKhoan && formik_dangNhap.touched.taiKhoan && (
                                 <p className="text-danger">{formik_dangNhap.errors.taiKhoan} </p>
                             )}
@@ -85,7 +89,7 @@ export default function DangNhap() {
                             <div className="bar"></div>
                         </div>
                         <div className="input-container">
-                            <input type="password" name="matKhau" id="matKhau" required="required" onChange={formik_dangNhap.handleChange} />
+                            <input type="password" name="matKhau" id="matKhau" autoComplete="off" required="required" onChange={formik_dangNhap.handleChange} />
                             {formik_dangNhap.errors.matKhau && formik_dangNhap.touched.matKhau && (
                                 <p className="text-danger">{formik_dangNhap.errors.matKhau} </p>
                             )}
@@ -95,6 +99,7 @@ export default function DangNhap() {
                         <div className="button-container">
                             <button type="submit"><span>Đăng nhập</span></button>
                         </div>
+                        <div className="card_footer"><p>Forgot your password?</p></div>
                     </form>
                 </div>
                 <div className="card_login alt">
@@ -112,7 +117,7 @@ export default function DangNhap() {
                     </h1>
                     <form onSubmit={formik_dangKy.handleSubmit}>
                         <div className="input-container">
-                            <input type="text" name="taiKhoan" required onChange={formik_dangKy.handleChange} />
+                            <input type="text" name="taiKhoan" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.taiKhoan && formik_dangKy.touched.taiKhoan && (
                                 <p className="text-danger">{formik_dangKy.errors.taiKhoan} </p>
                             )}
@@ -120,7 +125,7 @@ export default function DangNhap() {
                             <div className="bar"></div>
                         </div>
                         <div className="input-container">
-                            <input type="password" name="matKhau" required onChange={formik_dangKy.handleChange} />
+                            <input type="password" name="matKhau" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.matKhau && formik_dangKy.touched.matKhau && (
                                 <p className="text-danger">{formik_dangKy.errors.matKhau} </p>
                             )}
@@ -128,7 +133,7 @@ export default function DangNhap() {
                             <div className="bar"></div>
                         </div>
                         <div className="input-container">
-                            <input type="text" name="email" required onChange={formik_dangKy.handleChange} />
+                            <input type="text" name="email" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.email && formik_dangKy.touched.email && (
                                 <p className="text-danger">{formik_dangKy.errors.email} </p>
                             )}
@@ -136,7 +141,7 @@ export default function DangNhap() {
                             <div className="bar"></div>
                         </div>
                         <div className="input-container">
-                            <input type="text" name="hoTen" required onChange={formik_dangKy.handleChange} />
+                            <input type="text" name="hoTen" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.hoTen && formik_dangKy.touched.hoTen && (
                                 <p className="text-danger">{formik_dangKy.errors.hoTen} </p>
                             )}
@@ -144,7 +149,7 @@ export default function DangNhap() {
                             <div className="bar"></div>
                         </div>
                         <div className="input-container">
-                            <input type="text" name="soDt" required onChange={formik_dangKy.handleChange} />
+                            <input type="text" name="soDt" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.soDt && formik_dangKy.touched.soDt && (
                                 <p className="text-danger">{formik_dangKy.errors.soDt} </p>
                             )}

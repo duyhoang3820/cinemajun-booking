@@ -59,6 +59,7 @@ export const datVeAction = (thongTinDatVe) => {
                     window.scrollTo(0, 0);
                 }, 1500);
                 
+                
             }
         } catch (error) {
             Swal.fire({
