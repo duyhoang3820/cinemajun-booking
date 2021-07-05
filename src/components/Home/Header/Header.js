@@ -57,7 +57,7 @@ export default function Header() {
           />
         </a>
         <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i className="fa fa-bars" style={{ fontSize: '35px', color: '#f5222d' }}></i></button>
-        <div className="collapse navbar-collapse ml-5" id="collapsibleNavId">
+        <div className="collapse navbar-collapse ml-5 mb-1" id="collapsibleNavId">
           <ul className="navbar-nav m-auto mt-2 mt-lg-0 ">
             <li className="nav-item ">
               <Link onClick={() => {
@@ -72,7 +72,7 @@ export default function Header() {
           </ul>
 
           <div className="signIn">
-            <div className="d-flex align-items-center mb-2" style={{ justifyContent: 'center' }}>
+            <div className="d-flex align-items-center mb-2" style={{ justifyContent: 'left' }}>
               {taiKhoan.trim() === '' ? <a onClick={() => {
                 Swal.fire({
                   title: 'Sorry!',

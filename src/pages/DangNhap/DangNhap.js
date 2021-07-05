@@ -25,7 +25,7 @@ export default function DangNhap() {
             matKhau: Yup.string().required("Required!"),
         }),
         onSubmit: values => {
-            console.log('values', values);
+            // console.log('values', values);
             const action = dangNhapAction(values);
             dispatch(action);
             // console.log('value',values);

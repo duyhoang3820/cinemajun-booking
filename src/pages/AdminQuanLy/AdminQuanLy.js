@@ -17,10 +17,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import TimKiemNguoiDung from './QuanLyNguoiDung/TimKiemNguoiDung/TimKiemNguoiDung';
 import { TOKEN, USERLOGIN } from '../../util/constants/settingSystem';
 import logo from '../../assets/img/logo/logo.svg'
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+// import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
 import './assets/css/Admin.css'
-import BackToTop from "react-back-to-top-button";
+
 
 
 
@@ -119,9 +119,9 @@ export default function AdminQuanLyLichChieu() {
                       />
                     </NavLink>
                     <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i className="fa fa-bars" style={{ fontSize: '35px', color: '#f5222d' }}></i></button>
-                    <div className="collapse navbar-collapse ml-5" id="collapsibleNavId" style={{ justifyContent: 'flex-end' }}>
+                    <div className="collapse navbar-collapse mb-2" id="collapsibleNavId" style={{ justifyContent: 'flex-end' }}>
                       <div className="signIn">
-                        <div className="d-flex align-items-center">
+                        <div className="d-flex align-items-center" style={{ justifyContent: 'left' }}>
                           <NavLink to="/thong-tin-nguoi-dung" onClick={() => {
                             history.push('/thong-tin-nguoi-dung')
                           }}>
@@ -187,16 +187,6 @@ export default function AdminQuanLyLichChieu() {
                   <Route path='/admin/them-nguoi-dung' exact component={ThemNguoiDung} />
                   <Route path='/admin/them-phim' exact component={ThemPhim} />
                 </Switch>
-                <div className="backToTopBtn">
-                  <BackToTop
-                    showOnScrollUp
-                    showAt={100}
-                    speed={500}
-                    easing="easeInOutQuint"
-                  >
-                    <i className="fa fa-angle-double-up backToTop" style={{ color: '#fb4226', fontSize: '40px' }}></i>
-                  </BackToTop>
-                </div>
               </Content>
             </Layout>
           </Layout>

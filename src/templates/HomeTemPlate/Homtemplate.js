@@ -2,8 +2,8 @@ import { Fragment } from "react"
 import { Route } from "react-router"
 import Footer from "../../components/Home/Footer/Footer"
 import Header from "../../components/Home/Header/Header"
-import BackToTop from "react-back-to-top-button";
-import '../../assets/css/backToTop/backToTop.css'
+import { BackTop } from 'antd';
+import './HomeTemplate.css'
 
 
 // HOC higher order components
@@ -18,14 +18,11 @@ export const HomeTemplate = (props) => {
             <Header />
             <props.component {...propsRoute} />
             <Footer />
-            <BackToTop
-                showOnScrollUp
-                showAt={100}
-                speed={500}
-                easing="easeInOutQuint"
-            >
-                <i className="fa fa-angle-double-up backToTop" style={{ color: '#fb4226', fontSize: '40px' }}></i>
-            </BackToTop>
+            <BackTop>
+                <div>
+                    <i className="fa fa-angle-double-up backToTop" style={{ color: '#fb4226', fontSize: '50px' }}></i>
+                </div>
+            </BackTop>
         </Fragment >
     }} />
 }

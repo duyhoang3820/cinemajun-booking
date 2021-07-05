@@ -93,14 +93,14 @@ export default function CapNhatPhim() {
                         </div>
                         <div className="form-group">
                             <label htmlFor="tenPhim" className="text-primary mb-2">Tên phim</label>
-                            <input type="text" name="tenPhim" id="tenPhim" className="form-control" value={dataMovie?.tenPhim} onChange={formik.handleChange} />
+                            <input type="text" name="tenPhim" id="tenPhim" className="form-control" value={dataMovie?.tenPhim || ''} onChange={formik.handleChange} />
                             {formik.errors.tenPhim && formik.touched.tenPhim && (
                                 <p className="text-danger">{formik.errors.tenPhim} </p>
                             )}
                         </div>
                         <div className="form-group">
                             <label htmlFor="biDanh" className="text-primary mb-2">Bí danh</label>
-                            <input type="text" name="biDanh" id="biDanh" className="form-control" value={formik.values.biDanh} onChange={formik.handleChange} />
+                            <input type="text" name="biDanh" id="biDanh" className="form-control" value={formik.values.biDanh || ''} onChange={formik.handleChange} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="trailer" className="text-primary mb-2">Trailer</label>

@@ -1,0 +1,10 @@
+.ant-back-top {
+  right: 35px !important;
+}
+.backToTop {
+    transition: 0.3s;
+  }
+  .backToTop:hover {
+    transform: scale(1.3);
+  }
+  
