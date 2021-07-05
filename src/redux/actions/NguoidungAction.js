@@ -7,9 +7,18 @@ import 'sweetalert2/dist/sweetalert2.css'
 import { DISPLAY_LOADING, HIDE_LOADING } from "../constants/loadingConst"
 import { timeout } from "../constants/setTimeOut"
 import { THONG_TIN_TAI_KHOAN, DANG_NHAP } from "../constants/NguoiDungConst/NguoiDungConst"
+import { notification } from 'antd';
+
 
 
 export const dangNhapAction = (userLogin) => {
+    const openNotificationWithIcon = type => {
+        notification[type]({
+          message: 'Đăng nhập thành công!',
+          description:
+            'Chào mừng bạn đến với CineJun Cinema',
+        });
+      };
     return async dispatch => {
         dispatch({
             type: DISPLAY_LOADING
@@ -28,12 +37,13 @@ export const dangNhapAction = (userLogin) => {
             localStorage.setItem(TOKEN, result.data.accessToken);
             localStorage.setItem(USERLOGIN, JSON.stringify(result.data))
             // console.log('data',result.data);
-            Swal.fire({
-                title: 'Success!',
-                text: 'Đăng nhập thành công!',
-                icon: 'success',
-                confirmButtonText: 'OK'
-            })
+            // Swal.fire({
+            //     title: 'Success!',
+            //     text: 'Đăng nhập thành công!',
+            //     icon: 'success',
+            //     confirmButtonText: 'OK'
+            // })
+            openNotificationWithIcon('success');
             history.goBack()
             setTimeout(function () {
                 window.scrollTo(0, 0);
@@ -54,6 +64,13 @@ export const dangNhapAction = (userLogin) => {
 }
 
 export const dangKyAction = (userRegister) => {
+    const openNotificationWithIcon = type => {
+        notification[type]({
+          message: 'Đăng ký thành công!',
+          description:
+            'Đăng nhập để trải nghiệm CineJun Cinema',
+        });
+      };
     const value = 'true';
     return async dispatch => {
         dispatch({
@@ -70,12 +87,13 @@ export const dangKyAction = (userRegister) => {
                 type: 'IS_ACTIVE',
                 isActived: value
             })
-            Swal.fire({
-                title: 'Success!',
-                text: 'Đăng ký thành công!',
-                icon: 'success',
-                confirmButtonText: 'OK'
-            })
+            // Swal.fire({
+            //     title: 'Success!',
+            //     text: 'Đăng ký thành công!',
+            //     icon: 'success',
+            //     confirmButtonText: 'OK'
+            // })
+            openNotificationWithIcon('success');
             setTimeout(function () {
                 window.location.reload()
             }, 2000);

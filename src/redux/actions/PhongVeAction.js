@@ -5,6 +5,7 @@ import 'sweetalert2/dist/sweetalert2.css'
 import { DISPLAY_LOADING, HIDE_LOADING } from "../constants/loadingConst";
 import { timeout } from "../constants/setTimeOut";
 import { GET_PHONG_VE } from "../constants/PhongVeConst/PhongVeConst";
+import { notification } from 'antd';
 
 export const layDanhSachPhongVeAction = (maLichChieu) => {
     return async dispatch => {
@@ -33,6 +34,13 @@ export const layDanhSachPhongVeAction = (maLichChieu) => {
 }
 
 export const datVeAction = (thongTinDatVe) => {
+    const openNotificationWithIcon = type => {
+        notification[type]({
+          message: 'Đặt vé thành công!',
+          description:
+            'Chúc bạn có một buổi xem phim vui vẻ',
+        });
+      };
     return async dispatch => {
         dispatch({
             type: DISPLAY_LOADING
@@ -48,18 +56,19 @@ export const datVeAction = (thongTinDatVe) => {
                 }
             });
             if (result.status === 200) {
-                Swal.fire({
-                    title: 'Success!',
-                    text: result.data,
-                    icon: 'success',
-                    confirmButtonText: 'OK'
-                })
+                // Swal.fire({
+                //     title: 'Success!',
+                //     text: result.data,
+                //     icon: 'success',
+                //     confirmButtonText: 'OK'
+                // })
+                openNotificationWithIcon('success');
+                window.scrollTo(0, 0);
                 setTimeout(function () {
                     window.location.reload();
-                    window.scrollTo(0, 0);
                 }, 1500);
-                
-                
+
+
             }
         } catch (error) {
             Swal.fire({

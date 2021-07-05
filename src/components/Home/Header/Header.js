@@ -10,12 +10,20 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
 import logo from '../../../assets/img//logo/logo.svg'
 import { history } from "../../../App";
+import { notification } from 'antd';
 
 
 export default function Header() {
   const { taiKhoan, maLoaiNguoiDung } = useSelector(state => state.NguoiDungReducer)
   // console.log('maLoaiNguoiDung',maLoaiNguoiDung);
   // console.log('taiKhoan',taiKhoan);
+  const openNotificationWithIcon = type => {
+    notification[type]({
+      message: 'Đăng xuất thành công!',
+      description:
+        'Cảm ơn bạn đã sử dụng CineJun Cinema',
+    });
+  };
   const menu1 = (
     <Menu>
       <Menu.Item>
@@ -29,7 +37,7 @@ export default function Header() {
   const menu2 = (
     <Menu>
       <Menu.Item>
-        <NavLink to="/thong-tin-nguoi-dung">Thông tin cá nhân</NavLink>
+        <NavLink to="/thong-tin-nguoi-dung" style={{ textDecoration: 'none' }}>Thông tin cá nhân</NavLink>
       </Menu.Item>
     </Menu>
   )
@@ -94,7 +102,7 @@ export default function Header() {
                   <Dropdown overlay={menu2} placement="bottomCenter" arrow>
                     <a className="ant-dropdown-link">{taiKhoan}</a>
                   </Dropdown> :
-                  <NavLink to="/dangnhap-dangky" className="px-2">Đăng nhập</NavLink>}
+                  <NavLink to="/dangnhap-dangky" style={{ textDecoration: 'none' }} className="px-2">Đăng nhập</NavLink>}
               </div>
               <div>
                 {localStorage.getItem(USERLOGIN) ? <a onClick={() => {
@@ -110,12 +118,7 @@ export default function Header() {
                     confirmButtonText: 'Yes'
                   }).then((result) => {
                     if (result.isConfirmed) {
-                      Swal.fire({
-                        title: 'Success!',
-                        text: 'Đăng xuất thành công!',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                      })
+                      openNotificationWithIcon('success');
                       setTimeout(function () {
                         window.location.reload();
                         window.scrollTo(0, 0);

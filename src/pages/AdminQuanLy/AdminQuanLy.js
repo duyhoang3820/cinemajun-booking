@@ -32,22 +32,14 @@ export default function AdminQuanLyLichChieu() {
   // console.log('taiKhoan',taiKhoan);
   useEffect(() => {
     if (maLoaiNguoiDung === 'KhachHang' || taiKhoan.trim() === '') {
-      Swal.fire({
-        title: 'Error!',
-        text: 'Chức năng chỉ dành cho quản trị viên!',
-        icon: 'error',
-        confirmButtonText: 'OK'
-      })
-      setTimeout(function () {
-        history.goBack();
-      }, 2000);
+      history.push('/not-admin')
     }
     window.scrollTo(0, 0);
   }, [])
   const menu1 = (
     <Menu>
       <Menu.Item>
-        <NavLink to="/thong-tin-nguoi-dung" style={{textDecoration:'none'}} onClick={() => {
+        <NavLink to="/thong-tin-nguoi-dung" style={{ textDecoration: 'none' }} onClick={() => {
           history.push('/thong-tin-nguoi-dung')
         }}>Thông tin cá nhân</NavLink>
       </Menu.Item>

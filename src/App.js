@@ -10,6 +10,7 @@ import PageNotAuthorization from './util/constants/PageNotAuthorization'
 import { HomeTemplate } from './templates/HomeTemPlate/Homtemplate';
 import Loading from './components/Loading/Loading';
 import './App.css'
+import PageNotFound from './util/constants/PageNotFound';
 
 export const history = createBrowserHistory();
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/dangnhap-dangky" exact component={DangNhap} />
         <Route path="/admin/:path?" exact component={AdminQuanLy} />
         <Route path="/not-admin" exact component={PageNotAuthorization} />
+        <Route path="*" component={PageNotFound} />
         <HomeTemplate path="/" exact component={TrangChu} />
       </Switch>
     </Router>
