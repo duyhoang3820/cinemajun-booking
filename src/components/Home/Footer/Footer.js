@@ -11,6 +11,17 @@ import logoCnx from './logo/cnx.jpg'
 import logoLotte from './logo/lotte.png'
 import logoDongda from './logo/dongdacinema.png'
 import logoBt from './logo/bt.jpg'
+import logoIVB from './logo/IVB.png'
+import logoZalopay from './logo/zalopay_icon.png'
+import logoViettin from './logo/VIETTINBANK.png'
+import logoVCB from './logo/VCB.png'
+import logoTouch from './logo/TOUCH.png'
+import logoStarlight from './logo/STARLIGHT.png'
+import logoPayoo from './logo/payoo.jpg'
+import logoLaban from './logo/laban.png'
+import logoAgribank from './logo/AGRIBANK.png'
+import logo123go from './logo/123go.png'
+import logoDcine from './logo/dcine.png'
 import './Footer.css'
 
 export default function Footer() {
@@ -33,19 +44,32 @@ export default function Footer() {
                         <h4 className="footer-list-header">Đối tác</h4>
                     </li>
                     <li className="logoL">
-                        <a href="https://www.cgv.vn/" className="logo"><img src={logoCgv} alt="" /></a>
-                        <a href="https://www.galaxycine.vn/" className="logo"><img src={logoGalaxy} alt="" /></a>
-                        <a href="http://lottecinemavn.com/LCHS/index.aspx" className="logo"><img src={logoLotte} alt="" /></a>
+                        <a target="_blank" href="https://www.cgv.vn/" className="logo"><img src={logoCgv} alt="" /></a>
+                        <a target="_blank" href="https://www.galaxycine.vn/" className="logo"><img src={logoGalaxy} alt="" /></a>
+                        <a target="_blank" href="http://lottecinemavn.com/LCHS/index.aspx" className="logo"><img src={logoLotte} alt="" /></a>
+                        <a target="_blank" href="https://www.bhdstar.vn/" className="logo"><img src={logoBhd} alt="" /></a>
+                        <a target="_blank" href="https://www.megagscinemas.vn/" className="logo"><img src={logoMegags} alt="" /></a>
                     </li>
                     <li className="logoL">
-                        <a href="https://www.bhdstar.vn/" className="logo"><img src={logoBhd} alt="" /></a>
-                        <a href="https://www.megagscinemas.vn/" className="logo"><img src={logoMegags} alt="" /></a>
-                        <a href="http://ddcinema.vn/" className="logo"><img src={logoDongda} alt="" /></a>
+                        <a target="_blank" href="http://ddcinema.vn/" className="logo"><img src={logoDongda} alt="" /></a>
+                        <a target="_blank" href="http://cinestar.com.vn/" className="logo"><img src={logoCinestar} alt="" /></a>
+                        <a target="_blank" href="https://cinemaxvn.com/" className="logo"><img src={logoCnx} alt="" /></a>
+                        <a target="_blank" href="https://www.betacinemas.vn/home.htm" className="logo"><img src={logoBt} alt="" /></a>
+                        <a target="_blank" href="https://www.indovinabank.com.vn/" className="logo"><img src={logoIVB} alt="" /></a>
                     </li>
                     <li className="logoL">
-                        <a href="http://cinestar.com.vn/" className="logo"><img src={logoCinestar} alt="" /></a>
-                        <a href="https://cinemaxvn.com/" className="logo"><img src={logoCnx} alt="" /></a>
-                        <a href="https://www.betacinemas.vn/home.htm" className="logo"><img src={logoBt} alt="" /></a>
+                        <a target="_blank" href="https://touchcinema.com/" className="logo"><img src={logoTouch} alt="" /></a>
+                        <a target="_blank" href="http://starlight.vn/" className="logo"><img src={logoStarlight} alt="" /></a>
+                        <a target="_blank" href="https://www.dcine.vn/" className="logo"><img src={logoDcine} alt="" /></a>
+                        <a target="_blank" href="https://zalopay.vn/" className="logo"><img src={logoZalopay} alt="" /></a>
+                        <a target="_blank" href="https://www.payoo.vn/" className="logo"><img src={logoPayoo} alt="" /></a>
+                    </li>
+                    <li className="logoL">
+                        <a target="_blank" href="https://www.vietcombank.com.vn/" className="logo"><img src={logoVCB} alt="" /></a>
+                        <a target="_blank" href="http://www.agribank.com.vn/" className="logo"><img src={logoAgribank} alt="" /></a>
+                        <a target="_blank" href="https://www.vietinbank.vn/" className="logo"><img src={logoViettin} alt="" /></a>
+                        <a target="_blank" href="http://123go.vn" className="logo"><img src={logo123go} alt="" /></a>
+                        <a target="_blank" href="http://laban.vn" className="logo"><img src={logoLaban} alt="" /></a>
                     </li>
                 </ul>
                 <ul className="footer-list-top">
@@ -71,7 +95,7 @@ export default function Footer() {
                         <a href="#" className="generic-anchor" title="Google Plus" itemProp="significantLink"><i className="fa fa-google-plus" /></a>
                     </span>
                 </section>
-                <section className="footer-bottom-section flex-rw">
+                <section className="footer-bottom-section flex-rw mt-5">
                     <div className="footer-bottom-wrapper">
                         <i className="fa fa-copyright" role="copyright">
                         </i> COPYRIGHT 2021 CJ CineJun <address className="footer-address" role="company address">. </address><span className="footer-bottom-rights"> All RIGHTS RESERVED . </span>
