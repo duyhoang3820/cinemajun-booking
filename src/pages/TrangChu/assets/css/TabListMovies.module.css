@@ -11,12 +11,14 @@
   position: relative;
   cursor: pointer;
   width: 95% !important;
-  transition: all 0.3s;
+  transition: all 0.3s !important;
+  border: none;
+  outline: none;
 }
 .card_item:hover {
   background: linear-gradient(to bottom, #000, transparent 100%);
-  border: 1px solid transparent;
-  outline: transparent;
+  border: none;
+  outline: none;
   transform: scale(0.95);
 }
 .filmName {
@@ -89,5 +91,64 @@
 @keyframes pl3 {
   100% {
     box-shadow: 0 0 0 30px #0000;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  .card_item {
+    align-items: center;
+    width: 220px !important;
+    margin:0 6.5% !important;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .card_item {
+    align-items: center;
+    width: 220px !important;
+    margin:0 18% !important;
+  }
+}
+@media screen and (min-width: 400px) {
+  .card_item {
+    align-items: center;
+    width: 220px !important;
+    margin:0 21% !important;
+  }
+}
+@media screen and (min-width: 500px) {
+  .card_item {
+    align-items: center;
+    width: 220px !important;
+    margin:0 26% !important;
+  }
+}
+@media screen and (min-width: 540px) {
+  .card_item {
+    align-items: center;
+    width: 220px !important;
+    margin:0 7% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card_item {
+    align-items: center;
+    width: 220px !important;
+    margin:10px 2% !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card_item {
+    align-items: center;
+    width: 220px !important;
+    margin: 10px 3% !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card_item {
+    align-items: center;
+    width: 230px !important;
+    margin: 10px 8% !important;
   }
 }

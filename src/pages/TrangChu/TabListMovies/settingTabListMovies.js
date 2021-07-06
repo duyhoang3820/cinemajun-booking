@@ -7,23 +7,32 @@ export const settingTabListMovies = {
   autoplay: true,
   autoplaySpeed: 5000,
   centerPadding: "60px",
-  slidesToShow: 5,
-  slidesToScroll: 5,
+  slidesToShow: 4,
+  slidesToScroll: 4,
   speed: 500,
   rows: 2,
   // slidesPerRow: 2,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1200,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         infinite: true,
         dots: true
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 767,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -32,7 +41,7 @@ export const settingTabListMovies = {
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 539,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,

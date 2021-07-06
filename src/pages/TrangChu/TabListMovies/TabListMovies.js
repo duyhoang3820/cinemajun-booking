@@ -36,11 +36,11 @@ export default function TabListMovies(props) {
     const [trailer, setTrailer] = useState();
 
     const renderUpCommingMoviesList = () => {
-        return listPhimSapChieu.slice(0, 20).map((phim, index) => {
+        return listPhimSapChieu.slice(0, 16).map((phim, index) => {
             return <Card onClick={() => {
                 history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
-            }} className={`${style.card_item} mt-2`} style={{ width: 240, }} key={index} >
-                <div className="mb-2 text-center">
+            }} className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index} >
+                <div className=" ">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
                     <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
@@ -56,10 +56,10 @@ export default function TabListMovies(props) {
         })
     }
     const renderCurrentMoviesList = () => {
-        return listPhim.slice(0, 20).map((phim, index) => {
+        return listPhim.slice(0, 16).map((phim, index) => {
             return <Card onClick={() => {
                 history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
-            }} className={`${style.card_item} mt-2`} style={{ width: 240, }} key={index} >
+            }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
                     <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
@@ -76,10 +76,10 @@ export default function TabListMovies(props) {
         })
     }
     const renderHotMoviesList = () => {
-        return listPhimSapChieu.slice(0, 20).map((phim, index) => {
+        return listPhimSapChieu.slice(0, 16).map((phim, index) => {
             return <Card onClick={() => {
                 history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
-            }} className={`${style.card_item} mt-2`} style={{ width: 240, }} key={index} >
+            }} className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
                     <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
