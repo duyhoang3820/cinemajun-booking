@@ -6,6 +6,8 @@ import './assets/css/font-awesome.css'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { dangKyAction, dangNhapAction } from '../../redux/actions/NguoidungAction';
+import Footer from '../../components/Home/Footer/Footer';
+import { history } from '../../App';
 
 export default function DangNhap() {
     useEffect(() => {
@@ -21,8 +23,8 @@ export default function DangNhap() {
             matKhau: '',
         },
         validationSchema: Yup.object().shape({
-            taiKhoan: Yup.string().required("Required!"),
-            matKhau: Yup.string().required("Required!"),
+            taiKhoan: Yup.string().required("* Tài khoản không được để trống!"),
+            matKhau: Yup.string().required("* Mật khẩu không được để trống!"),
         }),
         onSubmit: values => {
             // console.log('values', values);
@@ -43,21 +45,21 @@ export default function DangNhap() {
             maNhom: 'GP01'
         },
         validationSchema: Yup.object().shape({
-            taiKhoan: Yup.string().min(2, "Mininum 2 characters")
-                .max(15, "Maximum 15 characters")
-                .required("Required!"),
-            matKhau: Yup.string().min(6, "Minimum 6 characters")
-                .max(15, "Maximum 15 characters")
-                .required("Required!"),
+            taiKhoan: Yup.string().min(3, "* Tài khoản tối thiểu 3 ký tự!")
+                .max(18, "* Tài khoản tối đa 18 ký tự!")
+                .required("* Tài khoản không được để trống!"),
+            matKhau: Yup.string().min(6, "* Mật khẩu tối thiểu 6 ký tự!")
+                .max(18, "* Mật khẩu tối đa 18 ký tự!")
+                .required("* Mật khẩu không được để trống!"),
             email: Yup.string()
-                .email("Invalid email format")
-                .required("Required!"),
-            hoTen: Yup.string().min(2, "Mininum 2 characters")
-                .max(15, "Maximum 15 characters")
-                .required("Required!"),
-            soDt: Yup.string().min(9, "Mininum 9 characters")
-                .max(11, "Maximum 11 characters")
-                .required("Required!"),
+                .email("* Email không đúng định dạng!")
+                .required("* Email không được để trống!"),
+            hoTen: Yup.string().min(3, "* Họ tên tối thiểu 3 ký tự!")
+                .max(30, "* Họ tên tối đa 30 ký tự!")
+                .required("* Họ tên không được để trống!"),
+            soDt: Yup.string().min(10, "* SĐT tối thiểu 10 ký tự!")
+                .max(10, "* SĐT tối đa 10 ký tự!")
+                .required("* SĐT không được để trống!"),
         }),
         onSubmit: values => {
             dispatch(dangKyAction(values))
@@ -73,14 +75,16 @@ export default function DangNhap() {
     return (
         <div className="login">
             <div className="pen-title">
-                <h1>Welcome to CineJun Cinema</h1>
+                <i className="fa fa-home" onClick={() => {
+                    history.push('/')
+                }}></i>
             </div>
             <div className={`${state.isActive} container_login`}>
                 <div className="card_login"></div>
                 <div className="card_login">
                     <h1 className="title_login">Đăng nhập</h1>
                     <form onSubmit={formik_dangNhap.handleSubmit}>
-                        <div className="input-container">
+                        <div className="input-container child1">
                             <input name="taiKhoan" type="text" id="taiKhoan" autoComplete="off" required="required" onChange={formik_dangNhap.handleChange} />
                             {formik_dangNhap.errors.taiKhoan && formik_dangNhap.touched.taiKhoan && (
                                 <p className="text-danger">{formik_dangNhap.errors.taiKhoan} </p>
@@ -88,7 +92,7 @@ export default function DangNhap() {
                             <label htmlFor="taiKhoan">Tài khoản</label>
                             <div className="bar"></div>
                         </div>
-                        <div className="input-container">
+                        <div className="input-container child1">
                             <input type="password" name="matKhau" id="matKhau" autoComplete="off" required="required" onChange={formik_dangNhap.handleChange} />
                             {formik_dangNhap.errors.matKhau && formik_dangNhap.touched.matKhau && (
                                 <p className="text-danger">{formik_dangNhap.errors.matKhau} </p>
@@ -119,7 +123,7 @@ export default function DangNhap() {
                         <div className="input-container">
                             <input type="text" name="taiKhoan" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.taiKhoan && formik_dangKy.touched.taiKhoan && (
-                                <p className="text-danger">{formik_dangKy.errors.taiKhoan} </p>
+                                <p className="text-white">{formik_dangKy.errors.taiKhoan} </p>
                             )}
                             <label htmlFor="taiKhoan">Tài khoản</label>
                             <div className="bar"></div>
@@ -127,7 +131,7 @@ export default function DangNhap() {
                         <div className="input-container">
                             <input type="password" name="matKhau" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.matKhau && formik_dangKy.touched.matKhau && (
-                                <p className="text-danger">{formik_dangKy.errors.matKhau} </p>
+                                <p className="text-white">{formik_dangKy.errors.matKhau} </p>
                             )}
                             <label htmlFor="matKhau">Mật khẩu</label>
                             <div className="bar"></div>
@@ -135,7 +139,7 @@ export default function DangNhap() {
                         <div className="input-container">
                             <input type="text" name="email" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.email && formik_dangKy.touched.email && (
-                                <p className="text-danger">{formik_dangKy.errors.email} </p>
+                                <p className="text-white">{formik_dangKy.errors.email} </p>
                             )}
                             <label htmlFor="email">Email</label>
                             <div className="bar"></div>
@@ -143,15 +147,15 @@ export default function DangNhap() {
                         <div className="input-container">
                             <input type="text" name="hoTen" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.hoTen && formik_dangKy.touched.hoTen && (
-                                <p className="text-danger">{formik_dangKy.errors.hoTen} </p>
+                                <p className="text-white">{formik_dangKy.errors.hoTen} </p>
                             )}
                             <label htmlFor="hoTen">Họ và tên</label>
                             <div className="bar"></div>
                         </div>
                         <div className="input-container">
-                            <input type="text" name="soDt" autoComplete="off" required onChange={formik_dangKy.handleChange} />
+                            <input type="number" name="soDt" autoComplete="off" required onChange={formik_dangKy.handleChange} />
                             {formik_dangKy.errors.soDt && formik_dangKy.touched.soDt && (
-                                <p className="text-danger">{formik_dangKy.errors.soDt} </p>
+                                <p className="text-white">{formik_dangKy.errors.soDt} </p>
                             )}
                             <label htmlFor="soDt">Số điện thoại</label>
                             <div className="bar"></div>
@@ -161,6 +165,9 @@ export default function DangNhap() {
                         </div>
                     </form>
                 </div>
+            </div>
+            <div className="mt-5">
+                <Footer className="mt-5" />
             </div>
         </div>
     )

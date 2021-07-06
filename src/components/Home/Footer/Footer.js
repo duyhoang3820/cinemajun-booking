@@ -44,32 +44,32 @@ export default function Footer() {
                         <h4 className="footer-list-header">Đối tác</h4>
                     </li>
                     <li className="logoL">
-                        <a target="_blank" href="https://www.cgv.vn/" className="logo"><img src={logoCgv} alt="" /></a>
-                        <a target="_blank" href="https://www.galaxycine.vn/" className="logo"><img src={logoGalaxy} alt="" /></a>
-                        <a target="_blank" href="http://lottecinemavn.com/LCHS/index.aspx" className="logo"><img src={logoLotte} alt="" /></a>
-                        <a target="_blank" href="https://www.bhdstar.vn/" className="logo"><img src={logoBhd} alt="" /></a>
-                        <a target="_blank" href="https://www.megagscinemas.vn/" className="logo"><img src={logoMegags} alt="" /></a>
+                        <a target="_blank" href="https://www.cgv.vn/" className="logoS"><img src={logoCgv} alt="" /></a>
+                        <a target="_blank" href="https://www.galaxycine.vn/" className="logoS"><img src={logoGalaxy} alt="" /></a>
+                        <a target="_blank" href="http://lottecinemavn.com/LCHS/index.aspx" className="logoS"><img src={logoLotte} alt="" /></a>
+                        <a target="_blank" href="https://www.bhdstar.vn/" className="logoS"><img src={logoBhd} alt="" /></a>
+                        <a target="_blank" href="https://www.megagscinemas.vn/" className="logoS"><img src={logoMegags} alt="" /></a>
                     </li>
                     <li className="logoL">
-                        <a target="_blank" href="http://ddcinema.vn/" className="logo"><img src={logoDongda} alt="" /></a>
-                        <a target="_blank" href="http://cinestar.com.vn/" className="logo"><img src={logoCinestar} alt="" /></a>
-                        <a target="_blank" href="https://cinemaxvn.com/" className="logo"><img src={logoCnx} alt="" /></a>
-                        <a target="_blank" href="https://www.betacinemas.vn/home.htm" className="logo"><img src={logoBt} alt="" /></a>
-                        <a target="_blank" href="https://www.indovinabank.com.vn/" className="logo"><img src={logoIVB} alt="" /></a>
+                        <a target="_blank" href="http://ddcinema.vn/" className="logoS"><img src={logoDongda} alt="" /></a>
+                        <a target="_blank" href="http://cinestar.com.vn/" className="logoS"><img src={logoCinestar} alt="" /></a>
+                        <a target="_blank" href="https://cinemaxvn.com/" className="logoS"><img src={logoCnx} alt="" /></a>
+                        <a target="_blank" href="https://www.betacinemas.vn/home.htm" className="logoS"><img src={logoBt} alt="" /></a>
+                        <a target="_blank" href="https://www.indovinabank.com.vn/" className="logoS"><img src={logoIVB} alt="" /></a>
                     </li>
                     <li className="logoL">
-                        <a target="_blank" href="https://touchcinema.com/" className="logo"><img src={logoTouch} alt="" /></a>
-                        <a target="_blank" href="http://starlight.vn/" className="logo"><img src={logoStarlight} alt="" /></a>
-                        <a target="_blank" href="https://www.dcine.vn/" className="logo"><img src={logoDcine} alt="" /></a>
-                        <a target="_blank" href="https://zalopay.vn/" className="logo"><img src={logoZalopay} alt="" /></a>
-                        <a target="_blank" href="https://www.payoo.vn/" className="logo"><img src={logoPayoo} alt="" /></a>
+                        <a target="_blank" href="https://touchcinema.com/" className="logoS"><img src={logoTouch} alt="" /></a>
+                        <a target="_blank" href="http://starlight.vn/" className="logoS"><img src={logoStarlight} alt="" /></a>
+                        <a target="_blank" href="https://www.dcine.vn/" className="logoS"><img src={logoDcine} alt="" /></a>
+                        <a target="_blank" href="https://zalopay.vn/" className="logoS"><img src={logoZalopay} alt="" /></a>
+                        <a target="_blank" href="https://www.payoo.vn/" className="logoS"><img src={logoPayoo} alt="" /></a>
                     </li>
                     <li className="logoL">
-                        <a target="_blank" href="https://www.vietcombank.com.vn/" className="logo"><img src={logoVCB} alt="" /></a>
-                        <a target="_blank" href="http://www.agribank.com.vn/" className="logo"><img src={logoAgribank} alt="" /></a>
-                        <a target="_blank" href="https://www.vietinbank.vn/" className="logo"><img src={logoViettin} alt="" /></a>
-                        <a target="_blank" href="http://123go.vn" className="logo"><img src={logo123go} alt="" /></a>
-                        <a target="_blank" href="http://laban.vn" className="logo"><img src={logoLaban} alt="" /></a>
+                        <a target="_blank" href="https://www.vietcombank.com.vn/" className="logoS"><img src={logoVCB} alt="" /></a>
+                        <a target="_blank" href="http://www.agribank.com.vn/" className="logoS"><img src={logoAgribank} alt="" /></a>
+                        <a target="_blank" href="https://www.vietinbank.vn/" className="logoS"><img src={logoViettin} alt="" /></a>
+                        <a target="_blank" href="http://123go.vn" className="logoS"><img src={logo123go} alt="" /></a>
+                        <a target="_blank" href="http://laban.vn" className="logoS"><img src={logoLaban} alt="" /></a>
                     </li>
                 </ul>
                 <ul className="footer-list-top">
