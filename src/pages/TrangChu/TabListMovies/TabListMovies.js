@@ -13,6 +13,7 @@ import img from '../../../assets/img/play-video.png'
 import ModalVideo from 'react-modal-video'
 import '../../../../node_modules/react-modal-video/scss/modal-video.scss';
 import { NavLink } from 'react-router-dom';
+import { history } from '../../../App';
 
 export default function TabListMovies(props) {
 
@@ -36,13 +37,15 @@ export default function TabListMovies(props) {
 
     const renderUpCommingMoviesList = () => {
         return listPhimSapChieu.slice(0, 20).map((phim, index) => {
-            return <Card className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index}>
+            return <Card onClick={() => {
+                history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+            }} className={`${style.card_item} mt-2`} style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={phim.tenPhim} description={`IMDb: ${phim.danhGia}`} /></span>
+                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
-                <div className={style.btnHover}>
+                <div className={`${style.btnHover}`}>
                     <button className="btn"><img onClick={() => {
                         setOpen(true);
                         setTrailer(phim.trailer.slice(30))
@@ -54,10 +57,12 @@ export default function TabListMovies(props) {
     }
     const renderCurrentMoviesList = () => {
         return listPhim.slice(0, 20).map((phim, index) => {
-            return <Card className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index} >
+            return <Card onClick={() => {
+                history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+            }} className={`${style.card_item} mt-2`} style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={phim.tenPhim} description={`IMDb: ${phim.danhGia}`} /></span>
+                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
@@ -72,13 +77,15 @@ export default function TabListMovies(props) {
     }
     const renderHotMoviesList = () => {
         return listPhimSapChieu.slice(0, 20).map((phim, index) => {
-            return <Card className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index}>
+            return <Card onClick={() => {
+                history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+            }} className={`${style.card_item} mt-2`} style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={phim.tenPhim} description={`IMDb: ${phim.danhGia}`} /></span>
+                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
-                <div className={style.btnHover}>
+                <div className={`${style.btnHover}`}>
                     <button className="btn"><img onClick={() => {
                         setOpen(true);
                         setTrailer(phim.trailer.slice(30))
@@ -86,7 +93,6 @@ export default function TabListMovies(props) {
                     <NavLink to={`/chi-tiet-dat-ve/${phim.maPhim}`} className={style.btn_DatVe}>Mua vé</NavLink>
                 </div>
             </Card >
-
         })
     }
 

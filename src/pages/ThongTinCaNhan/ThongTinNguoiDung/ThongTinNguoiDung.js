@@ -40,20 +40,18 @@ export default function ThongTinNguoiDung() {
             maNhom: 'GP01'
         },
         validationSchema: Yup.object().shape({
-            matKhau: Yup.string().min(6, "Minimum 6 characters")
-                .max(15, "Maximum 15 characters")
-                .required("Required!"),
+            matKhau: Yup.string().min(6, "* Mật khẩu tối thiểu 6 ký tự!")
+                .max(18, "* Mật khẩu tối đa 18 ký tự!")
+                .required("* Mật khẩu không được để trống!"),
             email: Yup.string()
-                .email("Invalid email format")
-                .required("Required!"),
-            hoTen: Yup.string().min(2, "Mininum 2 characters")
-                .max(15, "Maximum 15 characters")
-                .required("Required!"),
-            soDt: Yup.string().min(9, "Mininum 9 characters")
-                .max(11, "Maximum 11 characters")
-                .required("Required!"),
-            maLoaiNguoiDung: Yup.string()
-                .required("Required!"),
+                .email("* Email không đúng định dạng!")
+                .required("* Email không được để trống!"),
+            hoTen: Yup.string().min(3, "* Họ tên tối thiểu 3 ký tự!")
+                .max(30, "* Họ tên tối đa 30 ký tự!")
+                .required("* Họ tên không được để trống!"),
+            soDt: Yup.string().min(10, "* SĐT tối thiểu 10 ký tự!")
+                .max(10, "* SĐT tối đa 10 ký tự!")
+                .required("* SĐT không được để trống!")
         }),
         onSubmit: values => {
             // console.log('values', values);
@@ -89,31 +87,31 @@ export default function ThongTinNguoiDung() {
                                     <div className="form-group d-flex group">
                                         <label htmlFor="matKhau" className="text-primary mb-2 lable_input"><i className="fa fa-lock mr-2"></i> Mật khẩu</label>
                                         <input autoComplete="off" readOnly={readOnly} className="form-control user w-50 " type="text" name="matKhau" id="matKhau" value={dataUser?.dataUser.matKhau || ''} onChange={formik.handleChange} />
-                                        {formik.errors.matKhau && formik.touched.matKhau && (
-                                            <p className="text-danger">{formik.errors.matKhau} </p>
-                                        )}
                                     </div>
+                                    {formik.errors.matKhau && formik.touched.matKhau && (
+                                        <p className="text-danger text-center">{formik.errors.matKhau} </p>
+                                    )}
                                     <div className="form-group d-flex group">
                                         <label htmlFor="hoTen" className="text-primary mb-2 lable_input"><i className="fa fa-tag mr-2"></i> Họ tên</label>
                                         <input autoComplete="off" readOnly={readOnly} className="form-control user w-50 " type="text" name="hoTen" id="hoTen" value={dataUser?.dataUser.hoTen || ''} onChange={formik.handleChange} />
-                                        {formik.errors.hoTen && formik.touched.hoTen && (
-                                            <p className="text-danger">{formik.errors.hoTen} </p>
-                                        )}
                                     </div>
+                                    {formik.errors.hoTen && formik.touched.hoTen && (
+                                        <p className="text-danger text-center">{formik.errors.hoTen} </p>
+                                    )}
                                     <div className="form-group d-flex group">
                                         <label htmlFor="Email" className="text-primary mb-2 lable_input"><i className="fa fa-envelope mr-2"></i> Email</label>
                                         <input autoComplete="off" readOnly={readOnly} className="form-control user w-50 " type="email" name="email" id="Email" value={dataUser?.dataUser.email || ''} onChange={formik.handleChange} />
-                                        {formik.errors.email && formik.touched.email && (
-                                            <p className="text-danger">{formik.errors.email} </p>
-                                        )}
                                     </div>
+                                    {formik.errors.email && formik.touched.email && (
+                                        <p className="text-danger text-center">{formik.errors.email} </p>
+                                    )}
                                     <div className="form-group d-flex group">
                                         <label htmlFor="soDT" className="text-primary mb-2 lable_input"><i className="fa fa-phone mr-2"></i> Số điện thoại</label>
-                                        <input autoComplete="off" readOnly={readOnly} className="form-control user w-50 " type="text" name="soDT" id="soDT" value={dataUser?.dataUser.soDT || ''} onChange={formik.handleChange} />
-                                        {formik.errors.soDT && formik.touched.soDT && (
-                                            <p className="text-danger">{formik.errors.soDT} </p>
-                                        )}
+                                        <input autoComplete="off" readOnly={readOnly} className="form-control user w-50 " type="number" name="soDT" id="soDT" value={dataUser?.dataUser.soDT || ''} onChange={formik.handleChange} />
                                     </div>
+                                    {formik.errors.soDT && formik.touched.soDT && (
+                                        <p className="text-danger text-center">{formik.errors.soDT} </p>
+                                    )}
                                 </div>
                             </div>
                             <div className="btnCapNhat">
