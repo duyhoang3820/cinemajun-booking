@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
@@ -8,6 +9,8 @@ import * as Yup from 'yup'
 import { dangKyAction, dangNhapAction } from '../../redux/actions/NguoidungAction';
 import Footer from '../../components/Home/Footer/Footer';
 import { history } from '../../App';
+import logo from '../../assets/img/logo/logo.svg'
+import logo2 from '../../assets/img/logo/logo2.svg'
 
 export default function DangNhap() {
     useEffect(() => {
@@ -82,6 +85,9 @@ export default function DangNhap() {
             <div className={`${state.isActive} container_login`}>
                 <div className="card_login"></div>
                 <div className="card_login">
+                    <div className="d-flex" style={{ justifyContent: 'center' }}>
+                        <img style={{ textAlign: 'center' }} src={logo} width={70} height={50}></img>
+                    </div>
                     <h1 className="title_login">Đăng nhập</h1>
                     <form onSubmit={formik_dangNhap.handleSubmit}>
                         <div className="input-container child1">
@@ -112,6 +118,9 @@ export default function DangNhap() {
                             isActive: 'active'
                         })
                     }}></div>
+                    <div className="img_login d-flex" style={{ justifyContent: 'center' }}>
+                        <img style={{ textAlign: 'center' }} src={logo2} width={70} height={50}></img>
+                    </div>
                     <h1 className="title_login">Đăng ký
                         <div className="close" onClick={() => {
                             setstate({
@@ -162,6 +171,7 @@ export default function DangNhap() {
                         </div>
                         <div className="button-container">
                             <button type="submit"><span>Đăng ký</span></button>
+
                         </div>
                     </form>
                 </div>

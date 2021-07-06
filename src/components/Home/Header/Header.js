@@ -52,8 +52,8 @@ export default function Header() {
           <img
             src={logo}
             alt="logo"
-            width="90"
-            height="65"
+            width="95"
+            height="70"
           />
         </a>
         <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i className="fa fa-bars" style={{ fontSize: '35px', color: '#f5222d' }}></i></button>
