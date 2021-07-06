@@ -61,7 +61,7 @@ export const layDanhSachPhimHot = () => {
         await timeout(1800);
         try {
             let result = await axios({
-                url: `${DOMAIN}/QuanLyPhim/LayDanhSachPhim?maNhom=GP01`,
+                url: `${DOMAIN}/QuanLyPhim/LayDanhSachPhim?maNhom=GP07`,
                 method: 'GET'
             })
             dispatch({

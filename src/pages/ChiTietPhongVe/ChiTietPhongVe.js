@@ -42,7 +42,7 @@ export default function ChiTietPhongVe(props) {
                         type: DAT_GHE,
                         gheDangDat: ghe
                     })
-                }} disabled={ghe.daDat} className={`text-center ghe ${classGheDaDat} ${classGheVip} ${classGheDangDat}`} >
+                }} disabled={ghe.daDat} style={{border:"none", outline:"none"}} className={`text-center ghe ${classGheDaDat} ${classGheVip} ${classGheDangDat}`} >
                     <span>{ghe.daDat ? 'X' : ghe.stt}</span>
                 </button>
             </Fragment>

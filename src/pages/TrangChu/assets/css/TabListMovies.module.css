@@ -1,5 +1,5 @@
 .imgTabList {
-  height: 200px;
+  height: 230px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,6 +23,9 @@
 }
 .filmName {
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .card_item:hover .filmName {
   color: #ce3017;

@@ -23,6 +23,7 @@ import logoAgribank from './logo/AGRIBANK.png'
 import logo123go from './logo/123go.png'
 import logoDcine from './logo/dcine.png'
 import './Footer.css'
+import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -32,7 +33,7 @@ export default function Footer() {
                     <li>
                         <h4 className="footer-list-header">CineJun Cinema</h4>
                     </li>
-                    <li><a href="#" className="generic-anchor footer-list-anchor" itemProp="significantLink">Giới thiệu</a></li>
+                    <li><NavLink to="*" className="generic-anchor footer-list-anchor" itemProp="significantLink">Giới thiệu</NavLink></li>
                     <li><a href="#" className="generic-anchor footer-list-anchor" itemProp="significantLink">FAQ</a></li>
                     <li><a href="#" className="generic-anchor footer-list-anchor" itemProp="significantLink">Thỏa thuận sử dụng</a></li>
                     <li><a href="#" itemProp="significantLink" className="generic-anchor footer-list-anchor">Chính sách bảo mật</a></li>
@@ -47,29 +48,29 @@ export default function Footer() {
                         <a target="_blank" href="https://www.cgv.vn/" className="logoS"><img src={logoCgv} alt="" /></a>
                         <a target="_blank" href="https://www.galaxycine.vn/" className="logoS"><img src={logoGalaxy} alt="" /></a>
                         <a target="_blank" href="http://lottecinemavn.com/LCHS/index.aspx" className="logoS"><img src={logoLotte} alt="" /></a>
-                        <a target="_blank" href="https://www.bhdstar.vn/" className="logoS"><img src={logoBhd} alt="" /></a>
-                        <a target="_blank" href="https://www.megagscinemas.vn/" className="logoS"><img src={logoMegags} alt="" /></a>
+                        <a target="_blank" href="https://www.bhdstar.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoBhd} alt="" /></a>
+                        <a target="_blank" href="https://www.megagscinemas.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoMegags} alt="" /></a>
                     </li>
                     <li className="logoL">
                         <a target="_blank" href="http://ddcinema.vn/" className="logoS"><img src={logoDongda} alt="" /></a>
                         <a target="_blank" href="http://cinestar.com.vn/" className="logoS"><img src={logoCinestar} alt="" /></a>
                         <a target="_blank" href="https://cinemaxvn.com/" className="logoS"><img src={logoCnx} alt="" /></a>
-                        <a target="_blank" href="https://www.betacinemas.vn/home.htm" className="logoS"><img src={logoBt} alt="" /></a>
-                        <a target="_blank" href="https://www.indovinabank.com.vn/" className="logoS"><img src={logoIVB} alt="" /></a>
+                        <a target="_blank" href="https://www.betacinemas.vn/home.htm" className="logoS d-sm-none d-lg-inline"><img src={logoBt} alt="" /></a>
+                        <a target="_blank" href="https://www.indovinabank.com.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoIVB} alt="" /></a>
                     </li>
                     <li className="logoL">
                         <a target="_blank" href="https://touchcinema.com/" className="logoS"><img src={logoTouch} alt="" /></a>
                         <a target="_blank" href="http://starlight.vn/" className="logoS"><img src={logoStarlight} alt="" /></a>
                         <a target="_blank" href="https://www.dcine.vn/" className="logoS"><img src={logoDcine} alt="" /></a>
-                        <a target="_blank" href="https://zalopay.vn/" className="logoS"><img src={logoZalopay} alt="" /></a>
-                        <a target="_blank" href="https://www.payoo.vn/" className="logoS"><img src={logoPayoo} alt="" /></a>
+                        <a target="_blank" href="https://zalopay.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoZalopay} alt="" /></a>
+                        <a target="_blank" href="https://www.payoo.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoPayoo} alt="" /></a>
                     </li>
                     <li className="logoL">
                         <a target="_blank" href="https://www.vietcombank.com.vn/" className="logoS"><img src={logoVCB} alt="" /></a>
                         <a target="_blank" href="http://www.agribank.com.vn/" className="logoS"><img src={logoAgribank} alt="" /></a>
                         <a target="_blank" href="https://www.vietinbank.vn/" className="logoS"><img src={logoViettin} alt="" /></a>
-                        <a target="_blank" href="http://123go.vn" className="logoS"><img src={logo123go} alt="" /></a>
-                        <a target="_blank" href="http://laban.vn" className="logoS"><img src={logoLaban} alt="" /></a>
+                        <a target="_blank" href="http://123go.vn" className="logoS d-sm-none d-lg-inline"><img src={logo123go} alt="" /></a>
+                        <a target="_blank" href="http://laban.vn" className="logoS d-sm-none d-lg-inline"><img src={logoLaban} alt="" /></a>
                     </li>
                 </ul>
                 <ul className="footer-list-top">
@@ -78,7 +79,6 @@ export default function Footer() {
                     </li>
                     <li><p className="generic-anchor footer-list-anchor" itemProp="significantLink">Hotline: 1900 0000</p></li>
                     <li><p className="generic-anchor footer-list-anchor" itemProp="significantLink">Giờ làm việc: 8:00 - 22:00</p></li>
-                    <li id="find-a-store"><p className="generic-anchor footer-list-anchor" itemProp="significantLink">Email: duyhoang3820@gmail.com</p></li>
                     <li id="user-registration"><p className="generic-anchor footer-list-anchor" itemProp="significantLink">Tuyển dụng</p></li>
                     <li id="order-tracking"><p itemProp="significantLink" className="generic-anchor footer-list-anchor">Liên hệ quảng cáo</p></li>
                 </ul>
@@ -87,12 +87,12 @@ export default function Footer() {
                         CONNECT <span className="footer-social-small">with</span> US
                     </span>
                     <span className="footer-social-overlap footer-social-icons-wrapper">
-                        <a href="#" className="generic-anchor" title="Pinterest" itemProp="significantLink"><i className="fa fa-pinterest" /></a>
+                        <NavLink to="*" className="generic-anchor" title="Pinterest" itemProp="significantLink"><i className="fa fa-pinterest" /></NavLink>
                         <a href="https://www.facebook.com/duyhoang3820" className="generic-anchor" target="_blank" title="Facebook" itemProp="significantLink"><i className="fa fa-facebook" /></a>
-                        <a href="#" className="generic-anchor" title="Twitter" itemProp="significantLink"><i className="fa fa-twitter" /></a>
-                        <a href="#" className="generic-anchor" title="Instagram" itemProp="significantLink"><i className="fa fa-instagram" /></a>
-                        <a href="#" className="generic-anchor" title="Youtube" itemProp="significantLink"><i className="fa fa-youtube" /></a>
-                        <a href="#" className="generic-anchor" title="Google Plus" itemProp="significantLink"><i className="fa fa-google-plus" /></a>
+                        <NavLink to="*" className="generic-anchor" title="Twitter" itemProp="significantLink"><i className="fa fa-twitter" /></NavLink>
+                        <NavLink to="*" className="generic-anchor" title="Instagram" itemProp="significantLink"><i className="fa fa-instagram" /></NavLink>
+                        <NavLink to="*" className="generic-anchor" title="Youtube" itemProp="significantLink"><i className="fa fa-youtube" /></NavLink>
+                        <NavLink to="*" className="generic-anchor" title="Google Plus" itemProp="significantLink"><i className="fa fa-google-plus" /></NavLink>
                     </span>
                 </section>
                 <section className="footer-bottom-section flex-rw mt-5">

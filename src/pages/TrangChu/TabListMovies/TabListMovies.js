@@ -19,13 +19,13 @@ export default function TabListMovies(props) {
 
     const { listPhim } = useSelector(state => state.QuanLyPhimReducer);
     const { listPhimSapChieu } = useSelector(state => state.QuanLyPhimReducer);
-    // const { listPhimHot } = useSelector(state => state.QuanLyPhimReducer);
+    const { listPhimHot } = useSelector(state => state.QuanLyPhimReducer);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(layDanhSachPhimAction())
         dispatch(layDanhSachPhimSapChieu())
-        // dispatch(layDanhSachPhimHot())
+        dispatch(layDanhSachPhimHot())
     }, []);
 
     const { Meta } = Card;
@@ -39,10 +39,10 @@ export default function TabListMovies(props) {
         return listPhimSapChieu.slice(0, 16).map((phim, index) => {
             return <Card onClick={() => {
                 history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
-            }} className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index} >
-                <div className=" ">
+            }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
+                <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
+                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}>IMDb: {phim.danhGia}</p>} /></span>
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
@@ -62,7 +62,7 @@ export default function TabListMovies(props) {
             }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
+                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}>IMDb: {phim.danhGia}</p>} /></span>
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
@@ -76,13 +76,13 @@ export default function TabListMovies(props) {
         })
     }
     const renderHotMoviesList = () => {
-        return listPhimSapChieu.slice(0, 16).map((phim, index) => {
+        return listPhimHot.slice(0, 16).map((phim, index) => {
             return <Card onClick={() => {
                 history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
-            }} className={`${style.card_item} mt-2`} hoverable style={{ width: 240, }} key={index} >
+            }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={style.filmName}>{phim.tenPhim}</p>} description={<p className={style.filmName}>IMDb: {phim.danhGia}</p>} /></span>
+                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}>IMDb: {phim.danhGia}</p>} /></span>
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
