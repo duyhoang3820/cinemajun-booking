@@ -53,7 +53,7 @@ export default function ChiTietPhongVe(props) {
 
     return (
         <div >
-            <div className="bg"></div>
+            <div className="bg1"></div>
             <div className="star-field">
                 <div className="layer"></div>
                 <div className="layer"></div>

@@ -1,4 +1,4 @@
-.bg {
+.bg2 {
   background: url("../../pages/DangNhap/assets/img/bg2.jpg");
   background-size: contain;
   background-position: center;
@@ -10,7 +10,7 @@
   left: 0;
   z-index: -3;
 }
-.bg:before {
+.bg2:before {
   content: "";
   width: 100%;
   height: 100%;

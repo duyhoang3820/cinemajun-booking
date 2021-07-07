@@ -1,7 +1,6 @@
-.bg {
-  background:black;
+.bg1 {
+  background: black;
   background-size: cover;
-
   height: 100%;
   width: 100%;
   position: fixed;
@@ -9,7 +8,7 @@
   left: 0;
   z-index: -3;
 }
-.bg:before {
+.bg1:before {
   content: "";
   width: 100%;
   height: 100%;

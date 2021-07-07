@@ -6,6 +6,7 @@ import './ThongTinNguoiDung.css'
 import LichSuDatVe from '../LichSuDatVe/LichSuDatVe';
 import { history } from '../../../App';
 import ThongTinCaNhan from '../ThongTinCaNhan/ThongTinCaNhan';
+import '../../../components/Background/Background1.css'
 
 export default function ThongTinNguoiDung() {
     const { TabPane } = Tabs;
@@ -14,7 +15,13 @@ export default function ThongTinNguoiDung() {
     }, [])
 
     return (
-        <div className="py-3" style={{ backgroundColor: '#002329' }}>
+        <div className="py-3" >
+            <div className="bg1"></div>
+            <div className="star-field">
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+            </div>
             <a className="ml-4" onClick={() => {
                 history.goBack()
             }}><i className="fa fa-angle-left back"></i></a>

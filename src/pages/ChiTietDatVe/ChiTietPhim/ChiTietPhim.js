@@ -12,7 +12,7 @@ import ModalVideo from 'react-modal-video'
 import img from '../assets/img/play-video.png'
 import { Link } from 'react-scroll'
 import { history } from "../../../App";
-import '../../../components/Background/Background.css'
+import '../../../components/Background/Background2.css'
 
 
 export default function ChiTietPhim(props) {
@@ -29,7 +29,7 @@ export default function ChiTietPhim(props) {
 
   return (
     <div className="">
-      <div className="bg"></div>
+      <div className="bg2"></div>
       <div className="star-field">
         <div className="layer"></div>
         <div className="layer"></div>
