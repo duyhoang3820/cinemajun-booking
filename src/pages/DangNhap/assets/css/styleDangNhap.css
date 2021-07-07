@@ -95,7 +95,7 @@
   max-width: 460px;
   width: 100%;
   margin: 0 auto 100px;
-  padding-top: 35px;
+  padding-top: 25px;
   margin-bottom: 200px;
 }
 .container_login.active .card_login:first-child {
@@ -128,6 +128,9 @@
 .container_login.active .card_login.alt .toggle:before {
   content: "";
 }
+/* .card_login_img {
+  margin-left: 43%;
+} */
 .container_login.active .card_login.alt .title_login,
 .container_login.active .card_login.alt .input-container,
 .container_login.active .card_login.alt .button-container,
@@ -135,10 +138,11 @@
   left: 0;
   opacity: 1;
   visibility: visible;
+  /* display: block; */
   transition: 0.3s ease;
 }
 .container_login.active .card_login.alt .img_login {
- opacity: 1 !important;
+  opacity: 1 !important;
   transition-delay: 0.3s;
 }
 .container_login.active .card_login.alt .title_login {
@@ -184,6 +188,9 @@
   border-radius: 5px 5px 0 0;
   margin: 0 10px;
   padding: 0;
+}
+.card_login_img {
+  position: relative;
 }
 .card_login .title_login {
   position: relative;
@@ -339,7 +346,7 @@
 }
 
 .card_login.alt {
-  margin-top: 35px;
+  margin-top: 25px;
   position: absolute;
   top: 50px;
   right: -70px;
@@ -389,12 +396,14 @@
 .card_login.alt .input-container,
 .card_login.alt .button-container,
 .card_login.alt .img_login {
-  left: 100px;
+  /* left: 100px; */
   opacity: 0;
   visibility: hidden;
+  /* display: none; */
 }
-.card_login.alt .img_login{
+.card_login.alt .img_login {
   position: relative;
+  opacity: 0;
 }
 .card_login.alt .title_login {
   position: relative;
@@ -467,10 +476,10 @@
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 768px) {
   .card_login.alt {
-    top: 60px;
-    right: -50px;
+    top: 25px;
+    right: 0px;
   }
   .card_login.alt .toggle {
     width: 70px;
@@ -481,6 +490,9 @@
     font-size: 40px;
   }
   .container_login.active .card_login.alt .toggle {
-    transform: scale(23);
+    transform: scale(21);
+  }
+  .card_login_img {
+    opacity: 0;
   }
 }

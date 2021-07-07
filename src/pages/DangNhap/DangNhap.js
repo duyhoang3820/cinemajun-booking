@@ -77,15 +77,15 @@ export default function DangNhap() {
 
     return (
         <div className="login">
-            <div className="pen-title">
+            <div className="d-none d-md-block pen-title">
                 <i className="fa fa-home" onClick={() => {
                     history.push('/')
                 }}></i>
             </div>
-            <div className={`${state.isActive} container_login`}>
+            <div className={`${state.isActive} container_login w-100`}>
                 <div className="card_login"></div>
                 <div className="card_login">
-                    <div className="d-flex" style={{ justifyContent: 'center' }}>
+                    <div className="card_login_img d-flex" style={{ justifyContent: 'center' }}>
                         <img style={{ textAlign: 'center' }} src={logo} width={70} height={50}></img>
                     </div>
                     <h1 className="title_login">Đăng nhập</h1>
