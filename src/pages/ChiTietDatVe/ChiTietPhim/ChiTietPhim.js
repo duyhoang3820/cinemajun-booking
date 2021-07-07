@@ -12,6 +12,7 @@ import ModalVideo from 'react-modal-video'
 import img from '../assets/img/play-video.png'
 import { Link } from 'react-scroll'
 import { history } from "../../../App";
+import '../../../components/Background/Background.css'
 
 
 export default function ChiTietPhim(props) {
@@ -27,7 +28,13 @@ export default function ChiTietPhim(props) {
   }, []);
 
   return (
-    <div className="bgImg">
+    <div className="">
+      <div className="bg"></div>
+      <div className="star-field">
+        <div className="layer"></div>
+        <div className="layer"></div>
+        <div className="layer"></div>
+      </div>
       <a className="ml-4" onClick={() => {
         history.goBack()
       }}><i className="fa fa-angle-left back"></i></a>

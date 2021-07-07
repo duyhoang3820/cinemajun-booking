@@ -11,7 +11,9 @@ import { DAT_GHE } from '../../redux/constants/PhongVeConst/PhongVeConst';
 import screen from '../ChiTietDatVe/assets/img/screen.png'
 import { Collapse, List } from 'antd';
 import { CaretRightOutlined } from '@ant-design/icons';
+import '../../components/Background/Background1.css'
 const { Panel } = Collapse;
+
 
 
 export default function ChiTietPhongVe(props) {
@@ -50,7 +52,13 @@ export default function ChiTietPhongVe(props) {
     }
 
     return (
-        <div className="bgPhongVe" style={{ backgroundColor: '#002329' }} >
+        <div >
+            <div className="bg"></div>
+            <div className="star-field">
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+            </div>
             <a className="ml-4" onClick={() => {
                 history.goBack()
             }}><i className="fa fa-angle-left back"></i></a>
@@ -75,7 +83,9 @@ export default function ChiTietPhongVe(props) {
             </div>
             <div className="container">
                 <div className="text-center scrollCinema">
-                    <div className="titleChonGhe"></div>
+                    <div className="d-flex" style={{ justifyContent: 'center' }}>
+                        <div className="titleChonGhe "></div>
+                    </div>
                     <div className="row py-5" style={{ justifyContent: 'space-evenly', alignItems: 'center' }}>
                         <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
                             <button className="gheEx"></button>
@@ -98,7 +108,9 @@ export default function ChiTietPhongVe(props) {
                     </div>
                 </div>
                 <div className="text-center pt-5">
-                    <div className="titleThanhToan"></div>
+                    <div className="d-flex" style={{ justifyContent: 'center' }}>
+                        <div className="titleThanhToan "></div>
+                    </div>
                     <div className="row pt-3 pb-5" style={{ justifyContent: 'center' }}>
                         <div className=" col-10 col-sm-10 col-md-8 col-lg-8 mt-5 detailTicket">
                             <Collapse style={{ backgroundColor: '#00474f' }}

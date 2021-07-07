@@ -279,39 +279,198 @@
   display: flex;
   justify-content: center;
 }
-.titleChonGhe {
-  background-color: rgba(8, 6, 11, 0.6);
-  box-shadow: 20px 5px 30px 20px rgba(8, 6, 11, 0.6);
-  font-weight: bold;
-  font-family: monospace;
-  text-shadow: 0 0 0 rgb(255 0 0), 0 0 0 rgb(0 255 0), 0 0 0 rgb(0 0 255);
-  font-size: 30px;
-  animation: c2 1s infinite cubic-bezier(0.5, -2000, 0.5, 2000);
-}
-.titleChonGhe:before {
-  content: "Chọn ghế ⇓";
-  color: #fadb14;
-}
-.titleThanhToan {
-  font-weight: bold;
-  font-family: monospace;
-  text-shadow: 0 0 0 rgb(255 0 0), 0 0 0 rgb(0 255 0), 0 0 0 rgb(0 0 255);
-  font-size: 30px;
-  animation: c2 1s infinite cubic-bezier(0.5, -2000, 0.5, 2000);
-}
-.titleThanhToan:before {
-  content: "Thanh toán ⇓";
-  color: #fadb14;
-}
-@keyframes c2 {
-  25%,
-  100% {
-    text-shadow: 0.03px -0.01px 0.01px rgb(255 0 0),
-      0.02px 0.02px 0 rgb(0 255 0), -0.02px 0.02px 0 rgb(0 0 255);
-  }
-}
+
 .ant-empty-description {
   color: #fadb14 !important;
 }
+
+.titleChonGhe {
+  --w: 10ch;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 1.2em;
+  letter-spacing: var(--w);
+  width: var(--w);
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+  animation: c7 2s infinite;
+}
+.titleChonGhe:before {
+  content: "Chọn ghế ⇓";
+}
+
+.titleThanhToan {
+  --w: 10ch;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 1.2em;
+  letter-spacing: var(--w);
+  width: var(--w);
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+  animation: c7 2s infinite;
+}
+.titleThanhToan:before {
+  content: "Thanh toán ⇓";
+}
+
+@keyframes c7 {
+  0% {
+    text-shadow: calc(0 * var(--w)) -1.2em #fadb14,
+      calc(-1 * var(--w)) -1.2em #fadb14, calc(-2 * var(--w)) -1.2em #fadb14,
+      calc(-3 * var(--w)) -1.2em #fadb14, calc(-4 * var(--w)) -1.2em #fadb14,
+      calc(-5 * var(--w)) -1.2em #fadb14, calc(-6 * var(--w)) -1.2em #fadb14,
+      calc(-7 * var(--w)) -1.2em #fadb14, calc(-8 * var(--w)) -1.2em #fadb14,
+      calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  4% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14,
+      calc(-1 * var(--w)) -1.2em #fadb14, calc(-2 * var(--w)) -1.2em #fadb14,
+      calc(-3 * var(--w)) -1.2em #fadb14, calc(-4 * var(--w)) -1.2em #fadb14,
+      calc(-5 * var(--w)) -1.2em #fadb14, calc(-6 * var(--w)) -1.2em #fadb14,
+      calc(-7 * var(--w)) -1.2em #fadb14, calc(-8 * var(--w)) -1.2em #fadb14,
+      calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  8% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) -1.2em #fadb14, calc(-3 * var(--w)) -1.2em #fadb14,
+      calc(-4 * var(--w)) -1.2em #fadb14, calc(-5 * var(--w)) -1.2em #fadb14,
+      calc(-6 * var(--w)) -1.2em #fadb14, calc(-7 * var(--w)) -1.2em #fadb14,
+      calc(-8 * var(--w)) -1.2em #fadb14, calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  12% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) -1.2em #fadb14,
+      calc(-4 * var(--w)) -1.2em #fadb14, calc(-5 * var(--w)) -1.2em #fadb14,
+      calc(-6 * var(--w)) -1.2em #fadb14, calc(-7 * var(--w)) -1.2em #fadb14,
+      calc(-8 * var(--w)) -1.2em #fadb14, calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  16% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) -1.2em #fadb14, calc(-5 * var(--w)) -1.2em #fadb14,
+      calc(-6 * var(--w)) -1.2em #fadb14, calc(-7 * var(--w)) -1.2em #fadb14,
+      calc(-8 * var(--w)) -1.2em #fadb14, calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  20% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) -1.2em #fadb14,
+      calc(-6 * var(--w)) -1.2em #fadb14, calc(-7 * var(--w)) -1.2em #fadb14,
+      calc(-8 * var(--w)) -1.2em #fadb14, calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  24% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) -1.2em #fadb14, calc(-7 * var(--w)) -1.2em #fadb14,
+      calc(-8 * var(--w)) -1.2em #fadb14, calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  28% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) 0 #fadb14, calc(-7 * var(--w)) -1.2em #fadb14,
+      calc(-8 * var(--w)) -1.2em #fadb14, calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  32% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) 0 #fadb14, calc(-7 * var(--w)) 0 #fadb14,
+      calc(-8 * var(--w)) -1.2em #fadb14, calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  36% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) 0 #fadb14, calc(-7 * var(--w)) 0 #fadb14,
+      calc(-8 * var(--w)) 0 #fadb14, calc(-9 * var(--w)) -1.2em #fadb14;
+  }
+  40%,
+  60% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) 0 #fadb14, calc(-7 * var(--w)) 0 #fadb14,
+      calc(-8 * var(--w)) 0 #fadb14, calc(-9 * var(--w)) 0 #fadb14;
+  }
+  64% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) 0 #fadb14, calc(-7 * var(--w)) 0 #fadb14,
+      calc(-8 * var(--w)) 0 #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  68% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) 0 #fadb14, calc(-7 * var(--w)) 0 #fadb14,
+      calc(-8 * var(--w)) 1.2em #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  72% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) 0 #fadb14, calc(-7 * var(--w)) 1.2em #fadb14,
+      calc(-8 * var(--w)) 1.2em #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  76% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 0 #fadb14,
+      calc(-6 * var(--w)) 1.2em #fadb14, calc(-7 * var(--w)) 1.2em #fadb14,
+      calc(-8 * var(--w)) 1.2em #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  80% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 0 #fadb14, calc(-5 * var(--w)) 1.2em #fadb14,
+      calc(-6 * var(--w)) 1.2em #fadb14, calc(-7 * var(--w)) 1.2em #fadb14,
+      calc(-8 * var(--w)) 1.2em #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  84% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 0 #fadb14,
+      calc(-4 * var(--w)) 1.2em #fadb14, calc(-5 * var(--w)) 1.2em #fadb14,
+      calc(-6 * var(--w)) 1.2em #fadb14, calc(-7 * var(--w)) 1.2em #fadb14,
+      calc(-8 * var(--w)) 1.2em #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  88% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 0 #fadb14, calc(-3 * var(--w)) 1.2em #fadb14,
+      calc(-4 * var(--w)) 1.2em #fadb14, calc(-5 * var(--w)) 1.2em #fadb14,
+      calc(-6 * var(--w)) 1.2em #fadb14, calc(-7 * var(--w)) 1.2em #fadb14,
+      calc(-8 * var(--w)) 1.2em #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  92% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 0 #fadb14,
+      calc(-2 * var(--w)) 1.2em #fadb14, calc(-3 * var(--w)) 1.2em #fadb14,
+      calc(-4 * var(--w)) 1.2em #fadb14, calc(-5 * var(--w)) 1.2em #fadb14,
+      calc(-6 * var(--w)) 1.2em #fadb14, calc(-7 * var(--w)) 1.2em #fadb14,
+      calc(-8 * var(--w)) 1.2em #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  96% {
+    text-shadow: calc(0 * var(--w)) 0 #fadb14, calc(-1 * var(--w)) 1.2em #fadb14,
+      calc(-2 * var(--w)) 1.2em #fadb14, calc(-3 * var(--w)) 1.2em #fadb14,
+      calc(-4 * var(--w)) 1.2em #fadb14, calc(-5 * var(--w)) 1.2em #fadb14,
+      calc(-6 * var(--w)) 1.2em #fadb14, calc(-7 * var(--w)) 1.2em #fadb14,
+      calc(-8 * var(--w)) 1.2em #fadb14, calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+  100% {
+    text-shadow: calc(0 * var(--w)) 1.2em #fadb14,
+      calc(-1 * var(--w)) 1.2em #fadb14, calc(-2 * var(--w)) 1.2em #fadb14,
+      calc(-3 * var(--w)) 1.2em #fadb14, calc(-4 * var(--w)) 1.2em #fadb14,
+      calc(-5 * var(--w)) 1.2em #fadb14, calc(-6 * var(--w)) 1.2em #fadb14,
+      calc(-7 * var(--w)) 1.2em #fadb14, calc(-8 * var(--w)) 1.2em #fadb14,
+      calc(-9 * var(--w)) 1.2em #fadb14;
+  }
+}
+
 
 

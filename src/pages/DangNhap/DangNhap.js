@@ -11,6 +11,7 @@ import Footer from '../../components/Home/Footer/Footer';
 import { history } from '../../App';
 import logo from '../../assets/img/logo/logo.svg'
 import logo2 from '../../assets/img/logo/logo2.svg'
+import '../../components/Background/Background3.css'
 
 export default function DangNhap() {
     useEffect(() => {
@@ -76,7 +77,13 @@ export default function DangNhap() {
 
 
     return (
-        <div className="login">
+        <div className="">
+            <div className="bg"></div>
+            <div className="star-field">
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+            </div>
             <div className="d-none d-md-block pen-title">
                 <i className="fa fa-home" onClick={() => {
                     history.push('/')

@@ -3,13 +3,20 @@ import CarouselMovie from './CarouselMovie/CarouselMovie'
 import CinemaCluster from './CinemaSystem/CinemaSystem'
 import TabListMovies from './TabListMovies/TabListMovies'
 import './assets/css/Trangchu.css'
+import '../../components/Background/Background.css'
 
 export default function TrangChu(props) {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
     return (
-        <div className="home" >
+        <div className="" >
+            <div className="bg"></div>
+            <div className="star-field">
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+            </div>
             <div id="trangchu">
                 <CarouselMovie />
             </div>
