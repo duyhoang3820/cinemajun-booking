@@ -35,8 +35,6 @@ export default function Menu(props) {
     });
   };
 
-
-
   return (
     <div>
       <Tabs defaultActiveKey="1" centered={true} style={{borderRadius:'5px'}}>

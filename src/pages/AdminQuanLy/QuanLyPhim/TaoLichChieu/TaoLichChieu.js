@@ -5,15 +5,15 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
-import { layThongTinCumRapTheoHeThong, layThongTinPhim, themLichChieu } from '../../../../redux/actions/AdminQuanLyAction';
+import { layThongTinCumRapTheoHeThong, themLichChieu } from '../../../../redux/actions/AdminQuanLyAction';
 
 export default function TaoLichChieu() {
     const { phimInfo, listCumRap } = useSelector(state => state.AdminQuanLyReducer)
     const dispatch = useDispatch()
     // console.log('listCumRap', listCumRap);
-    console.log('phimInfo', phimInfo);
-    useEffect(() => {
-    }, [phimInfo])
+    // console.log('phimInfo', phimInfo);
+    // useEffect(() => {
+    // }, [phimInfo])
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {
@@ -29,10 +29,7 @@ export default function TaoLichChieu() {
         }),
         onSubmit: values => {
             // console.log('value', values);
-            dispatch(themLichChieu(values), () => {
-                dispatch(layThongTinPhim(formik.values.maPhim))
-            })
-
+            dispatch(themLichChieu(values))
         },
     });
     const rap_Formik = useFormik({

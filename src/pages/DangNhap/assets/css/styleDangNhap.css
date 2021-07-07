@@ -135,7 +135,8 @@
 .container_login.active .card_login.alt .input-container,
 .container_login.active .card_login.alt .button-container,
 .container_login.active .card_login.alt .img_login {
-  left: 0;
+  /* left: 0; */
+  right: 0;
   opacity: 1;
   visibility: visible;
   /* display: block; */
@@ -397,6 +398,7 @@
 .card_login.alt .button-container,
 .card_login.alt .img_login {
   /* left: 100px; */
+  right: 100px;
   opacity: 0;
   visibility: hidden;
   /* display: none; */

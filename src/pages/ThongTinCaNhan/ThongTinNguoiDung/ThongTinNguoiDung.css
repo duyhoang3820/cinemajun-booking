@@ -60,19 +60,20 @@ button:focus {
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .tablist__item {
   color: #1890ff;
-  font-size: 20px;
+  font-size: 25px;
 }
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:hover .tablist__item {
   color: #1890ff;
-  font-size: 20px;
+  font-size: 25px;
 }
 .ant-tabs-tab .ant-tabs-tab-btn .tablist__item {
-  transition: 0.3s;
+  transition: 0.2s;
   color: #1890ff;
+  font-size: 18px;
 }
 .ant-tabs-tab .ant-tabs-tab-btn:hover .tablist__item {
   color: #096dd9;
-  font-size: 17px;
+  font-size: 25px;
 }
 
 .history_table {

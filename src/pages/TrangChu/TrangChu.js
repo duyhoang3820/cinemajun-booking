@@ -13,14 +13,18 @@ export default function TrangChu(props) {
             <div id="trangchu">
                 <CarouselMovie />
             </div>
+            <br></br>
             <br id="lichChieu" /><br />
+            <br></br>
             <br></br>
             <div className="container">
                 <div className="titleLichChieu"></div>
                 <TabListMovies />
             </div>
+            <br></br>
             <br id="cumRap" /><br />
-            <br />
+            <br></br>
+            <br></br>
             <div className="container">
                 <div className="titleCunRap"></div>
                 <CinemaCluster />

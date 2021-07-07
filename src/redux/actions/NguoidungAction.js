@@ -14,11 +14,11 @@ import { notification } from 'antd';
 export const dangNhapAction = (userLogin) => {
     const openNotificationWithIcon = type => {
         notification[type]({
-          message: 'Đăng nhập thành công!',
-          description:
-            'Chào mừng bạn đến với CineJun Cinema',
+            message: 'Đăng nhập thành công!',
+            description:
+                'Chào mừng bạn đến với CineJun Cinema',
         });
-      };
+    };
     return async dispatch => {
         dispatch({
             type: DISPLAY_LOADING
@@ -66,11 +66,11 @@ export const dangNhapAction = (userLogin) => {
 export const dangKyAction = (userRegister) => {
     const openNotificationWithIcon = type => {
         notification[type]({
-          message: 'Đăng ký thành công!',
-          description:
-            'Đăng nhập để trải nghiệm CineJun Cinema',
+            message: 'Đăng ký thành công!',
+            description:
+                'Đăng nhập để trải nghiệm CineJun Cinema',
         });
-      };
+    };
     const value = 'true';
     return async dispatch => {
         dispatch({
@@ -158,6 +158,7 @@ export const capNhatNguoiDung = (thongTin) => {
                 icon: 'success',
                 confirmButtonText: 'OK'
             })
+
         } catch (error) {
             Swal.fire({
                 title: 'Error!',

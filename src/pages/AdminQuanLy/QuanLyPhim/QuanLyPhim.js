@@ -5,10 +5,10 @@ import { layDanhSachPhimHot } from '../../../redux/actions/QuanLyPhimAction';
 import { Table } from 'antd';
 import { Button } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { layThongTinPhim, xoaPhim } from '../../../redux/actions/AdminQuanLyAction';
+import { xoaPhim } from '../../../redux/actions/AdminQuanLyAction';
 import CapNhatPhim from './CapNhatPhim/CapNhatPhim';
 import TaoLichChieu from './TaoLichChieu/TaoLichChieu';
-import { EDIT_MOVIE } from '../../../redux/constants/AdminQuanLyConst/AdminQuanLyConst';
+import { EDIT_MOVIE, THONG_TIN_PHIM } from '../../../redux/constants/AdminQuanLyConst/AdminQuanLyConst';
 import { Popconfirm } from 'antd';
 
 export default function QuanLyPhim() {
@@ -72,7 +72,7 @@ export default function QuanLyPhim() {
                 <Fragment>
                     <Button onClick={() => {
                         dispatch({
-                            type: `THONG_TIN_PHIM`,
+                            type: THONG_TIN_PHIM,
                             phimInfo: record
                         })
                         // console.log(record.maPhim);

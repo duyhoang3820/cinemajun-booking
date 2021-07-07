@@ -42,7 +42,8 @@ export default function TabListMovies(props) {
             }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}>IMDb: {phim.danhGia}</p>} /></span>
+                    {index % 4 === 0 ? <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span> :
+                        <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageTypeP}>P</span>IMDb: {phim.danhGia}</p>} /></span>}
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
@@ -62,7 +63,9 @@ export default function TabListMovies(props) {
             }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}>IMDb: {phim.danhGia}</p>} /></span>
+                    {index % 2 === 0 ? index % 3 === 0 ? <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageTypeP}>P</span>IMDb: {phim.danhGia}</p>} /></span> :
+                        <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C18</span>IMDb: {phim.danhGia}</p>} /></span> :
+                        <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span>}
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
@@ -82,7 +85,8 @@ export default function TabListMovies(props) {
             }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}>IMDb: {phim.danhGia}</p>} /></span>
+                    {index % 3 === 0 ? <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C18</span>IMDb: {phim.danhGia}</p>} /></span> :
+                        <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span>}
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>

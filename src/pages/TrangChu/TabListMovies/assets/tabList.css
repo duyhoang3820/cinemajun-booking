@@ -5,14 +5,23 @@
   .ant-tabs-tab-btn
   .type__list_film {
   font-size: 18px;
-  transition: 0.2s;
+  transition:all 0.2s ease;
   font-weight: 600;
   color: white;
   /* margin-bottom: 20px !important; */
 }
+.ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list
+  .ant-tabs-tab
+  .ant-tabs-tab-btn
+  .type__list_film:hover{
+    font-size: 25px;
+  } 
 
 .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:hover {
   color: black;
+
 }
 
 .ant-tabs-nav
@@ -21,7 +30,7 @@
   .ant-tabs-tab.ant-tabs-tab-active
   .ant-tabs-tab-btn
   .type__list_film {
-  transform: scale(1.1);
+    font-size: 25px;
   color: #fa5238;
 }
 /* .ant-tabs-nav

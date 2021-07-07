@@ -73,6 +73,31 @@
   font-size: 30px !important;
   
 }
+.detail_ageType {
+  font-size: 14px;
+  background-color: #fb4226;
+  border-radius: 4px;
+  padding: 0 5px;
+  color: #fff;
+  min-width: 33px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: bold;
+}
+.detail_ageTypeP {
+  font-size: 14px;
+  background-color: #00ac4d;
+  border-radius: 4px;
+  padding: 0 5px;
+  color: #fff;
+  min-width: 33px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
 .detail__tenPhim{
   font-size: 24px;
   font-weight: 600;

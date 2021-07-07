@@ -7,7 +7,7 @@ import 'sweetalert2/dist/sweetalert2.css'
 import { history } from "../../App"
 import { DISPLAY_LOADING, HIDE_LOADING } from "../constants/loadingConst"
 import { timeout } from "../constants/setTimeOut"
-import { GET_CUM_RAP, GET_LIST_NGUOI_DUNG, GET_THONG_TIN_PHIM, SET_DANH_SACH_TIM_KIEM } from "../constants/AdminQuanLyConst/AdminQuanLyConst"
+import { GET_CUM_RAP, GET_LIST_NGUOI_DUNG, SET_DANH_SACH_TIM_KIEM } from "../constants/AdminQuanLyConst/AdminQuanLyConst"
 
 export const layDanhSachNguoiDung = () => {
     return async dispatch => {
@@ -35,7 +35,7 @@ export const layDanhSachNguoiDung = () => {
 }
 
 export const timKiemNguoiDung = (tuKhoa) => {
-    return async dispatch => { 
+    return async dispatch => {
         try {
             const result = await axios({
                 url: `${DOMAIN}/QuanLyNguoiDung/TimKiemNguoiDung?MaNhom=GP01&tuKhoa=${tuKhoa}`,
@@ -53,7 +53,7 @@ export const timKiemNguoiDung = (tuKhoa) => {
             // alert('Tìm kiếm thành công');
         } catch (error) {
             alert(error.response.error)
-        }        
+        }
     }
 }
 
@@ -274,29 +274,29 @@ export const capNhatPhim = (dataMovie) => {
     }
 }
 
-export const layThongTinPhim = (movieId) => {
-    return async dispatch => {
-        dispatch({
-            type: DISPLAY_LOADING
-        })
-        await timeout(1000);
-        try {
-            const result = await axios({
-                url: `${DOMAIN}/QuanLyPhim/LayThongTinPhim?MaPhim=${movieId}`,
-                method: 'GET',
-            })
-            dispatch({
-                type: GET_THONG_TIN_PHIM,
-                thongTinPhim: result.data
-            })
-        } catch (error) {
-            console.log(error);
-        }
-        dispatch({
-            type: HIDE_LOADING
-        })
-    }
-}
+// export const layThongTinPhim = (movieId) => {
+//     return async dispatch => {
+//         dispatch({
+//             type: DISPLAY_LOADING
+//         })
+//         await timeout(1000);
+//         try {
+//             const result = await axios({
+//                 url: `${DOMAIN}/QuanLyPhim/LayThongTinPhim?MaPhim=${movieId}`,
+//                 method: 'GET',
+//             })
+//             dispatch({
+//                 type: GET_THONG_TIN_PHIM,
+//                 thongTinPhim: result.data
+//             })
+//         } catch (error) {
+//             console.log(error);
+//         }
+//         dispatch({
+//             type: HIDE_LOADING
+//         })
+//     }
+// }
 
 export const themLichChieu = (dataLichChieu) => {
     return async dispatch => {

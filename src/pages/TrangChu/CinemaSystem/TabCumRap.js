@@ -63,7 +63,7 @@ export default function TabCumRap(props) {
     }
     return (
         <div>
-            <Tabs tabPosition="top" defaultActiveKey="1">
+            <Tabs tabPosition="top" defaultActiveKey="0">
                 {cumRap.map((cr, index) => {
                     const detail = styleClass(cr.tenCumRap)
                     return <TabPane key={index + 1} tab={<div className="cumRap" style={{ width: '250px' }}>

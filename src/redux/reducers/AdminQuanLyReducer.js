@@ -1,4 +1,4 @@
-import { EDIT_MOVIE, EDIT_USER, GET_CUM_RAP, GET_LIST_NGUOI_DUNG, GET_THONG_TIN_PHIM, SET_DANH_SACH_TIM_KIEM } from "../constants/AdminQuanLyConst/AdminQuanLyConst";
+import { EDIT_MOVIE, EDIT_USER, GET_CUM_RAP, GET_LIST_NGUOI_DUNG, SET_DANH_SACH_TIM_KIEM, THONG_TIN_PHIM } from "../constants/AdminQuanLyConst/AdminQuanLyConst";
 
 const initialState = {
     danhSachNguoiDung: [],
@@ -32,7 +32,7 @@ export default (state = initialState, action) => {
             state.listCumRap = action.listCumRap
             return { ...state }
         }
-        case 'THONG_TIN_PHIM': {
+        case THONG_TIN_PHIM: {
             state.phimInfo = action.phimInfo
             return { ...state }
         }

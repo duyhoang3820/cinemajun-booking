@@ -16,7 +16,7 @@
   .ant-tabs-tab
   .ant-tabs-tab-btn
   .item__nav:hover {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:hover {
@@ -30,7 +30,7 @@
   .ant-tabs-tab-btn
   .item__nav {
   /* color: white; */
-  font-size: 20px;
+  font-size: 25px;
   color: #fa5238;
 }
 .cinemaSystem_tenCumRap {
