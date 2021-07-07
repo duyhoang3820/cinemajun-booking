@@ -1,6 +1,6 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { DatePicker, Space} from 'antd';
+import { DatePicker, Space } from 'antd';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useFormik } from 'formik';
@@ -8,24 +8,24 @@ import * as Yup from 'yup'
 import { layThongTinCumRapTheoHeThong, layThongTinPhim, themLichChieu } from '../../../../redux/actions/AdminQuanLyAction';
 
 export default function TaoLichChieu() {
-    const { thongTinPhim, listCumRap } = useSelector(state => state.AdminQuanLyReducer)
+    const { phimInfo, listCumRap } = useSelector(state => state.AdminQuanLyReducer)
     const dispatch = useDispatch()
     // console.log('listCumRap', listCumRap);
-    // console.log('thongTinPhim', thongTinPhim);
+    console.log('phimInfo', phimInfo);
     useEffect(() => {
-    }, [thongTinPhim])
+    }, [phimInfo])
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {
-            maPhim: thongTinPhim.maPhim,
+            maPhim: phimInfo.maPhim,
             ngayChieuGioChieu: '',
-            maRap: 0,
-            giaVe: 0,
+            maRap: '',
+            giaVe: '',
         },
         validationSchema: Yup.object().shape({
-            giaVe: Yup.string().required("Required!"),
-            maRap: Yup.string().required("Required!"),
-            ngayChieuGioChieu: Yup.string().required("Required!"),
+            giaVe: Yup.string().required("* Vui lòng nhập giá vé!"),
+            maRap: Yup.string().required("* Vui lòng chọn rạp!"),
+            ngayChieuGioChieu: Yup.string().required("* Vui lòng chọn ngày chiếu!"),
         }),
         onSubmit: values => {
             // console.log('value', values);
@@ -41,7 +41,12 @@ export default function TaoLichChieu() {
             maHeThongRap: '',
             maCumRap: ''
         },
-
+        validationSchema: Yup.object().shape({
+            maHeThongRap: Yup.string().required("* Vui lòng chọn hệ thống rạp!"),
+            maCumRap: Yup.string().required("* Vui lòng chọn cụm rạp!"),
+        }),
+        onSubmit: values => {
+        },
     })
 
     useEffect(() => {
@@ -78,54 +83,63 @@ export default function TaoLichChieu() {
                                 <option value={'LotteCinima '}>Lotte Cinema</option>
                                 <option value={'MegaGS'}>MegaGS</option>
                             </select>
+                            {rap_Formik.errors.maHeThongRap && rap_Formik.touched.maHeThongRap && (
+                                <p className="text-danger" style={{ fontSize: '14px' }}>{rap_Formik.errors.maHeThongRap} </p>
+                            )}
                         </div>
                         <div className="form-group">
                             <select name="maCumRap" id="maCumRap" value={rap_Formik.values['maCumRap']} onChange={rap_Formik.handleChange} className="custom-select custom-select-sm-lg">
                                 <option defaultValue>Chọn cụm rạp</option>
                                 {renderCumRap()}
                             </select>
+                            {rap_Formik.errors.maCumRap && rap_Formik.touched.maCumRap && (
+                                <p className="text-danger" style={{ fontSize: '14px' }}>{rap_Formik.errors.maCumRap} </p>
+                            )}
                         </div>
                         <div className="form-group">
                             <select name="maRap" id="maRap" value={formik.values['maRap']} className="custom-select custom-select-sm-lg" onChange={formik.handleChange}>
                                 <option defaultValue>Chọn rạp</option>
                                 {renderRap()}
                             </select>
+                            {formik.errors.maRap && formik.touched.maRap && (
+                                <p className="text-danger" style={{ fontSize: '14px' }}>{formik.errors.maRap} </p>
+                            )}
                         </div>
                         <div className="form-group">
-                            <label htmlFor="giaVe" className="text-primary mb-2">Giá vé</label>
+                            <label htmlFor="giaVe" className="text-primary" style={{ fontSize: '14px' }}>Giá vé</label>
                             <input placeholder="Giá vé từ 75.000đ - 200.000đ" type="number" name="giaVe" id="giaVe" className="form-control" onChange={formik.handleChange} />
                             {formik.errors.giaVe && formik.touched.giaVe && (
-                                <p className="text-danger">{formik.errors.giaVe} </p>
+                                <p className="text-danger" style={{ fontSize: '14px' }}>{formik.errors.giaVe} </p>
                             )}
                         </div>
                         <div className="form-group row">
                             <div className="col-6">
-                                <label htmlFor="ngayChieuGioChieu" className="text-primary mb-2">Ngày chiếu giờ chiếu</label><br />
+                                <label htmlFor="ngayChieuGioChieu" className="text-primary" style={{ fontSize: '14px' }}>Ngày chiếu giờ chiếu</label><br />
                                 <Space direction="vertical" size={12}>
                                     <DatePicker id="ngayChieuGioChieu" name="ngayChieuGioChieu" showTime={{ format: 'HH:mm' }} format={dateFormatList} onChange={(value, dateString) => {
                                         formik.values.ngayChieuGioChieu = dateString
                                     }} />
                                 </Space>
                                 {formik.errors.ngayChieuGioChieu && formik.touched.ngayChieuGioChieu && (
-                                <p className="text-danger">{formik.errors.ngayChieuGioChieu} </p>
-                            )}
-                            </div>
-                            <div className="form-group col-6 mt-4">
-                                <button style={{ float: 'right' }} type="submit" className="btn btn-success">Tạo lịch chiếu</button>
+                                    <p className="text-danger" style={{ fontSize: '14px' }}>{formik.errors.ngayChieuGioChieu} </p>
+                                )}
                             </div>
                         </div>
 
                     </div>
-                    <div className="col-12 col-sm-12 col-xl-6 row">
-                        <div className="col-12 col-sm-12 col-xl-6">
-                            <img className="ml-4" style={{ width: 150, height: 200 }} src={thongTinPhim.hinhAnh} alt="" />
+                    <div className="col-12 col-sm-12 col-xl-6 row mb-5 pb-5" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
+                        <div className="col-6 d-none d-lg-block">
+                            <img className="ml-5" style={{ width: 150, height: 200 }} src={phimInfo.hinhAnh?.props.src} alt="" />
                         </div>
-                        <div className="col-12 col-sm-12 col-xl-6">
-                            <h1>{thongTinPhim.tenPhim}</h1>
+                        <div className="col-6 d-none d-lg-block  text-center">
+                            <h1>{phimInfo.tenPhim}</h1>
                         </div>
                     </div>
                 </div>
-            </form>        
+                <div className="form-group mt-4">
+                    <button style={{ float: 'right' }} type="submit" className="btn btn-success">Tạo lịch chiếu</button>
+                </div>
+            </form>
         </div>
     )
 }

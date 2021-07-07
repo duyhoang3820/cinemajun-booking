@@ -5,7 +5,7 @@ const initialState = {
     danhSachTimKiem: [],
     editNguoiDung: {},
     editMovie: {},
-    thongTinPhim: {},
+    phimInfo: {},
     listCumRap: []
 }
 
@@ -28,12 +28,12 @@ export default (state = initialState, action) => {
             state.editMovie = action.dataMovie
             return { ...state }
         }
-        case GET_THONG_TIN_PHIM: {
-            state.thongTinPhim = action.thongTinPhim
-            return { ...state }
-        }
         case GET_CUM_RAP: {
             state.listCumRap = action.listCumRap
+            return { ...state }
+        }
+        case 'THONG_TIN_PHIM': {
+            state.phimInfo = action.phimInfo
             return { ...state }
         }
         default:

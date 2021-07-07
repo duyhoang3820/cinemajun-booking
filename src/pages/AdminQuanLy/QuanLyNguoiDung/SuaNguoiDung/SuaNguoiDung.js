@@ -31,23 +31,23 @@ export default function SuaNguoiDung(props) {
             maNhom: 'GP01'
         },
         validationSchema: Yup.object().shape({
-            taiKhoan: Yup.string().min(3, "Mininum 3 characters")
-                .max(15, "Maximum 15 characters")
-                .required("Required!"),
-            matKhau: Yup.string().min(6, "Minimum 6 characters")
-                .max(15, "Maximum 15 characters")
-                .required("Required!"),
+            taiKhoan: Yup.string().min(3, "* Tài khoản tối thiểu 3 ký tự!")
+                .max(18, "* Tài khoản tối đa 18 ký tự!")
+                .required("* Tài khoản không được để trống!"),
+            matKhau: Yup.string().min(6, "* Mật khẩu tối thiểu 6 ký tự!")
+                .max(18, "* Mật khẩu tối đa 18 ký tự!")
+                .required("* Mật khẩu không được để trống!"),
             email: Yup.string()
-                .email("Invalid email format")
-                .required("Required!"),
-            hoTen: Yup.string().min(2, "Mininum 2 characters")
-                .max(15, "Maximum 15 characters")
-                .required("Required!"),
-            soDt: Yup.string().min(9, "Mininum 9 characters")
-                .max(11, "Maximum 11 characters")
-                .required("Required!"),
+                .email("* Email không đúng định dạng!")
+                .required("* Email không được để trống!"),
+            hoTen: Yup.string().min(3, "* Họ tên tối thiểu 3 ký tự!")
+                .max(30, "* Họ tên tối đa 30 ký tự!")
+                .required("* Họ tên không được để trống!"),
+            soDt: Yup.string().min(10, "* SĐT tối thiểu 10 ký tự!")
+                .max(10, "* SĐT tối đa 10 ký tự!")
+                .required("* SĐT không được để trống!"),
             maLoaiNguoiDung: Yup.string()
-                .required("Required!"),
+                .required("* Vui lòng chọn loại người dùng!"),
         }),
         onSubmit: values => {
             dispatch(
@@ -72,50 +72,50 @@ export default function SuaNguoiDung(props) {
                 <div className="col-12 col-sm-12 col-lg-6 w-100">
                     <div className="form-group">
 
-                        <label htmlFor="taiKhoan" className="text-primary mb-2">Tài khoản</label>
+                        <label htmlFor="taiKhoan" className="text-primary" style={{ fontSize: '14px' }}>Tài khoản</label>
                         <Tooltip title="Tài khoản không thể thay đổi!" color={colors} key={colors}>
                             <input className="form-control" readOnly={true} type="text" name="taiKhoan" id="taiKhoan" value={formik.values.taiKhoan = editNguoiDung?.taiKhoan} />
                         </Tooltip>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="matKhau" className="text-primary mb-2">Mật khẩu</label>
+                        <label htmlFor="matKhau" className="text-primary" style={{ fontSize: '14px' }}>Mật khẩu</label>
                         <input className="form-control" type="text" name="matKhau" id="matKhau" value={dataEdit?.matKhau} onChange={formik.handleChange} />
                         {formik.errors.matKhau && formik.touched.matKhau && (
-                            <p className="text-danger">{formik.errors.matKhau} </p>
+                            <p className="text-danger" style={{ fontSize: '14px' }}>{formik.errors.matKhau} </p>
                         )}
                     </div>
                     <div className="form-group">
-                        <label htmlFor="hoTen" className="text-primary mb-2">Họ tên</label>
+                        <label htmlFor="hoTen" className="text-primary" style={{ fontSize: '14px' }}>Họ tên</label>
                         <input className="form-control" type="text" name="hoTen" id="hoTen" value={dataEdit?.hoTen} onChange={formik.handleChange} />
                         {formik.errors.hoTen && formik.touched.hoTen && (
-                            <p className="text-danger">{formik.errors.hoTen} </p>
+                            <p className="text-danger" style={{ fontSize: '14px' }}>{formik.errors.hoTen} </p>
                         )}
                     </div>
                 </div>
                 <div className="col-12 col-sm-12 col-lg-6 w-100">
                     <div className="form-group">
-                        <label htmlFor="maLoaiNguoiDung" className="text-primary mb-2">Loại người dùng</label>
+                        <label htmlFor="maLoaiNguoiDung" className="text-primary" style={{ fontSize: '14px' }}>Loại người dùng</label>
                         <select className="w-100" name="maLoaiNguoiDung" id="maLoaiNguoiDung" value={formik.values['maLoaiNguoiDung']} className="custom-select custom-select-sm-lg" onChange={formik.handleChange}>
                             <option defaultValue>Chọn loại người dùng</option>
                             <option value={'KhachHang'}>Khách hàng</option>
                             <option value={'QuanTri'}>Quản trị</option>
                         </select>
                         {formik.errors.maLoaiNguoiDung && formik.touched.maLoaiNguoiDung && (
-                            <p className="text-danger">{formik.errors.maLoaiNguoiDung} </p>
+                            <p className="text-danger" style={{ fontSize: '14px' }}>{formik.errors.maLoaiNguoiDung} </p>
                         )}
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email" className="text-primary mb-2">Email</label>
+                        <label htmlFor="email" className="text-primary" style={{ fontSize: '14px' }}>Email</label>
                         <input className="form-control" type="email" name="email" id="Email" value={dataEdit?.email} onChange={formik.handleChange} />
                         {formik.errors.email && formik.touched.email && (
-                            <p className="text-danger">{formik.errors.email} </p>
+                            <p className="text-danger" style={{ fontSize: '14px' }}>{formik.errors.email} </p>
                         )}
                     </div>
                     <div className="form-group">
-                        <label htmlFor="soDt" className="text-primary mb-2">Số điện thoại</label>
+                        <label htmlFor="soDt" className="text-primary" style={{ fontSize: '14px' }}>Số điện thoại</label>
                         <input className="form-control" type="text" name="soDt" id="soDt" value={dataEdit?.sdt} onChange={formik.handleChange} />
                         {formik.errors.soDt && formik.touched.soDt && (
-                            <p className="text-danger">{formik.errors.soDt} </p>
+                            <p className="text-danger" style={{ fontSize: '14px' }}>{formik.errors.soDt} </p>
                         )}
                     </div>
                 </div>

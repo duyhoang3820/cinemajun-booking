@@ -56,7 +56,7 @@ export default function Header() {
             height="70"
           />
         </a>
-        <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i className="fa fa-bars" style={{ fontSize: '35px', color: '#f5222d' }}></i></button>
+        <button style={{ border: "none", outline: "none" }} className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i className="fa fa-bars" style={{ fontSize: '35px', color: '#f5222d' }}></i></button>
         <div className="collapse navbar-collapse ml-5 mb-1" id="collapsibleNavId">
           <ul className="navbar-nav m-auto mt-2 mt-lg-0 ">
             <li className="nav-item ">

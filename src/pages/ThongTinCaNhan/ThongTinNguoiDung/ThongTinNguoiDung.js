@@ -117,11 +117,11 @@ export default function ThongTinNguoiDung() {
                             <div className="btnCapNhat">
                                 {readOnly === true ? <button onClick={() => {
                                     setReadOnly(false)
-                                }} type="button" className=" btnCapNhat__item">Thay đổi thông tin</button> : <button onClick={() => {
+                                }} type="button" className=" btnCapNhat__item" style={{ border: "none", outline: "none" }}>Thay đổi thông tin</button> : <button onClick={() => {
                                     setReadOnly(true)
                                     dispatch(capNhatNguoiDung(formik.values))
                                     // console.log('values',formik.values);
-                                }} type="submit" className=" btnCapNhat__item">Cập nhật</button>}
+                                }} type="submit" className=" btnCapNhat__item" style={{ border: "none", outline: "none" }}>Cập nhật</button>}
                             </div>
                         </ form>
                     </div>

@@ -42,7 +42,7 @@ export default function ChiTietPhongVe(props) {
                         type: DAT_GHE,
                         gheDangDat: ghe
                     })
-                }} disabled={ghe.daDat} style={{border:"none", outline:"none"}} className={`text-center ghe ${classGheDaDat} ${classGheVip} ${classGheDangDat}`} >
+                }} disabled={ghe.daDat} style={{ border: "none", outline: "none" }} className={`text-center ghe ${classGheDaDat} ${classGheVip} ${classGheDangDat}`} >
                     <span>{ghe.daDat ? 'X' : ghe.stt}</span>
                 </button>
             </Fragment>
@@ -172,7 +172,7 @@ export default function ChiTietPhongVe(props) {
                                                     dispatch(datVeAction(objectApi))
                                                 }
                                             })
-                                        }} className=" btn_DatVe">
+                                        }} className=" btn_DatVe" style={{ border: "none", outline: "none" }}>
                                             <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
                                         </button> : <button onClick={() => {
                                             Swal.fire({
@@ -181,7 +181,7 @@ export default function ChiTietPhongVe(props) {
                                                 icon: 'warning',
                                                 confirmButtonText: 'OK'
                                             })
-                                        }} className="btn_DatVe ">
+                                        }} className="btn_DatVe" style={{ border: "none", outline: "none" }}>
                                             <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
                                         </button> : <button onClick={() => {
                                             Swal.fire({
@@ -194,7 +194,7 @@ export default function ChiTietPhongVe(props) {
                                                 history.push("/dangnhap-dangky")
                                             }, 2000);
 
-                                        }} className="btn_DatVe ">
+                                        }} className="btn_DatVe " style={{ border: "none", outline: "none" }}>
                                         <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
                                     </button>}
                             </div>

@@ -71,7 +71,10 @@ export default function QuanLyPhim() {
             render: (_, record) =>
                 <Fragment>
                     <Button onClick={() => {
-                        dispatch(layThongTinPhim(record.maPhim))
+                        dispatch({
+                            type: `THONG_TIN_PHIM`,
+                            phimInfo: record
+                        })
                         // console.log(record.maPhim);
                     }} className="m-2" type="dashed" style={{ backgroundColor: '#ffa940', color: 'white' }} data-toggle="modal" data-target="#taoLichChieu">Tạo lịch chiếu</Button>
                     <Button onClick={() => {
@@ -148,7 +151,7 @@ export default function QuanLyPhim() {
                 </div>
             </div>
             {renderDanhSachPhim()}
-            <Table columns={columns} dataSource={data} pagination={{position: ["bottomCenter"] }} scroll={{ y: 500, x: 1300 }} sticky />
+            <Table columns={columns} dataSource={data} pagination={{ position: ["bottomCenter"] }} scroll={{ y: 500, x: 1300 }} sticky />
 
         </div >
     )

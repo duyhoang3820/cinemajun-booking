@@ -118,7 +118,7 @@ export default function AdminQuanLyLichChieu() {
                         height="70"
                       />
                     </NavLink>
-                    <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i className="fa fa-bars" style={{ fontSize: '35px', color: '#f5222d' }}></i></button>
+                    <button style={{ border: "none", outline: "none" }} className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i className="fa fa-bars" style={{ fontSize: '35px', color: '#f5222d' }}></i></button>
                     <div className="collapse navbar-collapse mb-2" id="collapsibleNavId" style={{ justifyContent: 'flex-end' }}>
                       <div className="signIn">
                         <div className="d-flex align-items-center" style={{ justifyContent: 'left' }}>
@@ -139,8 +139,8 @@ export default function AdminQuanLyLichChieu() {
                               }}>
                                 <a className="ant-dropdown-link">{taiKhoan}</a>
                               </Dropdown> :
-                              <NavLink to="/dangnhap" className="px-2" onClick={() => {
-                                history.push('/dangnhap')
+                              <NavLink to="/dangnhap-dangky" className="px-2" onClick={() => {
+                                history.push('/dangnhap-dangky')
                               }}>Đăng nhập</NavLink>}
                           </div>
                           <div>

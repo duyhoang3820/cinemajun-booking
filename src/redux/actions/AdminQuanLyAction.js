@@ -256,7 +256,7 @@ export const capNhatPhim = (dataMovie) => {
             dispatch(layDanhSachPhimHot())
             Swal.fire({
                 title: 'Success!',
-                text: result.data,
+                text: "Cập nhật thành công!",
                 icon: 'success',
                 confirmButtonText: 'OK'
             })
