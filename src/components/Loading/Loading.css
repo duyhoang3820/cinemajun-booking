@@ -1,92 +1,72 @@
-/* .discord {
-    width:50px;
-    height:40px;
-    border-radius: 50%;
-    background:
-      radial-gradient(circle 6px at calc(50% + 2px) calc(50% + 4px),#fff 90%,#fb4226) left,
-      radial-gradient(circle 6px at calc(50% - 2px) calc(50% + 4px),#000 90%,#fb4226) right;
-    background-size: 51% 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    filter: drop-shadow(.5px 0px 0px #000) drop-shadow(0px -.5px 0px #000) drop-shadow(0px .5px 0px #000) drop-shadow(1px 1px 0px #000) drop-shadow(-.5px 0px 0px #000);
-    animation: dis-0 1s infinite;
-    z-index: 99;
-  }
-  .discord::before,
-  .discord::after {
-    content: "";
-    position: absolute;
-    animation: inherit;
-  }
-  
-  .discord::before {
-    inset: -5px -7px -10px;
-    animation-name: dis-1;
-    border: solid #fb4226;
-    border-width: 2px 12px 6px;
-    border-radius: 50% / 35%;
-    clip-path: polygon(8% 0,35% 0,40% 15px,60% 15px,65% 0,92% 0,100% 100%,70% 100%,60% calc(100% - 20px),40% calc(100% - 20px),30% 100%, 0 100%);
-  }
-  .discord::after {
-    inset: -6px -9px -8px;
-    animation-name: dis-2;
-    background: #fff;
-    border-radius: 85% 85% 77% 77%;
-    -webkit-mask: radial-gradient(50% 110%,#0000 82%, #000 0);
-    clip-path: polygon(10% 0,90% 0,105% 100%,-5% 100%);
-  }
-  
-  @keyframes dis-0{
-    20%  {transform:rotate(-20deg)}
-    75%  {transform:rotate(380deg)}
-    80%,
-    100% {transform:rotate(360deg)}
-  }
-  
-  @keyframes dis-1{
-    20%  {transform:rotate(0deg)  ;inset: -5px -7px -10px}
-    60%  {transform:rotate(-60deg);inset: -10px -12px -15px}
-    80%,
-    100% {transform:rotate(0deg)  ;inset: -5px -7px -10px}
-  }
-  @keyframes dis-2{
-    20%  {transform:rotate(0deg)  ;inset: -6px -9px -8px}
-    60%  {transform:rotate(-60deg);inset: -17px -21px -19px}
-    80%,
-    100% {transform:rotate(0deg)  ;inset: -6px -9px -8px}
-  } */
-  
-  /**/
-  
 
-  .loading {
-    width:80px;
-    height:40px;
-    border-radius: 100px 100px 0 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .loading:before {
-    content: "";
-    position: absolute;
-    inset:0 0 -100%;
-    background: 
-      radial-gradient(farthest-side,#ffd738 80%,#0000) left 70% top    20%/15px 15px,
-      radial-gradient(farthest-side,#020308 92%,#0000) left 65% bottom 19%/12px 12px,
-      radial-gradient(farthest-side,#ecfefe 92%,#0000) left 70% bottom 20%/15px 15px,
-      linear-gradient(#9eddfe 50%,#020308 0);
-    background-repeat: no-repeat;
-    animation:n5 2s infinite;
-  }
-  
-  @keyframes n5 {
-    0%,20%   {transform: rotate(0)}
-    40%,60%  {transform: rotate(.5turn)}
-    80%,100% {transform: rotate(1turn)}
-  }
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  perspective: 800px;
+}
 
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;  
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #fb4226;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #fb4226;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #fb4226;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+  
   .bgLoading{
-    background-color: rgb(228, 220, 220,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
     height: 100%;
@@ -100,3 +80,5 @@
     background-size: contain;
     background-position: center;
   }
+
+  
