@@ -17,7 +17,7 @@ export default function TrangChu(props) {
                 <div className="layer"></div>
                 <div className="layer"></div>
             </div>
-            <div id="trangchu">
+            <div id="trangchu" className="mt-4">
                 <CarouselMovie />
             </div>
             <br></br>

@@ -147,6 +147,25 @@
     margin-top: 30px;
   }
 }
+@media screen and (min-width: 500px) {
+  .thumnail {
+    width: 190px !important;
+    height: 260px !important;
+  }
+  .banner_phim .picture .btn_play_video {
+    width: 60px;
+    height: 60px;
+    left: 45%;
+    top: 45%;
+  }
+  .banner_phim .moTaPhim .picture .btn_play_video:hover{
+    width: 70px;
+    height: 70px;
+  }
+  .picture{
+    margin-top: 30px;
+  }
+}
 @media screen and (min-width: 540px) {
   .thumnail {
     width: 190px !important;

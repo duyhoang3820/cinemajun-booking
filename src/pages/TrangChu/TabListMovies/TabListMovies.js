@@ -37,13 +37,17 @@ export default function TabListMovies(props) {
 
     const renderUpCommingMoviesList = () => {
         return listPhimSapChieu.slice(0, 16).map((phim, index) => {
-            return <Card onClick={() => {
-                history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
-            }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
+            return <Card className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
-                    {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    {index % 4 === 0 ? <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span> :
-                        <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageTypeP}>P</span>IMDb: {phim.danhGia}</p>} /></span>}
+                    {<img onClick={() => {
+                        history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                    }} className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
+                    {index % 4 === 0 ? <span ><Meta onClick={() => {
+                        history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                    }} className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span> :
+                        <span ><Meta onClick={() => {
+                            history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                        }} className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageTypeP}>P</span>IMDb: {phim.danhGia}</p>} /></span>}
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
@@ -58,14 +62,20 @@ export default function TabListMovies(props) {
     }
     const renderCurrentMoviesList = () => {
         return listPhim.slice(0, 16).map((phim, index) => {
-            return <Card onClick={() => {
-                history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
-            }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
+            return <Card className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
-                    {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    {index % 2 === 0 ? index % 3 === 0 ? <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageTypeP}>P</span>IMDb: {phim.danhGia}</p>} /></span> :
-                        <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C18</span>IMDb: {phim.danhGia}</p>} /></span> :
-                        <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span>}
+                    {<img onClick={() => {
+                        history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                    }} className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
+                    {index % 2 === 0 ? index % 3 === 0 ? <span ><Meta onClick={() => {
+                        history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                    }} className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageTypeP}>P</span>IMDb: {phim.danhGia}</p>} /></span> :
+                        <span ><Meta onClick={() => {
+                            history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                        }} className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C18</span>IMDb: {phim.danhGia}</p>} /></span> :
+                        <span ><Meta onClick={() => {
+                            history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                        }} className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span>}
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
@@ -80,13 +90,17 @@ export default function TabListMovies(props) {
     }
     const renderHotMoviesList = () => {
         return listPhimHot.slice(0, 16).map((phim, index) => {
-            return <Card onClick={() => {
-                history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
-            }} className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
+            return <Card className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
-                    {<img className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
-                    {index % 3 === 0 ? <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C18</span>IMDb: {phim.danhGia}</p>} /></span> :
-                        <span ><Meta className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span>}
+                    {<img onClick={() => {
+                        history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                    }} className={style.imgTabList} src={phim.hinhAnh} alt={phim.moTa} />}
+                    {index % 3 === 0 ? <span ><Meta onClick={() => {
+                        history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                    }} className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C18</span>IMDb: {phim.danhGia}</p>} /></span> :
+                        <span ><Meta onClick={() => {
+                            history.push(`/chi-tiet-dat-ve/${phim.maPhim}`)
+                        }} className="mt-1 font-weight-bold" title={<p className={`${style.filmName} m-0`}>{phim.tenPhim}</p>} description={<p className={`${style.filmName} m-0`}><span className={style.ageType}>C16</span>IMDb: {phim.danhGia}</p>} /></span>}
                     <span><Rate className={style.rate} allowHalf defaultValue={phim.danhGia / 2} /></span>
                 </div>
                 <div className={`${style.btnHover}`}>
