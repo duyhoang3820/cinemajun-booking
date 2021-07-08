@@ -8,7 +8,7 @@ export const settingTabListMovies = {
   autoplaySpeed: 5000,
   centerPadding: "60px",
   slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToScroll: 2,
   speed: 500,
   rows: 2,
   // slidesPerRow: 2,
@@ -17,7 +17,7 @@ export const settingTabListMovies = {
       breakpoint: 1200,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 2,
         infinite: true,
         dots: true
       }

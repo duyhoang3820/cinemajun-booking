@@ -1,6 +1,9 @@
 .bgMovie {
   z-index: 1;
 }
+.bg_filmDetail{
+  background-color: rgba(0, 0, 0, 0.3);
+}
 .bgImg{
   background-image: url('../img/movie-details-bg.jpg');
   background-repeat:no-repeat;

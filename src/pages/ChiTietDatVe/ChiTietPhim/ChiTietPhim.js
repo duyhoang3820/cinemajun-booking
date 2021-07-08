@@ -28,7 +28,7 @@ export default function ChiTietPhim(props) {
   }, []);
 
   return (
-    <div className="">
+    <div className="bg_filmDetail">
       <div className="bg2"></div>
       <div className="star-field">
         <div className="layer"></div>

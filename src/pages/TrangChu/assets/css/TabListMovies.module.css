@@ -117,7 +117,6 @@
     box-shadow: 0 0 0 30px #0000;
   }
 }
-
 @media screen and (min-width: 280px) {
   .card_item {
     align-items: center;
