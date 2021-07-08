@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { TOKEN, USERLOGIN } from "../../../util/constants/settingSystem";
 import "./Header.css";
+import * as Scroll from 'react-scroll';
 import { Link } from 'react-scroll'
 import { Menu, Dropdown } from 'antd';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
@@ -14,6 +15,7 @@ import { notification } from 'antd';
 
 
 export default function Header() {
+  const scroller = Scroll.scroller;
   const { taiKhoan, maLoaiNguoiDung } = useSelector(state => state.NguoiDungReducer)
   // console.log('maLoaiNguoiDung',maLoaiNguoiDung);
   // console.log('taiKhoan',taiKhoan);
@@ -62,12 +64,24 @@ export default function Header() {
             <li className="nav-item ">
               <Link onClick={() => {
                 history.push('/')
-              }} className="nav-link header__lichChieu font-weight-bold" to="lichChieu" smooth={true} duration={500}>Lịch chiếu</Link>
+                setTimeout(function () {
+                  scroller.scrollTo('lichChieu', {
+                    duration: 500,
+                    smooth: true,
+                  })
+                }, 100);
+              }} className="nav-link header__lichChieu font-weight-bold">Lịch chiếu</Link>
             </li>
             <li className="nav-item ">
               <Link onClick={() => {
                 history.push('/')
-              }} className="nav-link header__cumRap font-weight-bold" to="cumRap" smooth={true} duration={500}>Cụm rạp</Link>
+                setTimeout(function () {
+                  scroller.scrollTo('cumRap', {
+                    duration: 500,
+                    smooth: true,
+                  })
+                }, 100);
+              }} className="nav-link header__cumRap font-weight-bold">Cụm rạp</Link>
             </li>
           </ul>
 

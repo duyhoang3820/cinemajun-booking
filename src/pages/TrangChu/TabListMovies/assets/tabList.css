@@ -5,7 +5,7 @@
   .ant-tabs-tab-btn
   .type__list_film {
   font-size: 18px;
-  transition:all 0.2s ease;
+  transition: all 0.2s ease;
   font-weight: 600;
   color: white;
   /* margin-bottom: 20px !important; */
@@ -15,13 +15,12 @@
   .ant-tabs-nav-list
   .ant-tabs-tab
   .ant-tabs-tab-btn
-  .type__list_film:hover{
-    font-size: 25px;
-  } 
+  .type__list_film:hover {
+  font-size: 25px;
+}
 
 .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:hover {
   color: black;
-
 }
 
 .ant-tabs-nav
@@ -30,26 +29,9 @@
   .ant-tabs-tab.ant-tabs-tab-active
   .ant-tabs-tab-btn
   .type__list_film {
-    font-size: 25px;
+  font-size: 25px;
   color: #fa5238;
 }
-/* .ant-tabs-nav
-  .ant-tabs-nav-wrap
-  .ant-tabs-nav-list
-  .ant-tabs-tab.ant-tabs-tab-active
-  .ant-tabs-tab-btn
-  .type__list_film::after {
-
-
-  content: "";
-  margin-top: 10px;
-  width: 0%;
-  height: 1px;
-  display: block;
-  background: linear-gradient(to right, #fb4226, #ce3017);
-  box-shadow: 0 0 30px 0 #fb4226;
-  transition: 0.5s;
-} */
 
 .ant-tabs-top > .ant-tabs-nav::before,
 .ant-tabs-bottom > .ant-tabs-nav::before,
@@ -67,6 +49,14 @@
     .ant-tabs-tab-btn
     .type__list_film {
     font-size: 15px;
+  }
+  .ant-tabs-nav
+    .ant-tabs-nav-wrap
+    .ant-tabs-nav-list
+    .ant-tabs-tab
+    .ant-tabs-tab-btn
+    .type__list_film:hover {
+    font-size: 20px;
   }
   .ant-tabs-nav
     .ant-tabs-nav-wrap
@@ -89,6 +79,14 @@
   .ant-tabs-nav
     .ant-tabs-nav-wrap
     .ant-tabs-nav-list
+    .ant-tabs-tab
+    .ant-tabs-tab-btn
+    .type__list_film:hover {
+    font-size: 20px;
+  }
+  .ant-tabs-nav
+    .ant-tabs-nav-wrap
+    .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
     .type__list_film {
@@ -103,6 +101,14 @@
     .ant-tabs-tab-btn
     .type__list_film {
     font-size: 16px;
+  }
+  .ant-tabs-nav
+    .ant-tabs-nav-wrap
+    .ant-tabs-nav-list
+    .ant-tabs-tab
+    .ant-tabs-tab-btn
+    .type__list_film:hover {
+    font-size: 22px;
   }
   .ant-tabs-nav
     .ant-tabs-nav-wrap
@@ -125,6 +131,14 @@
   .ant-tabs-nav
     .ant-tabs-nav-wrap
     .ant-tabs-nav-list
+    .ant-tabs-tab
+    .ant-tabs-tab-btn
+    .type__list_film:hover {
+    font-size: 22px;
+  }
+  .ant-tabs-nav
+    .ant-tabs-nav-wrap
+    .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
     .type__list_film {
@@ -143,6 +157,14 @@
   .ant-tabs-nav
     .ant-tabs-nav-wrap
     .ant-tabs-nav-list
+    .ant-tabs-tab
+    .ant-tabs-tab-btn
+    .type__list_film:hover {
+    font-size: 25px;
+  }
+  .ant-tabs-nav
+    .ant-tabs-nav-wrap
+    .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
     .type__list_film {
@@ -157,6 +179,14 @@
     .ant-tabs-tab-btn
     .type__list_film {
     font-size: 18px;
+  }
+  .ant-tabs-nav
+    .ant-tabs-nav-wrap
+    .ant-tabs-nav-list
+    .ant-tabs-tab
+    .ant-tabs-tab-btn
+    .type__list_film:hover {
+    font-size: 25px;
   }
   .ant-tabs-nav
     .ant-tabs-nav-wrap
