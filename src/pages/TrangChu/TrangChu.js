@@ -20,6 +20,7 @@ export default function TrangChu(props) {
             <div id="trangchu" className="mt-3">
                 <CarouselMovie />
             </div>
+            <hr id="holi"/>
             <br></br>
             <br id="lichChieu" /><br />
             <br></br>

@@ -70,7 +70,7 @@ export default function Header() {
                     smooth: true,
                   })
                 }, 100);
-              }} className="nav-link header__lichChieu font-weight-bold">Lịch chiếu</Link>
+              }} className="nav-link header__lichChieu">Lịch chiếu</Link>
             </li>
             <li className="nav-item ">
               <Link to="" onClick={() => {
@@ -81,7 +81,7 @@ export default function Header() {
                     smooth: true,
                   })
                 }, 100);
-              }} className="nav-link header__cumRap font-weight-bold">Cụm rạp</Link>
+              }} className="nav-link header__cumRap">Cụm rạp</Link>
             </li>
           </ul>
 

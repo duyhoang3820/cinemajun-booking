@@ -27,8 +27,8 @@ import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
     return (
-        <div className="">
-            <footer className="flex-rw pt-5">
+        <div style={{marginTop:'100px'}}>
+            <footer className="flex-rw pt-3">
                 <ul className="footer-list-top">
                     <li>
                         <h4 className="footer-list-header">CineJun Cinema</h4>

@@ -72,3 +72,11 @@
 }
 @keyframes c1 {100%{transform: translateY(calc(var(--s,1)*0.1%));}}
 
+#holi {
+  border-bottom: red solid 5px;
+  text-align: center;
+  width: 50vw;
+  margin: 0 auto;
+  height: 14vh;
+  border-radius: 25vw / 7vh;
+}

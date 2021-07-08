@@ -88,7 +88,6 @@ export default function CinemaCluster(props) {
             <Tabs tabPosition="left" centered={true}>
                 {renderHeThongRap()}
             </Tabs>
-            
         </div>
     )
 }
