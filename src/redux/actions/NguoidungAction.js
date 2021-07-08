@@ -44,7 +44,7 @@ export const dangNhapAction = (userLogin) => {
             //     confirmButtonText: 'OK'
             // })
             openNotificationWithIcon('success');
-            history.goBack()
+            history.push('/')
             setTimeout(function () {
                 window.scrollTo(0, 0);
             }, 1000);
@@ -94,9 +94,10 @@ export const dangKyAction = (userRegister) => {
             //     confirmButtonText: 'OK'
             // })
             openNotificationWithIcon('success');
-            setTimeout(function () {
-                window.location.reload()
-            }, 2000);
+            history.push('/dangnhap')
+            // setTimeout(function () {
+            //     window.location.reload()
+            // }, 2000);
         } catch (error) {
             Swal.fire({
                 title: 'Error!',

@@ -203,7 +203,7 @@ export default function ChiTietPhongVe(props) {
                                                 confirmButtonText: 'OK'
                                             })
                                             setTimeout(function () {
-                                                history.push("/dangnhap-dangky")
+                                                history.push("/dangnhap")
                                             }, 2000);
 
                                         }} className="btn_DatVe " style={{ border: "none", outline: "none" }}>

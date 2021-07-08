@@ -62,7 +62,7 @@ export default function Header() {
         <div className="collapse navbar-collapse ml-5 mb-1" id="collapsibleNavId">
           <ul className="navbar-nav m-auto mt-2 mt-lg-0 ">
             <li className="nav-item ">
-              <Link onClick={() => {
+              <Link to="" onClick={() => {
                 history.push('/')
                 setTimeout(function () {
                   scroller.scrollTo('lichChieu', {
@@ -73,7 +73,7 @@ export default function Header() {
               }} className="nav-link header__lichChieu font-weight-bold">Lịch chiếu</Link>
             </li>
             <li className="nav-item ">
-              <Link onClick={() => {
+              <Link to="" onClick={() => {
                 history.push('/')
                 setTimeout(function () {
                   scroller.scrollTo('cumRap', {
@@ -116,7 +116,7 @@ export default function Header() {
                   <Dropdown overlay={menu2} placement="bottomCenter" arrow>
                     <a className="ant-dropdown-link">{taiKhoan}</a>
                   </Dropdown> :
-                  <NavLink to="/dangnhap-dangky" style={{ textDecoration: 'none' }} className="px-2">Đăng nhập</NavLink>}
+                  <NavLink to="/dangnhap" style={{ textDecoration: 'none' }} className="px-2">Đăng nhập</NavLink>}
               </div>
               <div>
                 {localStorage.getItem(USERLOGIN) ? <a onClick={() => {
@@ -139,12 +139,7 @@ export default function Header() {
                       }, 2000);
                     }
                   })
-
-                  // history.push('/')
-
-                  // history.goBack()
-
-                }} className="nav-link text-danger">Đăng xuất</a> : ''}
+                }} className="nav-link text-danger">Đăng xuất</a> : <NavLink to="/dangky" style={{ textDecoration: 'none', borderLeft: "1px solid #9b9b9b" }} className="px-2">Đăng ký</NavLink>}
               </div>
             </div>
           </div>

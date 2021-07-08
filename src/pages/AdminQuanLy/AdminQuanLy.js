@@ -139,8 +139,8 @@ export default function AdminQuanLyLichChieu() {
                               }}>
                                 <a className="ant-dropdown-link">{taiKhoan}</a>
                               </Dropdown> :
-                              <NavLink to="/dangnhap-dangky" className="px-2" onClick={() => {
-                                history.push('/dangnhap-dangky')
+                              <NavLink to="/dangnhap" className="px-2" onClick={() => {
+                                history.push('/dangnhap')
                               }}>Đăng nhập</NavLink>}
                           </div>
                           <div>

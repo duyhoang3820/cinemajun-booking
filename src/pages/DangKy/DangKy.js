@@ -13,12 +13,12 @@ import logo from '../../assets/img/logo/logo.svg'
 import logo2 from '../../assets/img/logo/logo2.svg'
 import '../../components/Background/Background2.css'
 
-export default function DangNhap() {
+export default function DangKy() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
     const [state, setstate] = useState({
-        isActive: ''
+        isActive: 'active'
     })
     const dispatch = useDispatch();
     const formik_dangNhap = useFormik({
@@ -61,8 +61,8 @@ export default function DangNhap() {
             hoTen: Yup.string().min(3, "* Họ tên tối thiểu 3 ký tự!")
                 .max(30, "* Họ tên tối đa 30 ký tự!")
                 .required("* Họ tên không được để trống!"),
-            soDt: Yup.string().min(10, "* SĐT tối thiểu 10 ký tự!")
-                .max(9, "* SĐT tối đa 10 ký tự!")
+            soDt: Yup.string().min(9, "* SĐT tối thiểu 10 ký tự!")
+                .max(10, "* SĐT tối đa 10 ký tự!")
                 .required("* SĐT không được để trống!"),
         }),
         onSubmit: values => {
@@ -178,7 +178,6 @@ export default function DangNhap() {
                         </div>
                         <div className="button-container">
                             <button type="submit"><span>Đăng ký</span></button>
-
                         </div>
                     </form>
                 </div>
