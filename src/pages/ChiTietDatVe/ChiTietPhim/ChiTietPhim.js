@@ -42,29 +42,31 @@ export default function ChiTietPhim(props) {
         <div className="container">
           <div className="row banner_phim">
             <div className="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-7 d-flex moTaPhim">
-              <div className="picture">
-                <img className="thumnail" src={chiTietPhim.hinhAnh} width={220} height={320} alt="" />
-                <button className="btn"><img onClick={() => {
-                  setOpen(true);
-                  setTrailer(chiTietPhim.trailer.slice(30))
-                }} className="btn_play_video pulsing_2" src={img} alt="" /></button>
-              </div>
-              <div className="detail ml-4 mt-5 text-white">
-                <p className="detail__ngayKhoiChieu text-white ml-1">
-                  Ngày khởi chiếu:
-                  {moment(chiTietPhim.ngayKhoiChieu).format(" DD.MM.YYYY")}
-                </p>
-                <div className="row ml-1" style={{ alignItems: "center" }}>
-                  <span className="mr-3 detail_ageType" >C16</span>
-                  <span className="detail__tenPhim text-white">{chiTietPhim.tenPhim}</span>
+              <div className="row" style={{ alignItems: "center", justifyContent: 'center' }}>
+                <div className="picture d-flex col-12 col-md-6" style={{ alignItems: "center", justifyContent: 'center' }}>
+                  <img className="thumnail" src={chiTietPhim.hinhAnh} width={220} height={320} alt="" />
+                  <button className="" style={{ border: 'none', outline: 'none' }}><img onClick={() => {
+                    setOpen(true);
+                    setTrailer(chiTietPhim.trailer.slice(30))
+                  }} className="btn_play_video pulsing_2" src={img} alt="" /></button>
                 </div>
-                <p className="mb-5 mt-2 ml-1" style={{ color: '#e9e9e9', fontSize: '14px' }}>120 phút - 7.4 IMDb - 2D/Digitals</p>
-
-                {/* <p>Thời lượng: {chiTietPhim.thoiLuong}</p> */}
-                <Link to="cumRap" smooth={true} duration={500} className="btn_muaVe ml-1">Đặt vé</Link>
+                <div className="detail text-white col-6">
+                  <div>
+                    <p className="detail__ngayKhoiChieu text-white ml-1">
+                      Ngày khởi chiếu:
+                      {moment(chiTietPhim.ngayKhoiChieu).format(" DD.MM.YYYY")}
+                    </p>
+                    <span className="detail_ageType mr-2 d-none d-md-block" >C16</span>
+                    <span className="detail__tenPhim text-white">{chiTietPhim.tenPhim} <span className="d-block d-md-none">(C16)</span></span>
+                    <p className="mb-5 mt-2 ml-1" style={{ color: '#e9e9e9', fontSize: '14px' }}>120 phút - 7.4 IMDb - 2D/Digitals</p>
+                  </div>
+                  <div className="d-flex" style={{ alignItems: "center", justifyContent: 'center' }}>
+                    <Link to="cumRap" smooth={true} duration={500} className="btn_muaVe">Mua vé</Link>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-5 mt-5 danhGiaPhim ">
+            <div className="d-none d-md-block col-12 col-sm-12 col-md-4 col-lg-4 col-xl-5 mt-5 danhGiaPhim ">
               <div className="circle-score d-flex justify-content-center ">
                 <Progress
                   type="circle"

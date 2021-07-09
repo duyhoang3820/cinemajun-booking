@@ -55,7 +55,7 @@ export default function TabListMovies(props) {
                         setOpen(true);
                         setTrailer(phim.trailer.slice(30))
                     }} className={`${style.btn_play_video} pulsing_2`} src={img} alt="" /></button>
-                    <NavLink to={`/chi-tiet-dat-ve/${phim.maPhim}`} className={style.btn_DatVe}>Mua vé</NavLink>
+                    <NavLink to={`/chi-tiet-dat-ve/${phim.maPhim}`} className={style.btn_DatVe}>Xem chi tiết</NavLink>
                 </div>
             </Card >
         })
@@ -83,7 +83,7 @@ export default function TabListMovies(props) {
                         setOpen(true);
                         setTrailer(phim.trailer.slice(30))
                     }} className={`${style.btn_play_video} pulsing_2`} src={img} alt="" /></button>
-                    <NavLink to={`/chi-tiet-dat-ve/${phim.maPhim}`} className={style.btn_DatVe}>Mua vé</NavLink>
+                    <NavLink to={`/chi-tiet-dat-ve/${phim.maPhim}`} className={style.btn_DatVe}>Xem chi tiết</NavLink>
                 </div>
             </Card >
         })
@@ -108,7 +108,7 @@ export default function TabListMovies(props) {
                         setOpen(true);
                         setTrailer(phim.trailer.slice(30))
                     }} className={`${style.btn_play_video} pulsing_2`} src={img} alt="" /></button>
-                    <NavLink to={`/chi-tiet-dat-ve/${phim.maPhim}`} className={style.btn_DatVe}>Mua vé</NavLink>
+                    <NavLink to={`/chi-tiet-dat-ve/${phim.maPhim}`} className={style.btn_DatVe}>Xem chi tiết</NavLink>
                 </div>
             </Card >
         })

@@ -97,7 +97,7 @@ export default function LichSuDatVe() {
 
     return (
         <div className="py-2">
-            {renderData()}
+            {thongTinTaiKhoan.taiKhoan !== '' ? renderData() : ''}
             <Table className="history_table" columns={columns} dataSource={data} pagination={{ pageSize: 10, position: ["bottomCenter"] }} scroll={{ y: 240, x: 1300 }} />,
         </div >
     )

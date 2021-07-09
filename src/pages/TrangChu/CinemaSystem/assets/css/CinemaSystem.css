@@ -125,7 +125,7 @@
 }
 .cinemaSystem{
   border-radius: 5px;
-  box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 30px 30px #000;
 }
 
 .ant-tabs-tabpane .ant-tabs-tabpane-active .listShowTimes {

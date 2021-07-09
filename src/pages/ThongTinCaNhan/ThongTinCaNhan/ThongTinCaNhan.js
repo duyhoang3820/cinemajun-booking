@@ -16,6 +16,7 @@ export default function ThongTinCaNhan() {
     const [readOnly, setReadOnly] = useState(true)
     // console.log('thongTinTaiKhoan', thongTinTaiKhoan);
     // console.log('dataUser', dataUser);
+    
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(thongTinNguoiDungAction(taiKhoan))
