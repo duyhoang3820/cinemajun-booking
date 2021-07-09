@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Result, Button } from 'antd';
 import { history } from '../../App';
 export default function PageNotAuthorization() {
+    useEffect(() => {
+        document.title = 'CineJun | Page not authorization';
+    }, [])
     return (
-        <div>
+        <div >
             <Result
                 status="403"
                 title="403"
-                subTitle="Sorry, you are not authorized to access this page."
-                extra={<Button type="primary" onClick={()=>{
+                subTitle="Xin lỗi, bạn không được phép truy cập trang này."
+                extra={<Button type="primary" onClick={() => {
                     history.push('/')
-                }}>Back Home</Button>}
+                }}>Trở về trang chủ</Button>}
             />
         </div>
     )

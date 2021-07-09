@@ -20,7 +20,7 @@ function App() {
     <Router history={history}>
       <Loading />
       <Switch>
-        <HomeTemplate path="/" exact component={TrangChu} />
+        <HomeTemplate path="/" exact component={TrangChu}/>
         <HomeTemplate path="/thong-tin-nguoi-dung" exact component={ThongTinNguoiDung} />
         <HomeTemplate path="/chi-tiet-dat-ve/:maPhim" exact component={ChiTietPhim} />
         <HomeTemplate path="/chi-tiet-phong-ve/:maLichChieu" exact component={ChiTietPhongVe} />

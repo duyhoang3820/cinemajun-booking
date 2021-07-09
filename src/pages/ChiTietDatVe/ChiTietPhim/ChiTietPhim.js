@@ -23,6 +23,7 @@ export default function ChiTietPhim(props) {
   const [isOpen, setOpen] = useState(false)
   const [trailer, setTrailer] = useState()
   useEffect(() => {
+    document.title = 'CineJun | Chi tiết';
     dispatch(layChiTietPhimAction(maPhim));
     window.scrollTo(0, 0);
   }, []);

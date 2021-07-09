@@ -9,6 +9,7 @@ export default function LichSuDatVe() {
     // console.log('thongTinTaiKhoan', thongTinTaiKhoan);
 
     useEffect(() => {
+        document.title = 'CineJun | Lịch sử';
         renderData();
     }, [])
     const inThongTinGhe = (danhSachGhe) => {

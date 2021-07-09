@@ -7,6 +7,7 @@ import '../../components/Background/Background.css'
 
 export default function TrangChu(props) {
     useEffect(() => {
+        document.title = 'CineJun | Trang chủ';
         window.scrollTo(0, 0);
     }, [])
     return (

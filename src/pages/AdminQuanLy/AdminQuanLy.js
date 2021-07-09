@@ -20,6 +20,7 @@ import logo from '../../assets/img/logo/logo.svg'
 // import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
 import './assets/css/Admin.css'
+import '../../components/Background/Background1.css'
 
 
 
@@ -99,7 +100,7 @@ export default function AdminQuanLyLichChieu() {
               </Menu>
             </Sider>
             <Layout className="site-layout" style={{ backgroundColor: '#002329' }}>
-              <div className="row w-100" style={{ background: '#fefefe' }}>
+              <div className="d-flex" style={{ background: '#fefefe' }}>
                 <div className="col-2 col-sm-2 col-md-3 col-lg-5 back_page">
                   <a className="m-4" onClick={() => {
                     history.goBack()

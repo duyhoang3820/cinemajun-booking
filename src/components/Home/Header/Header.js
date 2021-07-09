@@ -60,28 +60,30 @@ export default function Header() {
         </a>
         <button style={{ border: "none", outline: "none" }} className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i className="fa fa-bars" style={{ fontSize: '35px', color: '#f5222d' }}></i></button>
         <div className="collapse navbar-collapse ml-5 mb-1" id="collapsibleNavId">
-          <ul className="navbar-nav m-auto mt-2 mt-lg-0 ">
+          <ul className="navbar-nav m-auto mt-2 mt-lg-3">
             <li className="nav-item ">
               <Link to="" onClick={() => {
                 history.push('/')
                 setTimeout(function () {
+                  document.title = 'CineJun | Trang chủ | Lịch chiếu';
                   scroller.scrollTo('lichChieu', {
                     duration: 500,
                     smooth: true,
                   })
                 }, 100);
-              }} className="nav-link header__lichChieu">Lịch chiếu</Link>
+              }} className="nav-link header__lichChieu ">Lịch chiếu</Link>
             </li>
             <li className="nav-item ">
               <Link to="" onClick={() => {
                 history.push('/')
                 setTimeout(function () {
+                  document.title = 'CineJun | Trang chủ | Cụm rạp';
                   scroller.scrollTo('cumRap', {
                     duration: 500,
                     smooth: true,
                   })
                 }, 100);
-              }} className="nav-link header__cumRap">Cụm rạp</Link>
+              }} className="nav-link header__cumRap ">Cụm rạp</Link>
             </li>
           </ul>
 
@@ -89,9 +91,9 @@ export default function Header() {
             <div className="d-flex align-items-center mb-2" style={{ justifyContent: 'center' }}>
               {taiKhoan.trim() === '' ? <a onClick={() => {
                 Swal.fire({
-                  title: 'Sorry!',
-                  text: 'Bạn chưa đăng nhập!',
+                  title: 'Bạn chưa đăng nhập!',
                   icon: 'warning',
+                  confirmButtonColor: '#f5222d',
                   confirmButtonText: 'OK'
                 })
               }}><img
@@ -120,18 +122,18 @@ export default function Header() {
               </div>
               <div>
                 {localStorage.getItem(USERLOGIN) ? <a onClick={() => {
-                  localStorage.removeItem(USERLOGIN);
-                  localStorage.removeItem(TOKEN);
                   Swal.fire({
-                    title: 'Are you sure?',
-                    text: "Bạn có chắc muốn đăng xuất!",
+                    title: 'Bạn có chắc muốn đăng xuất?',
                     icon: 'question',
                     showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes'
+                    confirmButtonColor: '#52c41a',
+                    cancelButtonColor: '#f5222d',
+                    cancelButtonText: "Hủy bỏ",
+                    confirmButtonText: 'Đăng xuất'
                   }).then((result) => {
                     if (result.isConfirmed) {
+                      localStorage.removeItem(USERLOGIN);
+                      localStorage.removeItem(TOKEN);
                       openNotificationWithIcon('success');
                       setTimeout(function () {
                         window.location.reload();

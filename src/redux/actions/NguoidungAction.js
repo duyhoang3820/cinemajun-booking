@@ -36,23 +36,14 @@ export const dangNhapAction = (userLogin) => {
             })
             localStorage.setItem(TOKEN, result.data.accessToken);
             localStorage.setItem(USERLOGIN, JSON.stringify(result.data))
-            // console.log('data',result.data);
-            // Swal.fire({
-            //     title: 'Success!',
-            //     text: 'Đăng nhập thành công!',
-            //     icon: 'success',
-            //     confirmButtonText: 'OK'
-            // })
             openNotificationWithIcon('success');
             history.push('/')
             setTimeout(function () {
                 window.scrollTo(0, 0);
             }, 1000);
         } catch (error) {
-            // alert('Tài khoản hoặc mật khẩu không đúng!');
             Swal.fire({
-                title: 'Error!',
-                text: error.response.data,
+                title: `${error.response.data}!`,
                 icon: 'error',
                 confirmButtonText: 'OK'
             })

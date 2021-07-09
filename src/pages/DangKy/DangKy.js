@@ -15,6 +15,7 @@ import '../../components/Background/Background2.css'
 
 export default function DangKy() {
     useEffect(() => {
+        document.title = 'CineJun | Đăng ký';
         window.scrollTo(0, 0);
     }, [])
     const [state, setstate] = useState({

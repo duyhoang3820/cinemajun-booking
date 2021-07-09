@@ -23,6 +23,7 @@ export default function ChiTietPhongVe(props) {
 
 
     useEffect(() => {
+        document.title = 'CineJun | Đặt vé';
         dispatch(layDanhSachPhongVeAction(props.match.params.maLichChieu))
         window.scrollTo(0, 0);
     }, [])
@@ -171,9 +172,10 @@ export default function ChiTietPhongVe(props) {
                                                 text: "Hãy kiểm tra thông tin trước khi thanh toán!",
                                                 icon: 'question',
                                                 showCancelButton: true,
-                                                confirmButtonColor: '#3085d6',
-                                                cancelButtonColor: '#d33',
-                                                confirmButtonText: 'Yes'
+                                                confirmButtonColor: '#52c41a',
+                                                cancelButtonColor: '#f5222d',
+                                                cancelButtonText: "Hủy bỏ",
+                                                confirmButtonText: 'Xác nhận'
                                             }).then((result) => {
                                                 if (result.isConfirmed) {
                                                     let objectApi = {
@@ -188,9 +190,9 @@ export default function ChiTietPhongVe(props) {
                                             <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
                                         </button> : <button onClick={() => {
                                             Swal.fire({
-                                                title: 'Sorry!',
-                                                text: "Vui lòng chọn ghế !",
+                                                title: 'Vui lòng chọn ghế !',
                                                 icon: 'warning',
+                                                confirmButtonColor: '#f5222d',
                                                 confirmButtonText: 'OK'
                                             })
                                         }} className="btn_DatVe" style={{ border: "none", outline: "none" }}>

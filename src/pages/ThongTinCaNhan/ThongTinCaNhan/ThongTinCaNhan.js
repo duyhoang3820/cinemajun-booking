@@ -16,9 +16,10 @@ export default function ThongTinCaNhan() {
     const [readOnly, setReadOnly] = useState(true)
     // console.log('thongTinTaiKhoan', thongTinTaiKhoan);
     // console.log('dataUser', dataUser);
-    
+
     const dispatch = useDispatch();
     useEffect(() => {
+        document.title = 'CineJun | Thông tin';
         dispatch(thongTinNguoiDungAction(taiKhoan))
         setDataUser({
             ...thongTinTaiKhoan,
@@ -110,13 +111,13 @@ export default function ThongTinCaNhan() {
                         setReadOnly(false)
                     }} type="button" className=" btnCapNhat__item" style={{ border: "none", outline: "none" }}>Thay đổi thông tin</button> : <button onClick={() => {
                         Swal.fire({
-                            title: 'Are you sure?',
-                            text: "Bạn có chắc muốn cập nhật?",
+                            title: 'Bạn có chắc muốn cập nhật?',
                             icon: 'question',
                             showCancelButton: true,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
-                            confirmButtonText: 'Yes'
+                            confirmButtonColor: '#52c41a',
+                            cancelButtonColor: '#f5222d',
+                            cancelButtonText: "Hủy bỏ",
+                            confirmButtonText: 'Cập nhật'
                         }).then((result) => {
                             if (result.isConfirmed) {
                                 setReadOnly(true)
