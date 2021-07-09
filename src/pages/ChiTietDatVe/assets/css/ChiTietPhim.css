@@ -13,6 +13,8 @@
 
 .banner_phim {
   padding: 70px 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .thongTinPhongVe {
@@ -20,6 +22,8 @@
 }
 .picture {
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 .banner_phim .picture .btn_play_video {
   width: 60px;
@@ -33,6 +37,8 @@
   border: none;
   opacity: 1;
   transition: all 0.5s;
+  border: none;
+  outline: none;
 }
 
 .pulsing_2 {
@@ -46,6 +52,7 @@
   }
 }
 .moTaPhim {
+  align-items: center;
   justify-content: center;
 }
 
@@ -113,6 +120,10 @@
 .thumnail {
   border-radius: 5px;
 }
+.detail {
+  align-items: center;
+  justify-content: center;
+}
 
 @media screen and (min-width: 280px) {
   .thumnail {
@@ -136,7 +147,7 @@
   .detail__ngayKhoiChieu {
     font-size: 14px;
   }
-  .detail{
+  .detail {
     margin-top: 50px;
   }
 }
@@ -257,7 +268,7 @@
   .detail_ageType {
     font-size: 14px;
   }
-  .detail{
+  .detail {
     margin-top: 0px;
   }
 }
