@@ -85,8 +85,8 @@ export default function Header() {
             </li>
           </ul>
 
-          <div className="signIn">
-            <div className="d-flex align-items-center mb-2" style={{ justifyContent: 'left' }}>
+          <div className="login-logout nav-link mr-3">
+            <div className="d-flex align-items-center mb-2" style={{ justifyContent: 'center' }}>
               {taiKhoan.trim() === '' ? <a onClick={() => {
                 Swal.fire({
                   title: 'Sorry!',
