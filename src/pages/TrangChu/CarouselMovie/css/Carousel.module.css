@@ -7,18 +7,8 @@
   border-radius: 5px;
   border: none;
 }
-/* .ant-card.ant-card-bordered{
-  width:80%  !important;
-} */
 
-/* .ant-card-body {
- 
-}
-.ant-card {
-  
-} */
-
-.btn_Trailer {
+.btn_trailer {
   position: absolute;
   opacity: 1;
   top: 45%;
@@ -58,7 +48,7 @@
   cursor: pointer;
 }
 
-.poster_item:hover .btn_Trailer {
+.poster_item:hover .btn_trailer {
   opacity: 1;
   transition: all 0.3s;
 }
@@ -74,14 +64,14 @@
 } */
 
 
-.posters .poster_item {
+.carousel_posters .poster_item {
   width: 100%;
   position: relative;
 }
-.posters .poster_item img {
+.carousel_posters .poster_item img {
   width: 100%;
 }
-.posters > div > div > div {
+.carousel_posters > div > div > div {
   transform: scale(0.95);
   opacity: 0.5;
   clip-path: polygon(
@@ -97,7 +87,7 @@
   transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 280px) {
-  .posters .poster_item .img {
+  .carousel_posters .poster_item .img {
     width: 100%;
     height: 150px;
   }
@@ -105,13 +95,13 @@
     width: 70% !important;
     height: 55px;
   }
-  .btn_Trailer {
+  .btn_trailer {
     top: 20%;
     left: 33%;
   }
 }
 @media screen and (min-width: 360px) {
-  .posters .poster_item .img {
+  .carousel_posters .poster_item .img {
     width: 100%;
     height: 200px;
   }
@@ -119,13 +109,13 @@
     width: 70% !important;
     height: 55px;
   }
-  .btn_Trailer {
+  .btn_trailer {
     top: 30%;
     left: 39.5%;
   }
 }
 @media screen and (min-width: 540px) {
-  .posters .poster_item .img {
+  .carousel_posters .poster_item .img {
     width: 100%;
     height: 270px;
   }
@@ -133,13 +123,13 @@
     width: 70% !important;
     height: 55px;
   }
-  .btn_Trailer {
+  .btn_trailer {
     top: 35%;
     left: 41.5%;
   }
 }
 @media screen and (min-width: 768px) {
-  .posters .poster_item .img {
+  .carousel_posters .poster_item .img {
     width: 100%;
     height: 350px;
   }
@@ -147,23 +137,23 @@
     width: 80% !important;
     height: 65px;
   }
-  .btn_Trailer {
+  .btn_trailer {
     top: 40%;
     left: 44%;
   }
 }
 @media screen and (min-width: 992px) {
-  .posters .poster_item .img {
+  .carousel_posters .poster_item .img {
     width: 100%;
     height: 400px;
   }
-  .btn_Trailer {
+  .btn_trailer {
     top: 40%;
     left: 43%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .posters .poster_item .img {
+  .carousel_posters .poster_item .img {
     width: 100%;
     height: 500px;
   }
@@ -171,7 +161,7 @@
     width: 100% !important;
     height: 80px;
   }
-  .btn_Trailer {
+  .btn_trailer {
     top: 40%;
     left: 45.5%;
   }

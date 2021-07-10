@@ -17,9 +17,10 @@ import '../../../components/Background/Background2.css'
 
 export default function ChiTietPhim(props) {
   const { chiTietPhim } = useSelector((state) => state.QuanLyPhimReducer);
+  // console.log('chiTietPhim',chiTietPhim);
   const dispatch = useDispatch();
   const maPhim = props.match.params.maPhim;
-  // console.log("chi tiet phim", chiTietPhim);
+  console.log("chi tiet phim", chiTietPhim);
   const [isOpen, setOpen] = useState(false)
   const [trailer, setTrailer] = useState()
   useEffect(() => {
@@ -41,14 +42,14 @@ export default function ChiTietPhim(props) {
       }}><i className="fa fa-angle-left back"></i></a>
       <div className="">
         <div className="container">
-          <div className="row banner_phim">
-            <div className="col-12 col-sm-12 col-md-8 row moTaPhim">
-              <div className="picture d-flex col-12 col-sm-12 col-md-5">
-                <img className="thumnail" src={chiTietPhim.hinhAnh} width={220} height={320} alt="" />
+          <div className="row detail_banner_phim">
+            <div className="col-12 col-sm-12 col-md-8 row detail_moTaPhim">
+              <div className="detail_picture d-flex col-12 col-sm-12 col-md-5">
+                <img className="detail_thumnail" src={chiTietPhim.hinhAnh} width={220} height={320} alt="" />
                 <button><img onClick={() => {
                   setOpen(true);
                   setTrailer(chiTietPhim.trailer.slice(30))
-                }} className="btn_play_video pulsing_2" src={img} alt="" /></button>
+                }} className="detail_btn_play_video pulsing_2" src={img} alt="" /></button>
               </div>
               <div className="detail text-white col-12 col-sm-12 col-md-7 d-flex">
                 <div>
@@ -60,13 +61,13 @@ export default function ChiTietPhim(props) {
                   <span className="detail__tenPhim text-white">{chiTietPhim.tenPhim} <span className="d-block d-md-none">(C16)</span></span>
                   <p className="mb-5 mt-2 ml-1" style={{ color: '#e9e9e9', fontSize: '14px' }}>120 phút - 7.4 IMDb - 2D/Digitals</p>
                   <div className="d-flex" style={{ alignItems: "center", justifyContent: 'flex-start' }}>
-                    <Link to="cumRap" smooth={true} duration={500} className="btn_muaVe">Mua vé</Link>
+                    <Link to="cumRap" smooth={true} duration={500} className="detail_btn_muaVe">Mua vé</Link>
                   </div>
                 </div>
 
               </div>
             </div>
-            <div className="d-none d-md-block col-12 col-sm-12 col-md-4 danhGiaPhim ">
+            <div className="d-none d-md-block col-12 col-sm-12 col-md-4">
               <div className="circle-score d-flex justify-content-center ">
                 <Progress
                   type="circle"

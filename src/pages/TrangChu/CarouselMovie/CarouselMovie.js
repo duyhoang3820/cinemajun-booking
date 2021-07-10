@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
-import style from '../assets/css/Carousel.module.css'
+import style from './css/Carousel.module.css'
 import '../../../assets/css/sclick/slick_dots.css'
 import ModalVideo from 'react-modal-video'
 import '../../../../node_modules/react-modal-video/scss/modal-video.scss';
@@ -47,7 +47,7 @@ export default function CarouselMovie() {
         return trailer.map((phim, index) => {
             return <div key={index} className={style.poster_item}>
                 <img className={style.img} src={phim.img} alt="" />
-                <div className={style.btn_Trailer}>
+                <div className={style.btn_trailer}>
                     <div className={style.pulsing_1} onClick={() => {
                         setOpen(true);
                         setIdTrailer(phim.id)
@@ -61,12 +61,9 @@ export default function CarouselMovie() {
     }
     return (
         <div >
-            <Slider {...options} className={style.posters}>
+            <Slider {...options} className={style.carousel_posters}>
                 {renderTrailer()}
             </Slider>
-            {/* <Carousel showArrows showArrowsOnHover height={500} continuous={true} cycle={true} >
-                {renderTrailer()}
-            </Carousel> */}
             <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={idTrailer} onClose={() => setOpen(false)} />
         </div>
 

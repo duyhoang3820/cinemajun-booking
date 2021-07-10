@@ -1,0 +1,42 @@
+.btnPlus{
+    border: none !important;
+    outline: none !important;
+    background: none;
+    padding: 5px 10px;
+    text-align: center;
+    color: #fa5238;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.btnPlus:hover{
+    transform: scale(1.2);
+}
+.btnMinus{
+    border: none !important;
+    outline: none !important;
+    background: none;
+    padding: 5px 10px;
+    text-align: center;
+    color: #fa5238;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.btnMinus:hover{
+    transform: scale(1.2);
+}
+.num{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+.titleList{
+    color: #000;
+    font-weight: bold;
+}

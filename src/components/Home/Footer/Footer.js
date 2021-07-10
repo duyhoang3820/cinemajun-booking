@@ -22,90 +22,91 @@ import logoLaban from './logo/laban.png'
 import logoAgribank from './logo/AGRIBANK.png'
 import logo123go from './logo/123go.png'
 import logoDcine from './logo/dcine.png'
-import './Footer.css'
+import style from './Footer.module.scss'
 import { NavLink } from 'react-router-dom'
+import cx from 'classnames';
+
 
 export default function Footer() {
     return (
-        <div style={{marginTop:'100px'}}>
-            <footer className="flex-rw pt-3">
-                <ul className="footer-list-top">
+        <div style={{ marginTop: '100px' }}>
+            <footer className={cx(style.flex_rw, "pt-3")}>
+                <ul className={style.footer_list_top}>
                     <li>
-                        <h4 className="footer-list-header">CineJun Cinema</h4>
+                        <h4 className={style.footer_list_header}>CineJun Cinema</h4>
                     </li>
-                    <li><NavLink to="*" className="generic-anchor footer-list-anchor" itemProp="significantLink">Giới thiệu</NavLink></li>
-                    <li><a href="#" className="generic-anchor footer-list-anchor" itemProp="significantLink">FAQ</a></li>
-                    <li><a href="#" className="generic-anchor footer-list-anchor" itemProp="significantLink">Thỏa thuận sử dụng</a></li>
-                    <li><a href="#" itemProp="significantLink" className="generic-anchor footer-list-anchor">Chính sách bảo mật</a></li>
-                    <li><a href="#" className="generic-anchor footer-list-anchor" itemProp="significantLink">Sự kiện</a></li>
-                    <li><a href="#" className="generic-anchor footer-list-anchor" itemProp="significantLink">Tiện ích online</a></li>
+                    <li><NavLink to="*" className={cx(style.generic_anchor, style.footer_list_anchor)} itemProp="significantLink">Giới thiệu</NavLink></li>
+                    <li><a href="#" className={cx(style.generic_anchor, style.footer_list_anchor)} itemProp="significantLink">FAQ</a></li>
+                    <li><a href="#" className={cx(style.generic_anchor, style.footer_list_anchor)} itemProp="significantLink">Thỏa thuận sử dụng</a></li>
+                    <li><a href="#" itemProp="significantLink" className={cx(style.generic_anchor, style.footer_list_anchor)}>Chính sách bảo mật</a></li>
+                    <li><a href="#" className={cx(style.generic_anchor, style.footer_list_anchor)} itemProp="significantLink">Sự kiện</a></li>
+                    <li><a href="#" className={cx(style.generic_anchor, style.footer_list_anchor)} itemProp="significantLink">Tiện ích online</a></li>
                 </ul>
-                <ul className="footer-list-top">
+                <ul className={style.footer_list_top}>
                     <li>
-                        <h4 className="footer-list-header">Đối tác</h4>
+                        <h4 className={style.footer_list_header}>Đối tác</h4>
                     </li>
-                    <li className="logoL">
-                        <a target="_blank" href="https://www.cgv.vn/" className="logoS"><img src={logoCgv} alt="" /></a>
-                        <a target="_blank" href="https://www.galaxycine.vn/" className="logoS"><img src={logoGalaxy} alt="" /></a>
-                        <a target="_blank" href="http://lottecinemavn.com/LCHS/index.aspx" className="logoS"><img src={logoLotte} alt="" /></a>
-                        <a target="_blank" href="https://www.bhdstar.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoBhd} alt="" /></a>
-                        <a target="_blank" href="https://www.megagscinemas.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoMegags} alt="" /></a>
+                    <li className={style.logoL}>
+                        <a target="_blank" href="https://www.cgv.vn/" className={style.logoS}><img src={logoCgv} alt="" /></a>
+                        <a target="_blank" href="https://www.galaxycine.vn/" className={style.logoS}><img src={logoGalaxy} alt="" /></a>
+                        <a target="_blank" href="http://lottecinemavn.com/LCHS/index.aspx" className={style.logoS}><img src={logoLotte} alt="" /></a>
+                        <a target="_blank" href="https://www.bhdstar.vn/" className={cx(style.logoS, "d-sm-none d-lg-inline")}><img src={logoBhd} alt="" /></a>
+                        <a target="_blank" href="https://www.megagscinemas.vn/" className={cx(style.logoS, "d-sm-none d-lg-inline")}><img src={logoMegags} alt="" /></a>
                     </li>
-                    <li className="logoL">
-                        <a target="_blank" href="http://ddcinema.vn/" className="logoS"><img src={logoDongda} alt="" /></a>
-                        <a target="_blank" href="http://cinestar.com.vn/" className="logoS"><img src={logoCinestar} alt="" /></a>
-                        <a target="_blank" href="https://cinemaxvn.com/" className="logoS"><img src={logoCnx} alt="" /></a>
-                        <a target="_blank" href="https://www.betacinemas.vn/home.htm" className="logoS d-sm-none d-lg-inline"><img src={logoBt} alt="" /></a>
-                        <a target="_blank" href="https://www.indovinabank.com.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoIVB} alt="" /></a>
+                    <li className={style.logoL}>
+                        <a target="_blank" href="http://ddcinema.vn/" className={style.logoS}><img src={logoDongda} alt="" /></a>
+                        <a target="_blank" href="http://cinestar.com.vn/" className={style.logoS}><img src={logoCinestar} alt="" /></a>
+                        <a target="_blank" href="https://cinemaxvn.com/" className={style.logoS}><img src={logoCnx} alt="" /></a>
+                        <a target="_blank" href="https://www.betacinemas.vn/home.htm" className={cx(style.logoS, "d-sm-none d-lg-inline")}><img src={logoBt} alt="" /></a>
+                        <a target="_blank" href="https://www.indovinabank.com.vn/" className={cx(style.logoS, "d-sm-none d-lg-inline")}><img src={logoIVB} alt="" /></a>
                     </li>
-                    <li className="logoL">
-                        <a target="_blank" href="https://touchcinema.com/" className="logoS"><img src={logoTouch} alt="" /></a>
-                        <a target="_blank" href="http://starlight.vn/" className="logoS"><img src={logoStarlight} alt="" /></a>
-                        <a target="_blank" href="https://www.dcine.vn/" className="logoS"><img src={logoDcine} alt="" /></a>
-                        <a target="_blank" href="https://zalopay.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoZalopay} alt="" /></a>
-                        <a target="_blank" href="https://www.payoo.vn/" className="logoS d-sm-none d-lg-inline"><img src={logoPayoo} alt="" /></a>
+                    <li className={style.logoL}>
+                        <a target="_blank" href="https://touchcinema.com/" className={style.logoS}><img src={logoTouch} alt="" /></a>
+                        <a target="_blank" href="http://starlight.vn/" className={style.logoS}><img src={logoStarlight} alt="" /></a>
+                        <a target="_blank" href="https://www.dcine.vn/" className={style.logoS}><img src={logoDcine} alt="" /></a>
+                        <a target="_blank" href="https://zalopay.vn/" className={cx(style.logoS, "d-sm-none d-lg-inline")}><img src={logoZalopay} alt="" /></a>
+                        <a target="_blank" href="https://www.payoo.vn/" className={cx(style.logoS, "d-sm-none d-lg-inline")}><img src={logoPayoo} alt="" /></a>
                     </li>
-                    <li className="logoL">
-                        <a target="_blank" href="https://www.vietcombank.com.vn/" className="logoS"><img src={logoVCB} alt="" /></a>
-                        <a target="_blank" href="http://www.agribank.com.vn/" className="logoS"><img src={logoAgribank} alt="" /></a>
-                        <a target="_blank" href="https://www.vietinbank.vn/" className="logoS"><img src={logoViettin} alt="" /></a>
-                        <a target="_blank" href="http://123go.vn" className="logoS d-sm-none d-lg-inline"><img src={logo123go} alt="" /></a>
-                        <a target="_blank" href="http://laban.vn" className="logoS d-sm-none d-lg-inline"><img src={logoLaban} alt="" /></a>
+                    <li className={style.logoL}>
+                        <a target="_blank" href="https://www.vietcombank.com.vn/" className={style.logoS}><img src={logoVCB} alt="" /></a>
+                        <a target="_blank" href="http://www.agribank.com.vn/" className={style.logoS}><img src={logoAgribank} alt="" /></a>
+                        <a target="_blank" href="https://www.vietinbank.vn/" className={style.logoS}><img src={logoViettin} alt="" /></a>
+                        <a target="_blank" href="http://123go.vn" className={cx(style.logoS, "d-sm-none d-lg-inline")}><img src={logo123go} alt="" /></a>
+                        <a target="_blank" href="http://laban.vn" className={cx(style.logoS, "d-sm-none d-lg-inline")}><img src={logoLaban} alt="" /></a>
                     </li>
                 </ul>
-                <ul className="footer-list-top">
+                <ul className={style.footer_list_top}>
                     <li id="help">
-                        <h4 className="footer-list-header">Chăm sóc khách hàng</h4>
+                        <h4 className={style.footer_list_header}>Chăm sóc khách hàng</h4>
                     </li>
-                    <li><p className="generic-anchor footer-list-anchor" itemProp="significantLink">Hotline: 1900 0000</p></li>
-                    <li><p className="generic-anchor footer-list-anchor" itemProp="significantLink">Giờ làm việc: 8:00 - 22:00</p></li>
-                    <li id="user-registration"><p className="generic-anchor footer-list-anchor" itemProp="significantLink">Tuyển dụng</p></li>
-                    <li id="order-tracking"><p itemProp="significantLink" className="generic-anchor footer-list-anchor">Liên hệ quảng cáo</p></li>
+                    <li><p className={cx(style.generic_anchor, style.footer_list_anchor)} itemProp="significantLink">Hotline: 1900 0000</p></li>
+                    <li><p className={cx(style.generic_anchor, style.footer_list_anchor)} itemProp="significantLink">Giờ làm việc: 8:00 - 22:00</p></li>
+                    <li id="user-registration"><p className={cx(style.generic_anchor, style.footer_list_anchor)} itemProp="significantLink">Tuyển dụng</p></li>
+                    <li id="order-tracking"><p itemProp="significantLink" className={cx(style.generic_anchor, style.footer_list_anchor)}>Liên hệ quảng cáo</p></li>
                 </ul>
-                <section className="footer-social-section flex-rw">
-                    <span className="footer-social-overlap footer-social-connect">
-                        CONNECT <span className="footer-social-small">with</span> US
+                <section className={cx(style.footer_social_section, style.flex_rw)}>
+                    <span className={cx(style.footer_social_overlap, style.footer_social_connect)}>
+                        CONNECT <span className={style.footer_social_small}>with</span> US
                     </span>
-                    <span className="footer-social-overlap footer-social-icons-wrapper">
-                        <NavLink to="*" className="generic-anchor" title="Pinterest" itemProp="significantLink"><i className="fa fa-pinterest" /></NavLink>
-                        <a href="https://www.facebook.com/duyhoang3820" className="generic-anchor" target="_blank" title="Facebook" itemProp="significantLink"><i className="fa fa-facebook" /></a>
-                        <NavLink to="*" className="generic-anchor" title="Twitter" itemProp="significantLink"><i className="fa fa-twitter" /></NavLink>
-                        <NavLink to="*" className="generic-anchor" title="Instagram" itemProp="significantLink"><i className="fa fa-instagram" /></NavLink>
-                        <NavLink to="*" className="generic-anchor" title="Youtube" itemProp="significantLink"><i className="fa fa-youtube" /></NavLink>
-                        <NavLink to="*" className="generic-anchor" title="Google Plus" itemProp="significantLink"><i className="fa fa-google-plus" /></NavLink>
+                    <span className={cx(style.footer_social_overlap, style.footer_social_icons_wrapper)}>
+                        <NavLink to="*" className={style.generic_anchor} title="Pinterest" itemProp="significantLink"><i className="fa fa-pinterest" /></NavLink>
+                        <a href="https://www.facebook.com/duyhoang3820" className={style.generic_anchor} target="_blank" title="Facebook" itemProp="significantLink"><i className="fa fa-facebook" /></a>
+                        <NavLink to="*" className={style.generic_anchor} title="Twitter" itemProp="significantLink"><i className="fa fa-twitter" /></NavLink>
+                        <NavLink to="*" className={style.generic_anchor} title="Instagram" itemProp="significantLink"><i className="fa fa-instagram" /></NavLink>
+                        <NavLink to="*" className={style.generic_anchor} title="Youtube" itemProp="significantLink"><i className="fa fa-youtube" /></NavLink>
+                        <NavLink to="*" className={style.generic_anchor} title="Google Plus" itemProp="significantLink"><i className="fa fa-google-plus" /></NavLink>
                     </span>
                 </section>
-                <section className="footer-bottom-section flex-rw mt-5">
-                    <div className="footer-bottom-wrapper">
+                <section className={cx(style.footer_bottom_section, style.flex_rw, "mt-5")}>
+                    <div className={style.footer_bottom_wrapper}>
                         <i className="fa fa-copyright" role="copyright">
-                        </i> COPYRIGHT 2021 CJ CineJun <address className="footer-address" role="company address">. </address><span className="footer-bottom-rights"> All RIGHTS RESERVED . </span>
+                        </i> COPYRIGHT 2021 CJ CineJun <address className={style.footer_address} role="company address">. </address><span className={style.footer_bottom_rights}> All RIGHTS RESERVED . </span>
                     </div>
-                    <div className="footer-bottom-wrapper">
-                        <span className="generic-anchor" rel="nofollow">Terms</span> | <span className="generic-anchor" rel="nofollow">Privacy</span>
+                    <div className={style.footer_bottom_wrapper}>
+                        <span className={style.generic_anchor} rel="nofollow">Terms</span> | <span className={style.generic_anchor} rel="nofollow">Privacy</span>
                     </div>
                 </section>
             </footer>
-
         </div>
     )
 }

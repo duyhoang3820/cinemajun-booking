@@ -72,12 +72,12 @@ export default function MenuTabCumRap(props) {
                                 <img style={{ borderRadius: '3px', }} src={detail.img} width='50px' height="50px"></img>
                             </div>
                             <div className="col-8">
-                                <p className="tenCumRap m-0">
+                                <p className="cumRap_ten m-0">
                                     <span style={{ color: detail.color }}>
                                         {splitCumRap(cr.tenCumRap)[0]}</span>
                                     <span style={{ color: 'black' }}> - {splitCumRap(cr.tenCumRap)[1]}</span></p>
-                                <p className="diaChi m-0">{cr.diaChi}</p>
-                                <p className="chiTiet m-0">[Chi tiết]</p>
+                                <p className="cumRap_diaChi m-0">{cr.diaChi}</p>
+                                <p className="cumRap_chiTiet m-0">[Chi tiết]</p>
                             </div>
                         </div>
                     </div>

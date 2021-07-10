@@ -22,9 +22,9 @@ export default function Menu(props) {
       return (
         <TabPane 
           tab={
-            <div className="heThongRap d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
+            <div className="chiTietPhim_logoSystem d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
               <img className="logoCinema" src={htr.logo} width={50} height={50} alt="" />
-              <span className="d-none d-md-block ml-3 tenHeThongRap">{htr.tenHeThongRap}</span>
+              <span className="d-none d-md-block ml-3 chiTietPhim_tenHeThongRap">{htr.tenHeThongRap}</span>
             </div>
           }
           key={index}
@@ -38,10 +38,10 @@ export default function Menu(props) {
   return (
     <div>
       <Tabs defaultActiveKey="1" centered={true} style={{borderRadius:'5px'}}>
-        <TabPane tab={<span className="item__nav">Lịch chiếu</span>} key="1">
+        <TabPane tab={<span className="chiTietPhim_menu">Lịch chiếu</span>} key="1">
           <Tabs className="bg-light" tabPosition={tabPosition}>{renderHeThongRap()}</Tabs>
         </TabPane>
-        <TabPane tab={<span className="item__nav">Thông tin</span>} key="2">
+        <TabPane tab={<span className="chiTietPhim_menu">Thông tin</span>} key="2">
           <div className="row">
             <div className="col-3">
               <p className="font-weight-bold text-white">Ngày công chiếu:</p>

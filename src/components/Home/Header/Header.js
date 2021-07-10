@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { TOKEN, USERLOGIN } from "../../../util/constants/settingSystem";
-import "./Header.css";
+import style from "./Header.module.scss";
 import * as Scroll from 'react-scroll';
 import { Link } from 'react-scroll'
 import { Menu, Dropdown } from 'antd';
@@ -12,6 +12,7 @@ import 'sweetalert2/dist/sweetalert2.css'
 import logo from '../../../assets/img//logo/logo.svg'
 import { history } from "../../../App";
 import { notification } from 'antd';
+import cx from 'classnames';
 
 
 export default function Header() {
@@ -45,9 +46,9 @@ export default function Header() {
   )
 
   return (
-    <div className="sticky">
-      <nav className="navbar navbar-expand-sm">
-        <a className="navbar-brand " onClick={() => {
+    <div className={style.sticky}>
+      <nav className={cx(style.navbar, "navbar navbar-expand-sm")}>
+        <a className={cx(style.navbar_brand, "navbar-brand")} onClick={() => {
           history.push('/')
           window.location.reload()
         }}>
@@ -71,10 +72,10 @@ export default function Header() {
                     smooth: true,
                   })
                 }, 100);
-              }} className="nav-link header__lichChieu ">Lịch chiếu</Link>
+              }} className={`${style.header__lichChieu} nav-link`}>Lịch chiếu</Link>
             </li>
-            <li className="nav-item ">
-              <Link to="" onClick={() => {
+            <li className="nav-item">
+              <a to="" onClick={() => {
                 history.push('/')
                 setTimeout(function () {
                   document.title = 'CineJun | Trang chủ | Cụm rạp';
@@ -83,11 +84,11 @@ export default function Header() {
                     smooth: true,
                   })
                 }, 100);
-              }} className="nav-link header__cumRap ">Cụm rạp</Link>
+              }} className={cx(style.header__cumRap, "nav-link")}>Cụm rạp</a>
             </li>
           </ul>
 
-          <div className="login-logout nav-link mr-3">
+          <div className={cx(style.header_login_logout, "nav-link mr-3")}>
             <div className="d-flex align-items-center mb-2" style={{ justifyContent: 'center' }}>
               {taiKhoan.trim() === '' ? <a onClick={() => {
                 Swal.fire({
@@ -111,7 +112,7 @@ export default function Header() {
                 </NavLink>}
 
               <div className="ml-2">
-                {taiKhoan.trim() !== '' ? maLoaiNguoiDung === 'QuanTri' && taiKhoan==='duyhoang3820' ?
+                {taiKhoan.trim() !== '' ? maLoaiNguoiDung === 'QuanTri' && taiKhoan === 'duyhoang3820' ?
                   <Dropdown overlay={menu1} placement="bottomCenter" arrow>
                     <a className="ant-dropdown-link">{taiKhoan}</a>
                   </Dropdown> :

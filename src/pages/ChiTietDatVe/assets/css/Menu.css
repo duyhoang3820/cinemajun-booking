@@ -3,7 +3,7 @@
   .ant-tabs-nav-list
   .ant-tabs-tab
   .ant-tabs-tab-btn
-  .item__nav {
+  .chiTietPhim_menu {
   font-size: 18px;
   transition: 0.2s;
   font-weight: 600;
@@ -15,7 +15,7 @@
   .ant-tabs-nav-list
   .ant-tabs-tab
   .ant-tabs-tab-btn
-  .item__nav:hover {
+  .chiTietPhim_menu:hover {
   font-size: 25px;
 }
 
@@ -28,37 +28,37 @@
   .ant-tabs-nav-list
   .ant-tabs-tab.ant-tabs-tab-active
   .ant-tabs-tab-btn
-  .item__nav {
+  .chiTietPhim_menu {
   /* color: white; */
   font-size: 25px;
   color: #fa5238;
 }
-.cinemaSystem_tenCumRap {
+.chiTietPhim_tenCumRap {
   display: inline;
   font-size: 20px;
   color: red;
   font-weight: bold;
   /* margin: 0 30px 15px 15px !important; */
 }
-.ant-tabs-tab .ant-tabs-tab-btn .heThongRap {
+.ant-tabs-tab .ant-tabs-tab-btn .chiTietPhim_logoSystem {
   transition: 0.5s;
   opacity: 0.5 !important;
   text-align: left !important;
 }
 
-.ant-tabs-tab .ant-tabs-tab-btn:hover .heThongRap {
+.ant-tabs-tab .ant-tabs-tab-btn:hover .chiTietPhim_logoSystem {
   opacity: 1 !important;
 }
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .heThongRap {
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .chiTietPhim_logoSystem {
   opacity: 1 !important;
 }
 
-.ant-tabs-nav-list .ant-tabs-tab .heThongRap span {
+.ant-tabs-nav-list .ant-tabs-tab .chiTietPhim_logoSystem span {
   color: black;
   font-weight: 500;
 }
 
-.ant-tabs-nav-list .ant-tabs-tab .heThongRap .tenHeThongRap {
+.ant-tabs-nav-list .ant-tabs-tab .chiTietPhim_logoSystem .chiTietPhim_tenHeThongRap {
   font-size: 16px;
   color: black;
 }
@@ -75,24 +75,23 @@
   transition: 0.5s;
   transform: scale(1.2);
 }
-.menu_ListShowTimes{}
 
-.ant-tabs-tabpane .ant-tabs-tabpane-active .menu_ListShowTimes {
+.ant-tabs-tabpane .ant-tabs-tabpane-active .chiTietPhim_lichChieu {
   max-height: 350px !important;
   overflow-y: scroll !important;
 }
-.ant-tabs-tabpane .ant-tabs-tabpane-active .menu_ListShowTimes::-webkit-scrollbar {
+.ant-tabs-tabpane .ant-tabs-tabpane-active .chiTietPhim_lichChieu::-webkit-scrollbar {
   width: 5px;
   background-color: #ffffff;
 }
 .ant-tabs-tabpane
   .ant-tabs-tabpane-active
-  .menu_ListShowTimes::-webkit-scrollbar-thumb {
+  .chiTietPhim_lichChieu::-webkit-scrollbar-thumb {
   background-color: #ff4444;
 }
 .ant-tabs-tabpane
   .ant-tabs-tabpane-active
-  .menu_ListShowTimes::-webkit-scrollbar-track {
+  .chiTietPhim_lichChieu::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
   background-color: #ffffff;
 }

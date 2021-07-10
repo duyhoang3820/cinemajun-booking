@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
 import React, { Fragment, useEffect } from 'react'
-import { layDanhSachPhimHot } from '../../../redux/actions/QuanLyPhimAction';
+import { layDanhSachPhimAction } from '../../../redux/actions/QuanLyPhimAction';
 import { Table } from 'antd';
 import { Button } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,10 +13,10 @@ import { Popconfirm } from 'antd';
 
 export default function QuanLyPhim() {
 
-    const { listPhimHot } = useSelector(state => state.QuanLyPhimReducer);
+    const { listPhim } = useSelector(state => state.QuanLyPhimReducer);
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(layDanhSachPhimHot())
+        dispatch(layDanhSachPhimAction())
         return () => {
         }
     }, [])
@@ -105,7 +105,7 @@ export default function QuanLyPhim() {
 
     const data = [];
     const renderDanhSachPhim = () => {
-        return listPhimHot.map((phim, index) => {
+        return listPhim.map((phim, index) => {
             data.push({
                 key: index,
                 maPhim: phim.maPhim,

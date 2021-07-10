@@ -5,7 +5,7 @@ import { DAT_GHE, GET_PHONG_VE } from "../constants/PhongVeConst/PhongVeConst";
 
 const initialState = {
     lichChieu: {},
-    danhSachGheDangDat: []
+    danhSachGheDangDat: [],
 }
 
 export default (state = initialState, action) => {

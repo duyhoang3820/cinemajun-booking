@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios"
 import { DOMAIN, TOKEN } from "../../util/constants/settingSystem"
-import { layDanhSachPhimHot } from "./QuanLyPhimAction"
+import { layDanhSachPhimAction, layDanhSachPhimHot } from "./QuanLyPhimAction"
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
 import { history } from "../../App"
@@ -180,7 +180,7 @@ export const themPhim = (thongTinPhim) => {
                     'Authorization': `Bearer ${localStorage.getItem(TOKEN)}`
                 }
             })
-            dispatch(layDanhSachPhimHot())
+            dispatch(layDanhSachPhimAction())
 
             Swal.fire({
                 title: 'Success!',
@@ -217,7 +217,7 @@ export const xoaPhim = (maPhim) => {
                     'Authorization': `Bearer ${localStorage.getItem(TOKEN)}`
                 }
             })
-            dispatch(layDanhSachPhimHot())
+            dispatch(layDanhSachPhimAction())
             Swal.fire({
                 title: 'Success!',
                 text: 'Xóa phim thành công!',
@@ -253,7 +253,7 @@ export const capNhatPhim = (dataMovie) => {
                     'Authorization': `Bearer ${localStorage.getItem(TOKEN)}`
                 }
             })
-            dispatch(layDanhSachPhimHot())
+            dispatch(layDanhSachPhimAction())
             Swal.fire({
                 title: 'Success!',
                 text: "Cập nhật thành công!",

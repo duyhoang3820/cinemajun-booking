@@ -3,7 +3,7 @@
   .ant-tabs-nav-list
   .ant-tabs-tab
   .ant-tabs-tab-btn
-  .type__list_film {
+  .tabpane_type {
   font-size: 18px;
   transition: all 0.2s ease;
   font-weight: 600;
@@ -15,7 +15,7 @@
   .ant-tabs-nav-list
   .ant-tabs-tab
   .ant-tabs-tab-btn
-  .type__list_film:hover {
+  .tabpane_type:hover {
   font-size: 25px;
 }
 
@@ -28,7 +28,7 @@
   .ant-tabs-nav-list
   .ant-tabs-tab.ant-tabs-tab-active
   .ant-tabs-tab-btn
-  .type__list_film {
+  .tabpane_type {
   font-size: 25px;
   color: #fa5238;
 }
@@ -47,7 +47,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 15px;
   }
   .ant-tabs-nav
@@ -55,7 +55,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film:hover {
+    .tabpane_type:hover {
     font-size: 20px;
   }
   .ant-tabs-nav
@@ -63,7 +63,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 20px;
   }
 }
@@ -73,7 +73,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 15px;
   }
   .ant-tabs-nav
@@ -81,7 +81,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film:hover {
+    .tabpane_type:hover {
     font-size: 20px;
   }
   .ant-tabs-nav
@@ -89,7 +89,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 20px;
   }
 }
@@ -99,7 +99,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 16px;
   }
   .ant-tabs-nav
@@ -107,7 +107,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film:hover {
+    .tabpane_type:hover {
     font-size: 22px;
   }
   .ant-tabs-nav
@@ -115,7 +115,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 22px;
   }
 }
@@ -125,7 +125,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 17px;
   }
   .ant-tabs-nav
@@ -133,7 +133,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film:hover {
+    .tabpane_type:hover {
     font-size: 22px;
   }
   .ant-tabs-nav
@@ -141,7 +141,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 22px;
   }
 }
@@ -151,7 +151,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 18px;
   }
   .ant-tabs-nav
@@ -159,7 +159,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film:hover {
+    .tabpane_type:hover {
     font-size: 25px;
   }
   .ant-tabs-nav
@@ -167,7 +167,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 25px;
   }
 }
@@ -177,7 +177,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 18px;
   }
   .ant-tabs-nav
@@ -185,7 +185,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab
     .ant-tabs-tab-btn
-    .type__list_film:hover {
+    .tabpane_type:hover {
     font-size: 25px;
   }
   .ant-tabs-nav
@@ -193,7 +193,7 @@
     .ant-tabs-nav-list
     .ant-tabs-tab.ant-tabs-tab-active
     .ant-tabs-tab-btn
-    .type__list_film {
+    .tabpane_type {
     font-size: 25px;
   }
 }

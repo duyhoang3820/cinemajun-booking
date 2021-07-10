@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './ChiTietPhongVe.css'
 import { layDanhSachPhongVeAction, datVeAction } from '../../redux/actions/PhongVeAction'
@@ -12,6 +12,8 @@ import screen from '../ChiTietDatVe/assets/img/screen.png'
 import { Collapse, List } from 'antd';
 import { CaretRightOutlined } from '@ant-design/icons';
 import '../../components/Background/Background1.css'
+import { Drawer, Button } from 'antd';
+import ListCombo from './ListCombo/ListCombo';
 const { Panel } = Collapse;
 
 
@@ -20,8 +22,13 @@ export default function ChiTietPhongVe(props) {
     const { taiKhoan } = useSelector(state => state.NguoiDungReducer)
     const { lichChieu, danhSachGheDangDat } = useSelector(state => state.PhongVeReducer);
     const dispatch = useDispatch();
-
-
+    const [visible, setVisible] = useState(false);
+    const showDrawer = () => {
+        setVisible(true);
+    };
+    const onClose = () => {
+        setVisible(false);
+    };
     useEffect(() => {
         document.title = 'CineJun | Đặt vé';
         dispatch(layDanhSachPhongVeAction(props.match.params.maLichChieu))
@@ -29,7 +36,6 @@ export default function ChiTietPhongVe(props) {
     }, [])
     // console.log('lichChieu', lichChieu);
     // console.log(danhSachGheDangDat);
-
     const renderDanhSachGhe = () => {
         return lichChieu.danhSachGhe?.map((ghe, index) => {
             let indexGheDD = danhSachGheDangDat.findIndex(gheDD => gheDD.maGhe === ghe.maGhe);
@@ -51,7 +57,6 @@ export default function ChiTietPhongVe(props) {
             </Fragment>
         })
     }
-
     return (
         <div >
             <div className="bg1"></div>
@@ -149,8 +154,7 @@ export default function ChiTietPhongVe(props) {
                                     />
                                 </Panel>
                             </Collapse>
-
-                            <div className="info_total mt-1" style={{ backgroundColor: '#00474f' }}>
+                            <div className="info_total mt-1 d-flex" style={{ backgroundColor: '#00474f', justifyContent: 'space-around', alignItems: 'center' }}>
                                 <table>
                                     <tbody>
                                         <tr className="text-left">
@@ -163,8 +167,20 @@ export default function ChiTietPhongVe(props) {
                                         </tr>
                                     </tbody>
                                 </table>
+                                <Button type="primary" onClick={showDrawer}>
+                                    Thêm combo
+                                </Button>
+                                <Drawer
+                                    width={500}
+                                    title="Chọn combo"
+                                    placement="right"
+                                    closable={false}
+                                    onClose={onClose}
+                                    visible={visible}
+                                >
+                                    <ListCombo />
+                                </Drawer>
                             </div>
-
                             <div className="datVe pt-4">
                                 {taiKhoan.trim() !== '' ?
                                     danhSachGheDangDat.length !== 0 ?
