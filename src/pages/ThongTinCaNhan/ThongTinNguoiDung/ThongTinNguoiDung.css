@@ -59,20 +59,20 @@ button:focus {
 }
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .tablist__item {
-  color: #1890ff;
+  color: #fb4226;
   font-size: 25px;
 }
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:hover .tablist__item {
-  color: #1890ff;
+  color: #fb4226;
   font-size: 25px;
 }
 .ant-tabs-tab .ant-tabs-tab-btn .tablist__item {
   transition: 0.2s;
-  color: #1890ff;
+  color: white;
   font-size: 18px;
 }
 .ant-tabs-tab .ant-tabs-tab-btn:hover .tablist__item {
-  color: #096dd9;
+  color: white;
   font-size: 25px;
 }
 

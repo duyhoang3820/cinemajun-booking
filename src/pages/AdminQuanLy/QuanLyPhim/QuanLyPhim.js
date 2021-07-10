@@ -46,7 +46,7 @@ export default function QuanLyPhim() {
         },
         {
             title: 'Mô tả',
-            width: 60,
+            width: 45,
             dataIndex: 'moTa',
             key: 'moTa',
         },
@@ -62,6 +62,7 @@ export default function QuanLyPhim() {
             width: 30,
             dataIndex: 'ngayKhoiChieu',
             key: 'ngayKhoiChieu',
+            align: 'center'
         },
         {
             title: 'Thao tác',
@@ -151,7 +152,7 @@ export default function QuanLyPhim() {
                 </div>
             </div>
             {renderDanhSachPhim()}
-            <Table columns={columns} dataSource={data} pagination={{ position: ["bottomCenter"] }} scroll={{ y: 500, x: 1300 }} sticky />
+            <Table columns={columns} dataSource={data} pagination={{ position: ["bottomCenter"] }} scroll={{ y: 500, x: 1100 }} sticky />
 
         </div >
     )

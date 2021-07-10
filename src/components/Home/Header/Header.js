@@ -111,7 +111,7 @@ export default function Header() {
                 </NavLink>}
 
               <div className="ml-2">
-                {taiKhoan.trim() !== '' ? maLoaiNguoiDung === 'QuanTri' ?
+                {taiKhoan.trim() !== '' ? maLoaiNguoiDung === 'QuanTri' && taiKhoan==='duyhoang3820' ?
                   <Dropdown overlay={menu1} placement="bottomCenter" arrow>
                     <a className="ant-dropdown-link">{taiKhoan}</a>
                   </Dropdown> :

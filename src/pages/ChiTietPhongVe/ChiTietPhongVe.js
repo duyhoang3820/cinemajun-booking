@@ -70,14 +70,16 @@ export default function ChiTietPhongVe(props) {
                             <img src={lichChieu.thongTinPhim?.hinhAnh} style={{ borderRadius: '10px', }} alt="" className="thumnailImg" />
                         </div>
                     </div>
-                    <div className="col-12 col-sm-12 col-md-4 py-3">
-                        <h3 style={{ fontSize: '25px' }} className="text-danger font-weight-bold mb-5">{lichChieu.thongTinPhim?.tenPhim} </h3>
-                        <div className="font-weight-bold text-white">
-                            <p className="cluster__info"><span className="mr-2 text-warning">Địa điểm:</span> {lichChieu.thongTinPhim?.diaChi}</p>
-                            <p className="cluster__info"><span className="mr-2 text-warning">Cụm rạp:</span> {lichChieu.thongTinPhim?.tenCumRap}</p>
-                            <p className="cluster__info"><span className="mr-2 text-warning">Ngày chiếu:</span> {lichChieu.thongTinPhim?.ngayChieu}</p>
-                            <p className="cluster__info"><span className="mr-2 text-warning">Giờ chiếu:</span> {lichChieu.thongTinPhim?.gioChieu}</p>
-                            <p className="cluster__info"><span className="mr-2 text-warning">Rạp:</span> {lichChieu.thongTinPhim?.tenRap}</p>
+                    <div className="col-12 col-sm-12 col-md-4 py-3 d-flex" style={{ justifyContent: 'center' }}>
+                        <div>
+                            <h3 style={{ fontSize: '25px' }} className="text-danger text-center font-weight-bold mb-5">{lichChieu.thongTinPhim?.tenPhim} </h3>
+                            <div className="font-weight-bold text-white">
+                                <p className="cluster__info"><span className="mr-2 text-warning">Địa điểm:</span> {lichChieu.thongTinPhim?.diaChi}</p>
+                                <p className="cluster__info"><span className="mr-2 text-warning">Cụm rạp:</span> {lichChieu.thongTinPhim?.tenCumRap}</p>
+                                <p className="cluster__info"><span className="mr-2 text-warning">Ngày chiếu:</span> {lichChieu.thongTinPhim?.ngayChieu}</p>
+                                <p className="cluster__info"><span className="mr-2 text-warning">Giờ chiếu:</span> {lichChieu.thongTinPhim?.gioChieu}</p>
+                                <p className="cluster__info"><span className="mr-2 text-warning">Rạp:</span> {lichChieu.thongTinPhim?.tenRap}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -32,7 +32,7 @@ export default function QuanLyNguoiDung(props) {
         },
         {
             title: 'Tài khoản',
-            width: 20,
+            width: 15,
             dataIndex: 'taiKhoan',
             key: 'taiKhoan',
         },
@@ -44,19 +44,19 @@ export default function QuanLyNguoiDung(props) {
         },
         {
             title: 'Họ tên',
-            width: 25,
+            width: 20,
             dataIndex: 'hoTen',
             key: 'hoTen',
         },
         {
             title: 'Email',
-            width: 30,
+            width: 20,
             dataIndex: 'email',
             key: 'email',
         },
         {
             title: 'Số điện thoại',
-            width: 20,
+            width: 15,
             dataIndex: 'sdt',
             key: 'sdt',
             align: 'center'
@@ -64,7 +64,7 @@ export default function QuanLyNguoiDung(props) {
         {
             title: 'Thao tác',
             key: 'thaoTac',
-            width: 20,
+            width: 15,
             align: 'center',
             render: (_, record) =>
                 <Fragment>
@@ -129,7 +129,7 @@ export default function QuanLyNguoiDung(props) {
             </div>
 
             {renderDanhSachNguoiDung()}
-            <Table columns={columns} dataSource={data} pagination={{ position: ["bottomCenter"] }} scroll={{ y: 500, x: 1300 }} sticky />
+            <Table columns={columns} dataSource={data} pagination={{ position: ["bottomCenter"] }} scroll={{ y: 500, x: 1100 }} sticky />
         </div >
     )
 }

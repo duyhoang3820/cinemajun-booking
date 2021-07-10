@@ -32,7 +32,8 @@ export default function AdminQuanLyLichChieu() {
   // console.log('maLoaiNguoiDung',maLoaiNguoiDung);
   // console.log('taiKhoan',taiKhoan);
   useEffect(() => {
-    if (maLoaiNguoiDung === 'KhachHang' || taiKhoan.trim() === '') {
+    document.title = 'CineJun | Admin';
+    if (maLoaiNguoiDung === 'KhachHang' || taiKhoan !=='duyhoang3820' || taiKhoan.trim() === ''  ) {
       history.push('/not-admin')
     }
     window.scrollTo(0, 0);
@@ -78,21 +79,29 @@ export default function AdminQuanLyLichChieu() {
               </Header>
               <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                 <SubMenu key="sub1" icon={<VideoCameraOutlined />} title="Quản lý phim" >
-                  <Menu.Item key="1" >
+                  <Menu.Item onClick={() => {
+                    document.title = 'CineJun | Admin | Danh sách phim';
+                  }} key="1" >
                     <span>Danh sách Phim</span>
                     <Link to='/admin/quan-ly-phim' />
                   </Menu.Item>
-                  <Menu.Item key="2" >
+                  <Menu.Item onClick={() => {
+                    document.title = 'CineJun | Admin | Thêm phim';
+                  }} key="2" >
                     <span>Thêm phim</span>
                     <Link to='/admin/them-phim' />
                   </Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" icon={<UserOutlined />} title="Quản lý người dùng" >
-                  <Menu.Item key="3">
+                  <Menu.Item onClick={() => {
+                    document.title = 'CineJun | Admin | Danh sách người dùng';
+                  }} key="3">
                     <span>Danh sách người dùng</span>
                     <Link to='/admin/quan-ly-nguoi-dung' />
                   </Menu.Item>
-                  <Menu.Item key="4" >
+                  <Menu.Item onClick={() => {
+                    document.title = 'CineJun | Admin | Thêm người dùng';
+                  }} key="4" >
                     <span>Thêm người dùng</span>
                     <Link to='/admin/them-nguoi-dung' />
                   </Menu.Item>
