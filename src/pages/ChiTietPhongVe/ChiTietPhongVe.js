@@ -102,7 +102,7 @@ export default function ChiTietPhongVe(props) {
                                                         <thead></thead>
                                                         <tbody>
                                                             <tr className="text-center">
-                                                                <td className="w-50"><button className={cx(style.gheDangDatEx, "text-center")}>{item.stt}</button> </td>
+                                                                <td className="w-50"><button style={{ border: "none", outline: "none" }} className={cx(style.gheDangDatEx, "text-center")}>{item.stt}</button> </td>
                                                                 <td className="w-50 font-weight-bold" style={{ fontSize: '20px', color: '#fadb14' }}> {item.giaVe.toLocaleString()} VNĐ</td>
                                                             </tr>
                                                         </tbody>

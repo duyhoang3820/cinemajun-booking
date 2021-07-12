@@ -14,7 +14,7 @@ export default function ThongTinDatVe(props) {
                     </div>
                     <div className="col-12 col-sm-12 col-md-4 py-3 d-flex" style={{ justifyContent: 'center' }}>
                         <div>
-                            <h3 style={{ fontSize: '25px' }} className="text-danger text-center font-weight-bold mb-5">{lichChieu.thongTinPhim?.tenPhim} </h3>
+                            <h3 style={{ fontSize: '25px',color:'#f5222d' }} className="text-center font-weight-bold mb-5">{lichChieu.thongTinPhim?.tenPhim} </h3>
                             <div className="font-weight-bold text-white">
                                 <p className={style.thongTinDatVe_clusterInfo}><span className="mr-2 text-warning">Địa điểm:</span> {lichChieu.thongTinPhim?.diaChi}</p>
                                 <p className={style.thongTinDatVe_clusterInfo}><span className="mr-2 text-warning">Cụm rạp:</span> {lichChieu.thongTinPhim?.tenCumRap}</p>

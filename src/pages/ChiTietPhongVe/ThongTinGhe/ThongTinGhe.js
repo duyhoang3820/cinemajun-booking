@@ -38,15 +38,15 @@ export default function ThongTinGhe(props) {
                 </div> */}
                 <div className="row py-5" style={{ justifyContent: 'space-evenly', alignItems: 'center' }}>
                     <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                        <button className={style.gheEx}></button>
+                        <button style={{ border: "none", outline: "none" }} className={style.gheEx}></button>
                         <span className="text-white ml-2">Ghế thường</span>
                     </div>
                     <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                        <button className={style.gheVipEx}></button>
+                        <button style={{ border: "none", outline: "none" }} className={style.gheVipEx}></button>
                         <span className="text-white ml-2">Ghế VIP</span>
                     </div>
                     <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                        <button className={style.gheDaDatEx}></button>
+                        <button style={{ border: "none", outline: "none" }} className={style.gheDaDatEx}></button>
                         <span className="text-white ml-2">Ghế đã đặt</span>
                     </div>
                 </div>
