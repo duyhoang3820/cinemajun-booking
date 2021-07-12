@@ -58,7 +58,7 @@ export default function TabListMovies(props) {
         })
     }
     const renderCurrentMoviesList = () => {
-        return listPhim.slice(16,32).map((phim, index) => {
+        return listPhim.slice(32, 48).map((phim, index) => {
             return <Card className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img onClick={() => {
@@ -86,7 +86,7 @@ export default function TabListMovies(props) {
         })
     }
     const renderHotMoviesList = () => {
-        return listPhim.slice(32, 48).map((phim, index) => {
+        return listPhim.slice(16,32).map((phim, index) => {
             return <Card className={`${style.card_item} mt-3`} hoverable style={{ width: 240, }} key={index} >
                 <div className="mb-2 text-center">
                     {<img onClick={() => {
