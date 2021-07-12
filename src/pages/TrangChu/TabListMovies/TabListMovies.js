@@ -3,11 +3,10 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Slider from 'react-slick';
-import { layDanhSachPhimAction} from '../../../redux/actions/QuanLyPhimAction';
+import { layDanhSachPhimAction } from '../../../redux/actions/QuanLyPhimAction';
 import { settingTabListMovies } from './settingTabListMovies';
-import style from './assets/css/TabListMovies.module.scss'
-import './assets/css/animation_tablist.css'
-import './assets/css/tabList.css'
+import style from './assets/css/TabListMovies.module.css'
+import './assets/css/Tabpane_TablistMovie.css'
 import '../../../assets/css/sclick/sclick_next.css'
 import { Card, Rate, Tabs } from 'antd';
 import img from '../../../assets/img/play-video.png'
@@ -15,6 +14,7 @@ import ModalVideo from 'react-modal-video'
 import '../../../../node_modules/react-modal-video/scss/modal-video.scss';
 import { NavLink } from 'react-router-dom';
 import { history } from '../../../App';
+import cx from 'classnames'
 
 export default function TabListMovies(props) {
 
@@ -51,7 +51,7 @@ export default function TabListMovies(props) {
                     <button className="btn"><img onClick={() => {
                         setOpen(true);
                         setTrailer(phim.trailer.slice(30))
-                    }} className={`${style.btn_play_video} pulsing_2`} src={img} alt="" /></button>
+                    }} className={cx(style.btn_play_video, style.pulsing_2)} src={img} alt="" /></button>
                     <NavLink to={`/chi-tiet-phim/${phim.maPhim}-${phim.biDanh}`} className={style.card_item_btnDatve}>Xem chi tiết</NavLink>
                 </div>
             </Card >
@@ -79,7 +79,7 @@ export default function TabListMovies(props) {
                     <button className="btn"><img onClick={() => {
                         setOpen(true);
                         setTrailer(phim.trailer.slice(30))
-                    }} className={`${style.btn_play_video} pulsing_2`} src={img} alt="" /></button>
+                    }} className={cx(style.btn_play_video, style.pulsing_2)} src={img} alt="" /></button>
                     <NavLink to={`/chi-tiet-phim/${phim.maPhim}-${phim.biDanh}`} className={style.card_item_btnDatve}>Xem chi tiết</NavLink>
                 </div>
             </Card >
@@ -104,7 +104,7 @@ export default function TabListMovies(props) {
                     <button className="btn"><img onClick={() => {
                         setOpen(true);
                         setTrailer(phim.trailer.slice(30))
-                    }} className={`${style.btn_play_video} pulsing_2`} src={img} alt="" /></button>
+                    }} className={cx(style.btn_play_video, style.pulsing_2)} src={img} alt="" /></button>
                     <NavLink to={`/chi-tiet-phim/${phim.maPhim}-${phim.biDanh}`} className={style.card_item_btnDatve}>Xem chi tiết</NavLink>
                 </div>
             </Card >

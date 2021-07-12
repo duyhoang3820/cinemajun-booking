@@ -118,9 +118,9 @@ button:focus {
 }
 .history_table .ant-table-body::-webkit-scrollbar {
   width: 5px;
-  background: #666565;
+  background: #434343;
 }
 .history_table .ant-table-body::-webkit-scrollbar-thumb {
-  background: #fb4226;
+  background: #d9d9d9;
 }
 

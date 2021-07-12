@@ -1,0 +1,15 @@
+.ant-list-items {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .ant-list-items::-webkit-scrollbar {
+    width: 3px;
+    background: #434343;
+  }
+  .ant-list-items::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+  }
+  .ant-empty-description {
+    color: #fadb14 !important;
+  }

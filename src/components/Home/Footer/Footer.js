@@ -22,7 +22,7 @@ import logoLaban from './logo/laban.png'
 import logoAgribank from './logo/AGRIBANK.png'
 import logo123go from './logo/123go.png'
 import logoDcine from './logo/dcine.png'
-import style from './Footer.module.scss'
+import style from './Footer.module.css'
 import { NavLink } from 'react-router-dom'
 import cx from 'classnames';
 

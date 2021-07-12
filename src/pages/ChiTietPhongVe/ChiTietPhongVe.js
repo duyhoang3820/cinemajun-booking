@@ -1,26 +1,30 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import './ChiTietPhongVe.css'
+import style from './ChiTietPhongVe.module.css'
+import './assets/css/ThanhToan.css'
 import { layDanhSachPhongVeAction, datVeAction } from '../../redux/actions/PhongVeAction'
 import { history } from '../../App';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
-import { DAT_GHE } from '../../redux/constants/PhongVeConst/PhongVeConst';
-import screen from '../ChiTietDatVe/assets/img/screen.png'
 import { Collapse, List } from 'antd';
 import { CaretRightOutlined } from '@ant-design/icons';
 import '../../components/Background/Background1.css'
-import { Drawer, Button } from 'antd';
+import { Drawer } from 'antd';
 import ListCombo from './ListCombo/ListCombo';
-const { Panel } = Collapse;
+import ThongTinDatVe from './ThongTinDatVe/ThongTinDatVe';
+import ThongTinGhe from './ThongTinGhe/ThongTinGhe';
+import cx from 'classnames'
+import './ListCombo/css/Drawer.css'
+import style1 from './assets/css/ButtonCombo.module.css'
 
+const { Panel } = Collapse;
 
 
 export default function ChiTietPhongVe(props) {
     const { taiKhoan } = useSelector(state => state.NguoiDungReducer)
-    const { lichChieu, danhSachGheDangDat } = useSelector(state => state.PhongVeReducer);
+    const { lichChieu, danhSachGheDangDat, tongTienCombo, comboDaChon } = useSelector(state => state.PhongVeReducer);
     const dispatch = useDispatch();
     const [visible, setVisible] = useState(false);
     const showDrawer = () => {
@@ -34,29 +38,8 @@ export default function ChiTietPhongVe(props) {
         dispatch(layDanhSachPhongVeAction(props.match.params.maLichChieu))
         window.scrollTo(0, 0);
     }, [])
-    // console.log('lichChieu', lichChieu);
+    // console.log('tongTienCombo', tongTienCombo);
     // console.log(danhSachGheDangDat);
-    const renderDanhSachGhe = () => {
-        return lichChieu.danhSachGhe?.map((ghe, index) => {
-            let indexGheDD = danhSachGheDangDat.findIndex(gheDD => gheDD.maGhe === ghe.maGhe);
-            let classGheDangDat = '';
-            if (indexGheDD !== -1) {
-                classGheDangDat = 'gheDangDat'
-            }
-            let classGheDaDat = ghe.daDat ? 'gheDaDat' : '';
-            let classGheVip = ghe.loaiGhe === 'Vip' ? 'gheVip' : '';
-            return <Fragment key={index}>
-                <button onClick={() => {
-                    dispatch({
-                        type: DAT_GHE,
-                        gheDangDat: ghe
-                    })
-                }} disabled={ghe.daDat} style={{ border: "none", outline: "none" }} className={`text-center ghe ${classGheDaDat} ${classGheVip} ${classGheDangDat}`} >
-                    <span>{ghe.daDat ? 'X' : ghe.stt}</span>
-                </button>
-            </Fragment>
-        })
-    }
     return (
         <div >
             <div className="bg1"></div>
@@ -68,120 +51,122 @@ export default function ChiTietPhongVe(props) {
             <a className="ml-4" onClick={() => {
                 history.goBack()
             }}><i className="fa fa-angle-left back"></i></a>
-            <div className="container py-5">
-                <div className="row" style={{ justifyContent: 'center' }}>
-                    <div className="col-12 col-sm-12 col-md-4 py-3">
-                        <div className="d-flex" style={{ justifyContent: 'center' }}>
-                            <img src={lichChieu.thongTinPhim?.hinhAnh} style={{ borderRadius: '10px', }} alt="" className="thumnailImg" />
-                        </div>
-                    </div>
-                    <div className="col-12 col-sm-12 col-md-4 py-3 d-flex" style={{ justifyContent: 'center' }}>
-                        <div>
-                            <h3 style={{ fontSize: '25px' }} className="text-danger text-center font-weight-bold mb-5">{lichChieu.thongTinPhim?.tenPhim} </h3>
-                            <div className="font-weight-bold text-white">
-                                <p className="cluster__info"><span className="mr-2 text-warning">Địa điểm:</span> {lichChieu.thongTinPhim?.diaChi}</p>
-                                <p className="cluster__info"><span className="mr-2 text-warning">Cụm rạp:</span> {lichChieu.thongTinPhim?.tenCumRap}</p>
-                                <p className="cluster__info"><span className="mr-2 text-warning">Ngày chiếu:</span> {lichChieu.thongTinPhim?.ngayChieu}</p>
-                                <p className="cluster__info"><span className="mr-2 text-warning">Giờ chiếu:</span> {lichChieu.thongTinPhim?.gioChieu}</p>
-                                <p className="cluster__info"><span className="mr-2 text-warning">Rạp:</span> {lichChieu.thongTinPhim?.tenRap}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ThongTinDatVe lichChieu={lichChieu} />
             <div className="container">
-                <div className="text-center scrollCinema">
-                    <div className="d-flex" style={{ justifyContent: 'center' }}>
-                        <div className="titleChonGhe "></div>
-                    </div>
-                    <div className="row py-5" style={{ justifyContent: 'space-evenly', alignItems: 'center' }}>
-                        <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                            <button className="gheEx"></button>
-                            <span className="text-white ml-2">Ghế thường</span>
-                        </div>
-                        <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                            <button className="gheVipEx"></button>
-                            <span className="text-white ml-2">Ghế VIP</span>
-                        </div>
-                        <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                            <button className="gheDaDatEx"></button>
-                            <span className="text-white ml-2">Ghế đã đặt</span>
-                        </div>
-                    </div>
-                    <div className="seatCinema ">
-                        <img src={screen} alt="" width="1100px" />
-                        <div className="seats" style={{ gridColumn: 16 }}>
-                            {renderDanhSachGhe()}
-                        </div>
-                    </div>
-                </div>
+                <ThongTinGhe lichChieu={lichChieu} danhSachGheDangDat={danhSachGheDangDat} />
                 <div className="text-center pt-5">
-                    <div className="d-flex" style={{ justifyContent: 'center' }}>
-                        <div className="titleThanhToan "></div>
+                    {/* <div className="d-flex" style={{ justifyContent: 'center' }}>
+                        <div className={style.titleThanhToan}></div>
+                    </div> */}
+                    <div className={style1.btnThemCombo}>
+                        <a className={style1.btn_mix} data-text="Thêm combo" onClick={showDrawer}>Thêm combo</a>
                     </div>
+                    <Drawer
+                        width='auto'
+                        title={<span className={style.title_selected_seats}>Chọn combo</span>}
+                        placement="right"
+                        closable={true}
+                        onClose={onClose}
+                        visible={visible}
+                        footer={<div className={cx(style.total_price, "text-center")}>
+                            <span>Tổng cộng: </span>
+                            <span>{tongTienCombo.toLocaleString()} VNĐ</span>
+                        </div>}
+                    >
+                        <ListCombo />
+                    </Drawer>
                     <div className="row pt-3 pb-5" style={{ justifyContent: 'center' }}>
-                        <div className=" col-10 col-sm-10 col-md-8 col-lg-8 mt-5 detailTicket">
-                            <Collapse style={{ backgroundColor: '#00474f' }}
-                                // defaultActiveKey={['1']}
-                                expandIconPosition={'right'}
-                                expandIcon={({ isActive }) => <CaretRightOutlined className="text-white" rotate={isActive ? 90 : 0} />} ghost>
-                                <Panel header={<span className="title_selected_seats">Danh sách ghế đã chọn</span>} key="1" className="site-collapse-custom-panel">
-                                    <List
-                                        header={<div className="header_list">
-                                            <table className="w-100">
-                                                <thead>
-                                                    <tr className="text-center" style={{ fontSize: '18px' }}>
-                                                        <th className="w-50">Mã ghế</th>
-                                                        <th className="w-50">Giá vé</th>
-                                                    </tr>
-                                                </thead>
-                                            </table>
-                                        </div>}
-                                        dataSource={danhSachGheDangDat}
-                                        renderItem={item => (
-                                            <List.Item>
+                        <div className=" col-10 col-sm-10 col-md-8 col-lg-8 detail_thanhToan">
+                            <div>
+                                <Collapse style={{ backgroundColor: '#212121' }}
+                                    // defaultActiveKey={['1']}
+                                    expandIconPosition={'right'}
+                                    expandIcon={({ isActive }) => <CaretRightOutlined className="text-white" rotate={isActive ? 90 : 0} />} ghost>
+                                    <Panel header={<span className={style.title_selected_seats}>Danh sách ghế đã chọn</span>} key="1" className="site-collapse-custom-panel">
+                                        <List
+                                            style={{ backgroundColor: '#484848' }}
+                                            header={<div className={style.header_list}>
+                                                <table className="w-100">
+                                                    <thead>
+                                                        <tr className="text-center" style={{ fontSize: '18px' }}>
+                                                            <th className="w-50">Mã ghế</th>
+                                                            <th className="w-50">Giá vé</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>}
+                                            dataSource={danhSachGheDangDat}
+                                            renderItem={item => (
+                                                <List.Item>
+                                                    <table className="w-100">
+                                                        <thead></thead>
+                                                        <tbody>
+                                                            <tr className="text-center">
+                                                                <td className="w-50"><button className={cx(style.gheDangDatEx, "text-center")}>{item.stt}</button> </td>
+                                                                <td className="w-50 font-weight-bold" style={{ fontSize: '20px', color: '#fadb14' }}> {item.giaVe.toLocaleString()} VNĐ</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </List.Item>
+                                            )}
+                                        />
+                                    </Panel>
+                                </Collapse>
+                            </div>
+                            <div className="mt-1">
+                                <Collapse style={{ backgroundColor: '#212121' }}
+                                    // defaultActiveKey={['1']}
+                                    expandIconPosition={'right'}
+                                    expandIcon={({ isActive }) => <CaretRightOutlined className="text-white" rotate={isActive ? 90 : 0} />} ghost>
+                                    <Panel header={<span className={style.title_selected_seats}>Danh sách combo đã chọn</span>} key="1" className="site-collapse-custom-panel">
+                                        <List
+                                            style={{ backgroundColor: '#484848' }}
+                                            size="small"
+                                            header={<div className={style.header_list}>
+                                                <table className="w-100">
+                                                    <thead>
+                                                        <tr className="d-flex" style={{ fontSize: '14px', justifyContent: 'center' }}>
+                                                            <th className="w-50">Combo</th>
+                                                            <th className="w-50">Số lượng</th>
+                                                            <th className="w-50">Tổng</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>}
+                                            dataSource={comboDaChon}
+                                            renderItem={item => <List.Item>
                                                 <table className="w-100">
                                                     <thead></thead>
                                                     <tbody>
-                                                        <tr className="text-center">
-                                                            <td className="w-50"><button className="text-center gheDangDatEx">{item.stt}</button> </td>
-                                                            <td className="w-50 font-weight-bold" style={{ fontSize: '20px', color: '#1890ff' }}> {item.giaVe.toLocaleString()} VNĐ</td>
+                                                        <tr className="d-flex" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                                            <td className="w-50 text-white text-left">{item.name}</td>
+                                                            <td className="w-50 text-white">{item.quanlity}</td>
+                                                            <td className="w-50 font-weight-bold" style={{ fontSize: '16px', color: '#fadb14' }}> {(item.price * item.quanlity).toLocaleString()} VNĐ</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                            </List.Item>
-                                        )}
-                                    />
-                                </Panel>
-                            </Collapse>
-                            <div className="info_total mt-1 d-flex" style={{ backgroundColor: '#00474f', justifyContent: 'space-around', alignItems: 'center' }}>
+                                            </List.Item>}
+                                        />
+                                    </Panel>
+                                </Collapse>
+                            </div>
+                            <div className={cx(style.info_total, " mt-1 d-flex")} style={{ backgroundColor: '#212121', justifyContent: 'flex-start', alignItems: 'center' }}>
                                 <table>
                                     <tbody>
                                         <tr className="text-left">
-                                            <th className="total_seat"> Tổng số ghế: {danhSachGheDangDat.length}</th>
+                                            <th className={style.total_seat}> Tổng số ghế: {danhSachGheDangDat.length}</th>
                                         </tr>
                                         <tr>
-                                            <th className="total_price">Tổng tiền: {danhSachGheDangDat.reduce((tongTien, gheDD, index) => {
+                                            <th className={style.total_price}>Tổng tiền: {danhSachGheDangDat.reduce((tongTien, gheDD, index) => {
                                                 return tongTien += gheDD.giaVe;
-                                            }, 0).toLocaleString()} VNĐ</th>
+                                            }, 0 + tongTienCombo).toLocaleString()} VNĐ</th>
+                                        </tr>
+                                        <tr className="text-left">
                                         </tr>
                                     </tbody>
                                 </table>
-                                <Button type="primary" onClick={showDrawer}>
-                                    Thêm combo
-                                </Button>
-                                <Drawer
-                                    width={500}
-                                    title="Chọn combo"
-                                    placement="right"
-                                    closable={false}
-                                    onClose={onClose}
-                                    visible={visible}
-                                >
-                                    <ListCombo />
-                                </Drawer>
                             </div>
-                            <div className="datVe pt-4">
+                            <div className={cx(style.detailDatve_datVe, " pt-4")}>
                                 {taiKhoan.trim() !== '' ?
                                     danhSachGheDangDat.length !== 0 ?
                                         <button onClick={() => {
@@ -204,7 +189,7 @@ export default function ChiTietPhongVe(props) {
                                                     dispatch(datVeAction(objectApi))
                                                 }
                                             })
-                                        }} className=" btn_DatVe" style={{ border: "none", outline: "none" }}>
+                                        }} className={style.detailDatve_btnDatve} style={{ border: "none", outline: "none" }}>
                                             <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
                                         </button> : <button onClick={() => {
                                             Swal.fire({
@@ -213,7 +198,7 @@ export default function ChiTietPhongVe(props) {
                                                 confirmButtonColor: '#f5222d',
                                                 confirmButtonText: 'OK'
                                             })
-                                        }} className="btn_DatVe" style={{ border: "none", outline: "none" }}>
+                                        }} className={style.detailDatve_btnDatve} style={{ border: "none", outline: "none" }}>
                                             <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
                                         </button> : <button onClick={() => {
                                             Swal.fire({
@@ -226,16 +211,14 @@ export default function ChiTietPhongVe(props) {
                                                 history.push("/dangnhap")
                                             }, 2000);
 
-                                        }} className="btn_DatVe " style={{ border: "none", outline: "none" }}>
+                                        }} className={style.detailDatve_btnDatve} style={{ border: "none", outline: "none" }}>
                                         <span className="w-100 p-5" style={{ fontSize: 17 }}>ĐẶT VÉ</span>
                                     </button>}
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     )
 }

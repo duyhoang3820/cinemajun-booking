@@ -1,0 +1,14 @@
+.ant-drawer-footer {
+  border: none !important;
+  background-color: #00474f;
+}
+.ant-drawer-header {
+  border: none !important;
+  background-color: #00474f !important;
+}
+.ant-drawer .ant-drawer-content {
+  background-color: #00474f;
+}
+.ant-drawer-close {
+  color: white !important;
+}

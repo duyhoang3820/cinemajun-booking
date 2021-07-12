@@ -3,7 +3,7 @@
   .ant-tabs-nav-list
   .ant-tabs-tab
   .ant-tabs-tab-btn
-  .chiTietPhim_menu {
+  .detailShowtime_typeTabpane {
   font-size: 18px;
   transition: 0.2s;
   font-weight: 600;
@@ -15,7 +15,7 @@
   .ant-tabs-nav-list
   .ant-tabs-tab
   .ant-tabs-tab-btn
-  .chiTietPhim_menu:hover {
+  .detailShowtime_typeTabpane:hover {
   font-size: 25px;
 }
 
@@ -28,37 +28,37 @@
   .ant-tabs-nav-list
   .ant-tabs-tab.ant-tabs-tab-active
   .ant-tabs-tab-btn
-  .chiTietPhim_menu {
+  .detailShowtime_typeTabpane {
   /* color: white; */
   font-size: 25px;
   color: #fa5238;
 }
-.chiTietPhim_tenCumRap {
+.detailShowtime_tenCumRap {
   display: inline;
   font-size: 20px;
   color: red;
   font-weight: bold;
   /* margin: 0 30px 15px 15px !important; */
 }
-.ant-tabs-tab .ant-tabs-tab-btn .chiTietPhim_logoSystem {
+.ant-tabs-tab .ant-tabs-tab-btn .detailShowtime_logoSystem {
   transition: 0.5s;
   opacity: 0.5 !important;
   text-align: left !important;
 }
 
-.ant-tabs-tab .ant-tabs-tab-btn:hover .chiTietPhim_logoSystem {
+.ant-tabs-tab .ant-tabs-tab-btn:hover .detailShowtime_logoSystem {
   opacity: 1 !important;
 }
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .chiTietPhim_logoSystem {
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .detailShowtime_logoSystem {
   opacity: 1 !important;
 }
 
-.ant-tabs-nav-list .ant-tabs-tab .chiTietPhim_logoSystem span {
+.ant-tabs-nav-list .ant-tabs-tab .detailShowtime_logoSystem span {
   color: black;
   font-weight: 500;
 }
 
-.ant-tabs-nav-list .ant-tabs-tab .chiTietPhim_logoSystem .chiTietPhim_tenHeThongRap {
+.ant-tabs-nav-list .ant-tabs-tab .detailShowtime_logoSystem .detailShowtime_tenHeThongRap {
   font-size: 16px;
   color: black;
 }
@@ -71,27 +71,49 @@
   font-size: 20px;
   font-weight: 600;
 }
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .logoCinema {
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .detailShowtime_logoCinema {
   transition: 0.5s;
   transform: scale(1.2);
 }
 
-.ant-tabs-tabpane .ant-tabs-tabpane-active .chiTietPhim_lichChieu {
+.ant-tabs-tabpane .ant-tabs-tabpane-active .detailShowtime {
   max-height: 350px !important;
   overflow-y: scroll !important;
 }
-.ant-tabs-tabpane .ant-tabs-tabpane-active .chiTietPhim_lichChieu::-webkit-scrollbar {
+.ant-tabs-tabpane .ant-tabs-tabpane-active .detailShowtime::-webkit-scrollbar {
   width: 5px;
   background-color: #ffffff;
 }
 .ant-tabs-tabpane
   .ant-tabs-tabpane-active
-  .chiTietPhim_lichChieu::-webkit-scrollbar-thumb {
+  .detailShowtime::-webkit-scrollbar-thumb {
   background-color: #ff4444;
 }
 .ant-tabs-tabpane
   .ant-tabs-tabpane-active
-  .chiTietPhim_lichChieu::-webkit-scrollbar-track {
+  .detailShowtime::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
   background-color: #ffffff;
+}
+.detailShowtime_tagTimes {
+  color: #ffffff;
+  padding: 5px;
+  width: 90px;
+  position: relative;
+  mask-position: center center;
+  text-align: center;
+  mask-image: url("../img/movie-seat.png");
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  margin: 5px;
+}
+.detailShowtime_tagTimes:hover {
+  background: #31d7a9;
+  color: #fb4226;
+  transition: 0.3s;
+  font-size: 15px !important;
+  font-weight: bold;
+  transform: scale(1.2);
 }

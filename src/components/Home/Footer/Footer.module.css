@@ -1,16 +1,12 @@
-.logoS {
-	img {
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		margin: 3px 10px;
-		transition: all 0.3s;
-	}
-	&:hover {
-		img {
-			transform: scale(1.2);
-		}
-	}
+.logoS img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin: 3px 10px;
+	transition: all 0.3s;
+}
+.logoS:hover img {
+	transform: scale(1.2);
 }
 .logoL {
 	margin: 0px;
@@ -23,13 +19,13 @@ a {
 }
 .generic_anchor {
 	color: #8db9ed;
-	&:visited {
-		color: #8db9ed;
-	}
-	&:hover {
-		color: #f5222d;
-		cursor: pointer;
-	}
+}
+.generic_anchor:visited {
+	color: #8db9ed;
+}
+.generic_anchor:hover {
+	color: #f5222d;
+	cursor: pointer;
 }
 .flex_rw {
 	display: flex;
@@ -42,13 +38,13 @@ footer {
 }
 .footer_list_top {
 	width: 33.333%;
-	>li {
-		text-align: center;
-		padding-bottom: 10px;
-		a {
-			text-decoration: none;
-		}
-	}
+}
+.footer_list_top > li {
+	text-align: center;
+	padding-bottom: 10px;
+}
+.footer_list_top > li a {
+	text-decoration: none;
 }
 .footer_list_header {
 	padding: 10px 0 5px 0;
@@ -64,15 +60,15 @@ footer {
 	justify-content: space-around;
 	position: relative;
 	margin-top: 5px;
-	&::after {
-		content: "";
-		position: absolute;
-		z-index: 1;
-		top: 50%;
-		left: 10px;
-		border-top: 1px solid #f5222d;
-		width: calc(100% - 20px);
-	}
+}
+.footer_social_section::after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 10px;
+	border-top: 1px solid #f5222d;
+	width: calc(100% - 20px);
 }
 .footer_social_overlap {
 	border-radius: 10px;
@@ -80,12 +76,12 @@ footer {
 	z-index: 2;
 	background: #373737;
 	padding: 0 20px;
-	>a {
-		font-size: 3em;
-		&:not(:first-child) {
-			margin-left: 0.38em;
-		}
-	}
+}
+.footer_social_overlap > a {
+	font-size: 3em;
+}
+.footer_social_overlap > a:not(:first-child) {
+	margin-left: 0.38em;
 }
 .footer_social_connect {
 	display: flex;
@@ -101,11 +97,9 @@ footer {
 	width: 100%;
 	padding: 10px;
 	margin-top: 10px;
-	>div {
-		&:first-child {
-			margin-right: auto;
-		}
-	}
+}
+.footer_bottom_section > div:first-child {
+	margin-right: auto;
 }
 .footer_bottom_wrapper {
 	font-size: 1.5em;
@@ -118,96 +112,88 @@ footer {
 @media only screen and (max-width: 768px) {
 	.footer_list_header {
 		font-size: 2em;
-	}
+   }
 	.footer_list_anchor {
 		font-size: 1.1em;
-	}
+   }
 	.footer_social_connect {
 		font-size: 2.5em;
-	}
-	.footer_social_overlap {
-		>a {
-			font-size: 2.24em;
-		}
-	}
+   }
+	.footer_social_overlap > a {
+		font-size: 2.24em;
+   }
 	.footer_bottom_wrapper {
 		font-size: 1.3em;
-	}
+   }
 }
 @media only screen and (max-width: 568px) {
 	main {
 		font-size: 5em;
-	}
+   }
 	.footer_list_top {
 		width: 100%;
-	}
+   }
 	.footer_list_header {
 		font-size: 3em;
-	}
+   }
 	.footer_list_anchor {
 		font-size: 1.5em;
-	}
+   }
 	.footer_social_section {
 		justify-content: center;
-		&::after {
-			top: 25%;
-		}
-	}
+   }
+	.footer_social_section::after {
+		top: 25%;
+   }
 	.footer_social_connect {
 		margin-bottom: 10px;
 		padding: 0 10px;
-	}
+   }
 	.footer_social_overlap {
 		display: flex;
 		justify-content: center;
-		>a {
-			&:not(:first-child) {
-				margin-left: 20px;
-			}
-		}
-	}
+   }
+	.footer_social_overlap > a:not(:first-child) {
+		margin-left: 20px;
+   }
 	.footer_social_icons_wrapper {
 		width: 100%;
 		padding: 0;
-	}
+   }
 	.footer_bottom_section {
 		padding: 0 5px 10px 5px;
-	}
+   }
 	.footer_bottom_wrapper {
 		text-align: center;
 		width: 100%;
 		margin-top: 10px;
-	}
+   }
 }
 @media only screen and (max-width: 480px) {
-	.footer_social_overlap {
-		>a {
-			margin: auto;
-			&:not(:first-child) {
-				margin-left: 0;
-			}
-		}
-	}
+	.footer_social_overlap > a {
+		margin: auto;
+   }
+	.footer_social_overlap > a:not(:first-child) {
+		margin-left: 0;
+   }
 	.footer_bottom_rights {
 		display: block;
-	}
+   }
 }
 @media only screen and (max-width: 320px) {
 	.footer_list_header {
 		font-size: 2.2em;
-	}
+   }
 	.footer_list_anchor {
 		font-size: 1.2em;
-	}
+   }
 	.footer_social_connect {
 		font-size: 2.4em;
-	}
-	.footer_social_overlap {
-		>a {
-			font-size: 2.24em;
-		}
-	}
+   }
+	.footer_social_overlap > a {
+		font-size: 2.24em;
+   }
 	.footer_bottom_wrapper {
 		font-size: 1.3em;
-	}
+   }
 }

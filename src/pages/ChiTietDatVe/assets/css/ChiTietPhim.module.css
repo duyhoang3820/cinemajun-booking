@@ -56,7 +56,10 @@
   justify-content: center;
 }
 
-.detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+.detail_banner_phim
+  .detail_moTaPhim
+  .detail_picture
+  .detail_btn_play_video:hover {
   width: 70px;
   height: 70px;
   opacity: 1;
@@ -79,10 +82,9 @@
   background-color: #b42a14;
 }
 
-.ant-progress-circle .ant-progress-text {
-  color: #fff !important;
-  font-weight: bold !important;
-  font-size: 30px !important;
+.detail__danhGia {
+  font-weight: bold;
+  font-size: 30px;
 }
 .detail_ageType {
   margin-right: 6px;
@@ -126,7 +128,10 @@
     top: 50%;
     transition: all 0.3s;
   }
-  .detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+  .detail_banner_phim
+    .detail_moTaPhim
+    .detail_picture
+    .detail_btn_play_video:hover {
     width: 70px;
     height: 70px;
   }
@@ -152,7 +157,10 @@
     top: 50%;
     transition: all 0.3s;
   }
-  .detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+  .detail_banner_phim
+    .detail_moTaPhim
+    .detail_picture
+    .detail_btn_play_video:hover {
     width: 70px;
     height: 70px;
   }
@@ -175,7 +183,10 @@
     top: 50%;
     transition: all 0.3s;
   }
-  .detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+  .detail_banner_phim
+    .detail_moTaPhim
+    .detail_picture
+    .detail_btn_play_video:hover {
     width: 70px;
     height: 70px;
   }
@@ -198,7 +209,10 @@
     top: 50%;
     transition: all 0.3s;
   }
-  .detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+  .detail_banner_phim
+    .detail_moTaPhim
+    .detail_picture
+    .detail_btn_play_video:hover {
     width: 70px;
     height: 70px;
   }
@@ -221,7 +235,10 @@
     top: 50%;
     transition: all 0.3s;
   }
-  .detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+  .detail_banner_phim
+    .detail_moTaPhim
+    .detail_picture
+    .detail_btn_play_video:hover {
     width: 70px;
     height: 70px;
   }
@@ -244,7 +261,10 @@
     top: 50%;
     transition: all 0.3s;
   }
-  .detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+  .detail_banner_phim
+    .detail_moTaPhim
+    .detail_picture
+    .detail_btn_play_video:hover {
     width: 70px;
     height: 70px;
   }
@@ -273,7 +293,10 @@
     top: 50%;
     transition: all 0.3s;
   }
-  .detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+  .detail_banner_phim
+    .detail_moTaPhim
+    .detail_picture
+    .detail_btn_play_video:hover {
     width: 70px;
     height: 70px;
   }
@@ -299,7 +322,10 @@
     top: 50%;
     transition: all 0.3s;
   }
-  .detail_banner_phim .detail_moTaPhim .detail_picture .detail_btn_play_video:hover {
+  .detail_banner_phim
+    .detail_moTaPhim
+    .detail_picture
+    .detail_btn_play_video:hover {
     width: 70px;
     height: 70px;
   }

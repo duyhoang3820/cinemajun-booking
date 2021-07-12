@@ -2,12 +2,15 @@ import { Tag } from 'antd'
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import moment from 'moment';
-
+import _ from 'lodash'
 
 
 export default function TabLichChieu(props) {
     const lichChieu = props.lichChieu
     // console.log('lichChieu', lichChieu);
+    function removeAccents(str) {
+        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D');
+    }
     return (
         <div>
             <div className="lichChieu">
@@ -15,7 +18,7 @@ export default function TabLichChieu(props) {
                     return <div className="pb-3" key={index2} >
                         <div className=" d-flex mb-4" style={{ alignItems: 'center' }}>
                             <div className="col-3 d-none d-md-block col-lg-2">
-                                <NavLink to={`/chi-tiet-dat-ve/${phim.maPhim}`} ><span><img className="lichChieu_img" src={phim.hinhAnh} style={{ width: '100px', height: '150px', borderRadius: 3 }} alt="" /></span></NavLink>
+                                <NavLink to={`/chi-tiet-phim/${phim.maPhim}-${_.kebabCase(_.deburr((removeAccents(phim.tenPhim))))}`} ><span><img className="lichChieu_img" src={phim.hinhAnh} style={{ width: '100px', height: '150px', borderRadius: 3 }} alt="" /></span></NavLink>
                             </div>
                             <div className="col-9 col-sm-12 col-md-8">
                                 <div className="mb-3">

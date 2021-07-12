@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { TOKEN, USERLOGIN } from "../../../util/constants/settingSystem";
-import style from "./Header.module.scss";
+import style from "./Header.module.css";
 import * as Scroll from 'react-scroll';
 import { Link } from 'react-scroll'
 import { Menu, Dropdown } from 'antd';

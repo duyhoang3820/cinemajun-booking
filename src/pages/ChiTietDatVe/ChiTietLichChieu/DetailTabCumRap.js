@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { Tabs } from 'antd';
-import MenuTabLichChieu from './MenuTabLichChieu'
+import DetailTabLichChieu from './DetailTabLichChieu'
 import '../../TrangChu/CinemaSystem/assets/css/CinemaSystem.css'
 import mega from '../../TrangChu/CinemaSystem/assets/img/mega.jpg'
 import bhdstar from '../../TrangChu/CinemaSystem/assets/img/bhd-star.png'
@@ -82,7 +82,7 @@ export default function MenuTabCumRap(props) {
                         </div>
                     </div>
                     }>
-                        <MenuTabLichChieu lichChieu={cr} imgCumRap={detail.img} />
+                        <DetailTabLichChieu lichChieu={cr} imgCumRap={detail.img} />
                     </TabPane>
                 })}
             </Tabs>

@@ -15,19 +15,19 @@
   background-repeat: repeat;
   /* height: 755px; */
 }
-.pen-title {
+.pen_title {
   float: left;
   margin: 30px 50px;
   letter-spacing: 2px;
 }
-.pen-title i {
+.pen_title i {
   color: #f5222d;
   font-size: 48px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
 }
-.pen-title i:hover {
+.pen_title i:hover {
   transform: scale(1.2);
 }
 
@@ -132,8 +132,8 @@
   margin-left: 43%;
 } */
 .container_login.active .card_login.alt .title_login,
-.container_login.active .card_login.alt .input-container,
-.container_login.active .card_login.alt .button-container,
+.container_login.active .card_login.alt .input_container,
+.container_login.active .card_login.alt .button_container,
 .container_login.active .card_login.alt .img_login {
   /* left: 0; */
   right: 0;
@@ -149,22 +149,22 @@
 .container_login.active .card_login.alt .title_login {
   transition-delay: 0.3s;
 }
-.container_login.active .card_login.alt .input-container {
+.container_login.active .card_login.alt .input_container {
   transition-delay: 0.4s;
 }
-.container_login.active .card_login.alt .input-container:nth-child(2) {
+.container_login.active .card_login.alt .input_container:nth-child(2) {
   transition-delay: 0.5s;
 }
-.container_login.active .card_login.alt .input-container:nth-child(3) {
+.container_login.active .card_login.alt .input_container:nth-child(3) {
   transition-delay: 0.6s;
 }
-.container_login.active .card_login.alt .input-container:nth-child(4) {
+.container_login.active .card_login.alt .input_container:nth-child(4) {
   transition-delay: 0.7s;
 }
-.container_login.active .card_login.alt .input-container:nth-child(5) {
+.container_login.active .card_login.alt .input_container:nth-child(5) {
   transition-delay: 0.8s;
 }
-.container_login.active .card_login.alt .button-container {
+.container_login.active .card_login.alt .button_container {
   transition-delay: 0.9s;
 }
 
@@ -204,15 +204,15 @@
   font-weight: 600;
   text-transform: uppercase;
 }
-.card_login .input-container {
+.card_login .input_container {
   position: relative;
   margin: 0 60px 25px;
 }
-.card_login .input-container.child1 {
+.card_login .input_container.child1 {
   position: relative;
   margin: 0 60px 50px;
 }
-.card_login .input-container input {
+.card_login .input_container input {
   outline: none;
   z-index: 1;
   position: relative;
@@ -224,19 +224,19 @@
   font-size: 15px;
   font-weight: 400;
 }
-.card_login .input-container input:focus ~ label {
+.card_login .input_container input:focus ~ label {
   color: #9d9d9d;
   transform: translate(-12%, -50%) scale(0.75);
 }
-.card_login .input-container input:focus ~ .bar:before,
-.card_login .input-container input:focus ~ .bar:after {
+.card_login .input_container input:focus ~ .bar:before,
+.card_login .input_container input:focus ~ .bar:after {
   width: 50%;
 }
-.card_login .input-container input:valid ~ label {
+.card_login .input_container input:valid ~ label {
   color: #9d9d9d;
   transform: translate(-12%, -50%) scale(0.75);
 }
-.card_login .input-container label {
+.card_login .input_container label {
   position: absolute;
   top: 0;
   left: 0;
@@ -246,7 +246,7 @@
   line-height: 30px;
   transition: 0.2s ease;
 }
-.card_login .input-container .bar {
+.card_login .input_container .bar {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -254,8 +254,8 @@
   width: 100%;
   height: 1px;
 }
-.card_login .input-container .bar:before,
-.card_login .input-container .bar:after {
+.card_login .input_container .bar:before,
+.card_login .input_container .bar:after {
   content: "";
   position: absolute;
   background: #f5222d;
@@ -263,17 +263,17 @@
   height: 2px;
   transition: 0.2s ease;
 }
-.card_login .input-container .bar:before {
+.card_login .input_container .bar:before {
   left: 50%;
 }
-.card_login .input-container .bar:after {
+.card_login .input_container .bar:after {
   right: 50%;
 }
-.card_login .button-container {
+.card_login .button_container {
   margin: 0 60px;
   text-align: center;
 }
-.card_login .button-container button {
+.card_login .button_container button {
   outline: 0;
   cursor: pointer;
   position: relative;
@@ -289,13 +289,13 @@
   overflow: hidden;
   transition: 0.3s ease;
 }
-.card_login .button-container button span {
+.card_login .button_container button span {
   position: relative;
   z-index: 1;
   color: #ddd;
   transition: 0.3s ease;
 }
-.card_login .button-container button:before {
+.card_login .button_container button:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -309,22 +309,22 @@
   opacity: 0;
   transition: 0.3s ease;
 }
-.card_login .button-container button:hover,
-.card_login .button-container button:active,
-.card_login .button-container button:focus {
+.card_login .button_container button:hover,
+.card_login .button_container button:active,
+.card_login .button_container button:focus {
   border-color: #f5222d;
 }
-.card_login .button-container button:hover span,
-.card_login .button-container button:active span,
-.card_login .button-container button:focus span {
+.card_login .button_container button:hover span,
+.card_login .button_container button:active span,
+.card_login .button_container button:focus span {
   color: #f5222d;
 }
-.card_login .button-container button:active span,
-.card_login .button-container button:focus span {
+.card_login .button_container button:active span,
+.card_login .button_container button:focus span {
   color: #ffffff;
 }
-.card_login .button-container button:active:before,
-.card_login .button-container button:focus:before {
+.card_login .button_container button:active:before,
+.card_login .button_container button:focus:before {
   opacity: 1;
   transform: scale(10);
 }
@@ -394,8 +394,8 @@
   transform: scale(1.2);
 }
 .card_login.alt .title_login,
-.card_login.alt .input-container,
-.card_login.alt .button-container,
+.card_login.alt .input_container,
+.card_login.alt .button_container,
 .card_login.alt .img_login {
   /* left: 100px; */
   right: 100px;
@@ -429,38 +429,38 @@
 .card_login.alt .title_login .close:before {
   content: "×";
 }
-.card_login.alt .input-container input {
+.card_login.alt .input_container input {
   color: #ffffff;
 }
-.card_login.alt .input-container input:focus ~ label {
+.card_login.alt .input_container input:focus ~ label {
   color: #ffffff;
 }
-.card_login.alt .input-container input:focus ~ .bar:before,
-.card_login.alt .input-container input:focus ~ .bar:after {
+.card_login.alt .input_container input:focus ~ .bar:before,
+.card_login.alt .input_container input:focus ~ .bar:after {
   background: #ffffff;
 }
-.card_login.alt .input-container input:valid ~ label {
+.card_login.alt .input_container input:valid ~ label {
   color: #ffffff;
 }
-.card_login.alt .input-container label {
+.card_login.alt .input_container label {
   color: rgba(255, 255, 255, 0.8);
 }
-.card_login.alt .input-container .bar {
+.card_login.alt .input_container .bar {
   background: rgba(255, 255, 255, 0.8);
 }
-.card_login.alt .button-container button {
+.card_login.alt .button_container button {
   width: 100%;
   background: #ffffff;
   border-color: #ffffff;
 }
-.card_login.alt .button-container button span {
+.card_login.alt .button_container button span {
   color: #f5222d;
 }
-.card_login.alt .button-container button:hover {
+.card_login.alt .button_container button:hover {
   background: rgba(255, 255, 255, 0.9);
 }
-.card_login.alt .button-container button:active:before,
-.card_login.alt .button-container button:focus:before {
+.card_login.alt .button_container button:active:before,
+.card_login.alt .button_container button:focus:before {
   display: none;
 }
 
