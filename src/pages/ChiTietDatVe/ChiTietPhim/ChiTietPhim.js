@@ -32,7 +32,7 @@ export default function ChiTietPhim(props) {
 
   return (
     <div className={style.bg_filmDetail}>
-      <Background2/>
+      <Background2 />
       <a className="ml-4" onClick={() => {
         history.goBack()
       }}><i className="fa fa-angle-left back"></i></a>
@@ -42,10 +42,10 @@ export default function ChiTietPhim(props) {
             <div className={cx(style.detail_moTaPhim, "col-12 col-sm-12 col-md-8 row")}>
               <div className={cx(style.detail_picture, " d-flex col-12 col-sm-12 col-md-5")}>
                 <img className={style.detail_thumnail} src={chiTietPhim.hinhAnh} width={220} height={320} alt="" />
-                <button><img onClick={() => {
+                <a><img onClick={() => {
                   setOpen(true);
                   setTrailer(chiTietPhim.trailer.slice(30))
-                }} className={cx(style.detail_btn_play_video, style.pulsing_2)} src={img} alt="" /></button>
+                }} className={cx(style.detail_btn_play_video, style.pulsing_2)} src={img} alt="" /></a>
               </div>
               <div className={cx(style.detail, " text-white col-12 col-sm-12 col-md-7 d-flex")}>
                 <div>
