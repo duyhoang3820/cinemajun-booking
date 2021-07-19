@@ -1,4 +1,4 @@
-* Tài khoản admin : duyhoang3820 - pass: 123456
+Tài khoản admin : duyhoang3820 - pass: 123456
 Cấu trúc thư mục:
 - assets: Chứa ảnh, videos, file, …
 - components: Chứa các folder component, trong mỗi folder là các file component
