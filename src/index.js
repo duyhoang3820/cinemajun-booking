@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 
 //setup redux
 import 'antd/dist/antd.css';
-import 'ui-neumorphism/dist/index.css'
 import { Provider } from 'react-redux'
 import store from './redux/configStore';
 
