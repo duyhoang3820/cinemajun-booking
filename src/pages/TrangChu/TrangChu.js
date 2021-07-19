@@ -3,7 +3,7 @@ import CarouselMovie from './CarouselMovie/CarouselMovie'
 import CinemaCluster from './CinemaSystem/CinemaSystem'
 import TabListMovies from './TabListMovies/TabListMovies'
 import './assets/css/Trangchu.css'
-import '../../components/Background/Background.css'
+import Background from '../../components/Background/Background'
 
 export default function TrangChu(props) {
     useEffect(() => {
@@ -12,12 +12,7 @@ export default function TrangChu(props) {
     }, [])
     return (
         <div className="" >
-            <div className="bg"></div>
-            <div className="star-field">
-                <div className="layer"></div>
-                <div className="layer"></div>
-                <div className="layer"></div>
-            </div>
+            <Background/>
             <div id="trangchu" className="mt-3">
                 <CarouselMovie />
             </div>

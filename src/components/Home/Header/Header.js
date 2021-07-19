@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import { TOKEN, USERLOGIN } from "../../../util/constants/settingSystem";
 import style from "./Header.module.css";
 import * as Scroll from 'react-scroll';
-import { Link } from 'react-scroll'
 import { Menu, Dropdown } from 'antd';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
@@ -63,7 +62,7 @@ export default function Header() {
         <div className="collapse navbar-collapse ml-5 mb-1" id="collapsibleNavId">
           <ul className="navbar-nav m-auto mt-2 mt-lg-3">
             <li className="nav-item ">
-              <Link to="" onClick={() => {
+              <a onClick={() => {
                 history.push('/')
                 setTimeout(function () {
                   document.title = 'CineJun | Trang chủ | Lịch chiếu';
@@ -72,10 +71,10 @@ export default function Header() {
                     smooth: true,
                   })
                 }, 100);
-              }} className={`${style.header__lichChieu} nav-link`}>Lịch chiếu</Link>
+              }} className={`${style.header__lichChieu} nav-link`}>Lịch chiếu</a>
             </li>
             <li className="nav-item">
-              <a to="" onClick={() => {
+              <a onClick={() => {
                 history.push('/')
                 setTimeout(function () {
                   document.title = 'CineJun | Trang chủ | Cụm rạp';

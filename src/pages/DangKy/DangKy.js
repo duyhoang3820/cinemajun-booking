@@ -11,8 +11,8 @@ import Footer from '../../components/Home/Footer/Footer';
 import { history } from '../../App';
 import logo from '../../assets/img/logo/logo.svg'
 import logo2 from '../../assets/img/logo/logo2.svg'
-import '../../components/Background/Background2.css'
 import cx from 'classnames'
+import Background2 from '../../components/Background/Background2';
 
 export default function DangKy() {
     useEffect(() => {
@@ -80,12 +80,7 @@ export default function DangKy() {
 
     return (
         <div className="">
-            <div className="bg2"></div>
-            <div className="star-field">
-                <div className="layer"></div>
-                <div className="layer"></div>
-                <div className="layer"></div>
-            </div>
+            <Background2/>
             <div className={cx(style.pen_title, "d-none d-md-block")}>
                 <i className="fa fa-home" onClick={() => {
                     history.push('/')

@@ -12,8 +12,8 @@ import ModalVideo from 'react-modal-video'
 import img from '../assets/img/play-video.png'
 import { Link } from 'react-scroll'
 import { history } from "../../../App";
-import '../../../components/Background/Background2.css'
 import cx from 'classnames'
+import Background2 from "../../../components/Background/Background2";
 
 
 export default function ChiTietPhim(props) {
@@ -32,12 +32,7 @@ export default function ChiTietPhim(props) {
 
   return (
     <div className={style.bg_filmDetail}>
-      <div className="bg2"></div>
-      <div className="star-field">
-        <div className="layer"></div>
-        <div className="layer"></div>
-        <div className="layer"></div>
-      </div>
+      <Background2/>
       <a className="ml-4" onClick={() => {
         history.goBack()
       }}><i className="fa fa-angle-left back"></i></a>

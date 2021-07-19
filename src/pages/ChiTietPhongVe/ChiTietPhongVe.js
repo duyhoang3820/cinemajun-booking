@@ -10,7 +10,6 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
 import { Collapse, List } from 'antd';
 import { CaretRightOutlined } from '@ant-design/icons';
-import '../../components/Background/Background1.css'
 import { Drawer } from 'antd';
 import ListCombo from './ListCombo/ListCombo';
 import ThongTinDatVe from './ThongTinDatVe/ThongTinDatVe';
@@ -18,6 +17,7 @@ import ThongTinGhe from './ThongTinGhe/ThongTinGhe';
 import cx from 'classnames'
 import './ListCombo/css/Drawer.css'
 import style1 from './assets/css/ButtonCombo.module.css'
+import Background1 from '../../components/Background/Background1'
 
 const { Panel } = Collapse;
 
@@ -42,12 +42,7 @@ export default function ChiTietPhongVe(props) {
     // console.log(danhSachGheDangDat);
     return (
         <div >
-            <div className="bg1"></div>
-            <div className="star-field">
-                <div className="layer"></div>
-                <div className="layer"></div>
-                <div className="layer"></div>
-            </div>
+            <Background1/>
             <a className="ml-4" onClick={() => {
                 history.goBack()
             }}><i className="fa fa-angle-left back"></i></a>
