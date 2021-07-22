@@ -32,24 +32,28 @@ export default function ThongTinGhe(props) {
     }
     return (
         <div>
-            <div className={cx(style.thongTinGhe_scrollCinema,"text-center")}>
+            <div className="row py-5" style={{ justifyContent: 'space-evenly', alignItems: 'center' }}>
+                <div className="d-flex col-12 col-sm-6 col-md-3 text-left mb-2" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <button style={{ border: "none", outline: "none" }} className={style.gheEx}></button>
+                    <span className="text-white ml-2" style={{ width: '100px' }}>Ghế thường</span>
+                </div>
+                <div className="d-flex col-12 col-sm-6 col-md-3 text-left mb-2" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <button style={{ border: "none", outline: "none" }} className={style.gheVipEx}></button>
+                    <span className="text-white ml-2" style={{ width: '100px' }}>Ghế VIP</span>
+                </div>
+                <div className="d-flex col-12 col-sm-6 col-md-3 text-left mb-2" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <button style={{ border: "none", outline: "none" }} className={style.gheDaDatEx}></button>
+                    <span className="text-white ml-2" style={{ width: '100px' }}>Ghế đã đặt</span>
+                </div>
+                <div className="d-flex col-12 col-sm-6 col-md-3 text-left mb-2" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <button style={{ border: "none", outline: "none" }} className={style.gheDangDatEx}></button>
+                    <span className="text-white ml-2" style={{ width: '100px' }}>Ghế đang chọn</span>
+                </div>
+            </div>
+            <div className={cx(style.thongTinGhe_scrollCinema, "text-center")}>
                 {/* <div className="d-flex" style={{ justifyContent: 'center' }}>
                     <div className={style.titleChonGhe}></div>
                 </div> */}
-                <div className="row py-5" style={{ justifyContent: 'space-evenly', alignItems: 'center' }}>
-                    <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                        <button style={{ border: "none", outline: "none" }} className={style.gheEx}></button>
-                        <span className="text-white ml-2">Ghế thường</span>
-                    </div>
-                    <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                        <button style={{ border: "none", outline: "none" }} className={style.gheVipEx}></button>
-                        <span className="text-white ml-2">Ghế VIP</span>
-                    </div>
-                    <div className="d-flex" style={{ justifyContent: 'space-around', alignItems: 'center' }}>
-                        <button style={{ border: "none", outline: "none" }} className={style.gheDaDatEx}></button>
-                        <span className="text-white ml-2">Ghế đã đặt</span>
-                    </div>
-                </div>
                 <div className={style.thongTinGhe_seatCinema}>
                     <img src={screen} alt="" width="1100px" />
                     <div className={style.thongTinGhe_seats} style={{ gridColumn: 16 }}>
